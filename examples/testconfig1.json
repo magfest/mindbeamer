@@ -1,0 +1,67 @@
+{
+    "event": "Summer MAGCon 2021",
+    "event_source": "https://docs.google.com/spreadsheets/d/1NtitOdKWSrL6kbzsuLc2mKcWs3XSHFClmkhR07JQ77I/edit#gid=0",
+    "event_duration": {
+        "start": "2021-06-26T12:00:00-04:00",
+        "end": "2021-06-27T23:00:00-04:00"
+    },
+    "rooms": {
+        "main_event": {
+            "human_name": "Main Twitch Stream",
+            "venue_name": "https://twitch.tv/magfest",
+            "empty_event": {
+                "name": "Offline"
+            },
+            "schedule": [
+                {
+                    "start_time": "2021-06-26T12:00:00-04:00",
+                    "duration": 30,
+                    "name": "Refresher on MAGFest Org Structure for New/Forgetful Staff",
+                    "speakers": "Debra"
+                },
+                {
+                    "start_time": "2021-06-26T12:30:00-04:00",
+                    "duration": 10,
+                    "name": "Welcome, Schedule Review, Ground Rules",
+                    "speakers": "Faith"
+                },
+                {
+                    "start_time": "2021-06-26T12:40:00-04:00",
+                    "duration": 35,
+                    "name": "Intros + State of the MAG",
+                    "speakers": "Debra"
+                }
+            ]
+        },
+        "breakout_1": {
+            "human_name": "Breakout Google Meet 1",
+            "venue_name": "https://meet.google.com/aaa-aaaa-aaa",
+            "empty_event": {
+                "name": "Free Chat"
+            },
+            "schedule": [
+                
+            ]
+        },
+        "breakout_2": {
+            "human_name": "Breakout Google Meet 2",
+            "venue_name": "https://meet.google.com/bbb-bbbb-bbb",
+            "empty_event": {
+                "name": "Free Chat"
+            },
+            "schedule": [
+                
+            ]
+        },
+        "breakout_3": {
+            "human_name": "Breakout Google Meet 3",
+            "venue_name": "https://meet.google.com/ccc-cccc-ccc",
+            "empty_event": {
+                "name": "Free Chat"
+            },
+            "schedule": [
+                
+            ]
+        }
+    }
+}
