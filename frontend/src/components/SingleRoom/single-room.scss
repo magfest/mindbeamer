@@ -1,7 +1,5 @@
+@import "../../assets/styles/panel-layout";
 
-.individual-rows {
-    font-family: 'Roboto';
-}
 
 .panel-time {
     display: inline-block;
@@ -33,4 +31,17 @@
 
 .line-separate-place {
     display: block;
+}
+
+
+@media only screen and (min-width: 601px) {
+    .panel-time {
+        vertical-align: middle;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .panel-time {
+        vertical-align: bottom;
+    }
 }
