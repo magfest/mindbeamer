@@ -30,6 +30,30 @@
                     "duration": 35,
                     "name": "Intros + State of the MAG",
                     "speakers": "Debra"
+                },
+                {
+                    "start_time": "2021-06-26T13:15:00-04:00",
+                    "duration": 25,
+                    "name": "Board of Directors Updates",
+                    "speakers": "BoD"
+                },
+                {
+                    "start_time": "2021-06-26T13:40:00-04:00",
+                    "duration": 10,
+                    "name": "FINANCE",
+                    "speakers": "Emily"
+                },
+                {
+                    "start_time": "2021-06-26T13:50:00-04:00",
+                    "duration": 5,
+                    "name": "Warehouse Updates",
+                    "speakers": "Beale"
+                },
+                {
+                    "start_time": "2021-06-26T13:55:00-04:00",
+                    "duration": 5,
+                    "name": "Everyone clap for Beale",
+                    "speakers": "I said everyone"
                 }
             ]
         },
