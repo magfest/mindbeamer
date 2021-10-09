@@ -1,0 +1,36 @@
+
+.individual-rows {
+    font-family: 'Roboto';
+}
+
+.panel-time {
+    display: inline-block;
+    width: 40%;
+    margin: 0 auto 0 0;
+}
+
+.row-divider-time {
+    display: inline-block;
+    width: 9%;
+    margin: 0 15% 0 6%;
+}
+
+.panel-name {
+    display: inline-flex;
+    text-align: left;
+    width: 60%;
+    margin: 0 0 0 auto;
+    vertical-align: center;
+    text-align: left;
+}
+
+.row-divider-name {
+    display: inline-block;
+    width: 50%;
+    margin: 0 0 0 auto;
+}
+
+
+.line-separate-place {
+    display: block;
+}
