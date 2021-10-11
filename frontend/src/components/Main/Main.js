@@ -11,22 +11,22 @@ class Main extends React.Component {
         super(props);
         // TODO: change what state it is based on api
         this.state = {
-            isFull: true
+            isFull: false
         }
     }
 
 
     render(){
         const { schedule } = example.default.rooms.main_event;
+        const { isFull } = this.state;
         // TODO: include code to filter schedule based on current time
         return (
             <div id="main-container">
                 <div id="header">
                     <img src={ mountainsTextCombined } className="mountainsCombined" />
-                </div>
-                <div id="background-colors">
+                </div><div id="background-colors" className={(!isFull) ? "fullHeight" : ""}>
                     <div id="panels-info">
-                        { (this.state.isFull) ?
+                        { (isFull) ?
                             <FullSchedule fullSchedule={ fullSchedule.default } />
                             :
                             <SingleRoom schedule={ schedule } />

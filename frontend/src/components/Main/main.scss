@@ -12,6 +12,8 @@
         height: 18%;
         margin-bottom: 0px;
         font-size: 0px;
+        float: left;
+        clear: none;
     }
 
     #panels-info {
@@ -62,7 +64,7 @@
         border: 1px solid white;
     }
 
-    #background-colors {
+    .fullHeight { 
         height: 100vh;
     }
 }
