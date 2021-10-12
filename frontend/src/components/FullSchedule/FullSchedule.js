@@ -1,8 +1,8 @@
 import React from 'react';
 import dayjs from 'dayjs';
 import "./full-schedule.scss";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDesktop, faMicrophone, faAt } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDesktop, faMicrophone, faAt } from '@fortawesome/free-solid-svg-icons';
 
 
 const FullSchedule = ({ fullSchedule }) => (
@@ -10,7 +10,7 @@ const FullSchedule = ({ fullSchedule }) => (
     // TODO: include code to filter schedule based on current time
     fullSchedule.map((element, index ) => {
         return (
-            <div className={"individual-rows full-version" + ((index % 2 === 0) ? " tanned" : "")}>
+            <div className={"individual-rows full-version" + ((index % 2 !== 0) ? " tanned" : "")}>
                 <div className="gridded-area">
 
                     {/* Icon on the left */}
@@ -35,7 +35,7 @@ const FullSchedule = ({ fullSchedule }) => (
                     </span>
 
                     {/* Visual divider */}
-                    <hr className={"tanned-border" + ((index % 2 === 0) ? " spacier" : " smaller")} />
+                    <hr className={"tanned-border" + ((index % 2 !== 0) ? " spacier" : " smaller")} />
 
                     {/* Location area */}
                     <span className="text-area-full bottom">

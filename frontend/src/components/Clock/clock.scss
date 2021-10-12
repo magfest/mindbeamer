@@ -1,0 +1,32 @@
+#clock-container {
+    vertical-align: middle;
+    margin: auto 0;
+    text-align: left;
+    padding-right: 10px;
+    font-size: 0.9em;
+}
+
+.table-icon, .clock-icon {
+    display: inline-block;
+}
+
+.date-area {
+    margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    #clock-container {
+        margin: auto 0;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    #clock-container {
+        margin: 0 auto;
+    }
+
+    .informational-section {
+        margin: 10px 10%;
+    }
+}

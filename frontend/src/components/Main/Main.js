@@ -1,17 +1,19 @@
 import React from 'react';
 import SingleRoom from '../SingleRoom/SingleRoom';
 import FullSchedule from '../FullSchedule/FullSchedule';
+import GenericInfoSection from '../GenericInfoSection/GenericInfoSection';
 import * as example from 'testConfig/testconfig1.json';
 import * as fullSchedule from 'testConfig/super_2019_panels_json.json';
 import "./main.scss";
-import mountainsTextCombined from "../../assets/pictures/mountainsTextCombined.svg";
+
+import mountainsTextCombined from '../../assets/pictures/mountainsTextCombined.svg';
 
 class Main extends React.Component {
     constructor(props){
         super(props);
         // TODO: change what state it is based on api
         this.state = {
-            isFull: false
+            isFull: true,
         }
     }
 
@@ -24,8 +26,9 @@ class Main extends React.Component {
             <div id="main-container">
                 <div id="header">
                     <img src={ mountainsTextCombined } className="mountainsCombined" />
-                </div><div id="background-colors" className={(!isFull) ? "fullHeight" : ""}>
+                </div><div id="background-colors">
                     <div id="panels-info">
+                        <GenericInfoSection isFull={isFull} />
                         { (isFull) ?
                             <FullSchedule fullSchedule={ fullSchedule.default } />
                             :
