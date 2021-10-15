@@ -1,0 +1,32 @@
+#loading-container {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.loader-animation {
+    border: 10px solid white;
+    border-top: 10px solid #EBAD43;
+    margin: 15px auto;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 2s linear infinite;
+  }
+
+  .loading-text {
+      font-size: 1.5em;
+      font-weight: 800;
+  }
+  
+  @keyframes spin {
+    0% { 
+        transform: rotate(0deg); 
+    }
+    100% { 
+        transform: rotate(360deg); 
+    }
+  }
