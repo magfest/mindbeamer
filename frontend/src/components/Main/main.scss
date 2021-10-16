@@ -31,9 +31,6 @@
         width: 100%;
     }
 
-    .full-view {
-        height: 100vh;
-    }
 }
 
 
@@ -50,8 +47,15 @@
     }
 
     #background-colors {
-        height: 100%;
         margin-top: 0px;
+    }
+
+    .non-loading-background {
+        height: 100%;
+    }
+
+    .loading-background {
+        height: 100vh;
     }
 
 }
@@ -65,5 +69,14 @@
     .row-divider-time, .row-divider-name {
         border: 1px solid white;
     }
+}
 
+@media only screen and (max-width: 400px) {
+    #main-container {
+        margin: 0;
+    }
+
+    .loading-background {
+        height: auto;
+    }
 }

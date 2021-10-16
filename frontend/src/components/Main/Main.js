@@ -41,7 +41,7 @@ class Main extends React.Component {
             <div id="main-container">
                 <div id="header">
                     <img src={ mountainsTextCombined } className="mountainsCombined" />
-                </div><div id="background-colors" className={(loading)? "full-view": ""}>
+                </div><div id="background-colors" className={(loading) ? "loading-background": "non-loading-background"}>
                     <div id="panels-info">
                         <GenericInfoSection isFull={isFull} />
                         {

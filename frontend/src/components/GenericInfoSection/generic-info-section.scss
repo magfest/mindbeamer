@@ -61,7 +61,8 @@
     }
 
     .guidebook-text-qrCode {
-        max-width: 40%;
+        max-width: 35%;
+        margin: 0 0 0 0;
     }
 
     .qrCode {
@@ -94,5 +95,14 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+}
+
+
+
+@media only screen and (max-width: 400px) {
+    #generic-info-section {
+        width: auto;
+        padding: 5px 0px;
     }
 }
