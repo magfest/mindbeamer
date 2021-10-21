@@ -38,13 +38,9 @@
 
 @media only screen and (min-width: 601px) {
     .individual-rows {
-        margin-bottom: 2%;
         font-size: 30px;
     }
 
-    .row-divider-time, .row-divider-name {
-        border: 2px solid white;
-    }
 
     #background-colors {
         margin-top: 0px;
@@ -55,7 +51,28 @@
     }
 
     .loading-background {
-        height: 100vh;
+        height: 100%;
+    }
+
+    #panels-info {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .is-full-class {
+        .left-side, .right-side {
+            width: 50%;
+        }
+    }
+    
+    .is-small-class {
+        .left-side {
+            width: 40%;
+        }
+    
+        .right-side {
+            width: 60%;
+        }
     }
 
 }
@@ -66,8 +83,14 @@
         font-size: 20px;
     }
 
-    .row-divider-time, .row-divider-name {
-        border: 1px solid white;
+
+    #panels-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left-side, .right-side {
+        width: 100%;
     }
 }
 

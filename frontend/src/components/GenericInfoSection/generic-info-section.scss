@@ -1,5 +1,4 @@
 #generic-info-section {
-    width: 70%;
     box-sizing: content-box;
     padding: 5px;
     color: #1F0A02;
@@ -37,10 +36,15 @@
     background-color: #F2CC8A;
 }
 
+// .flexed-content-generic {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-evenly;
+// }
 .flexed-content-generic {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
 }
 
 
@@ -49,8 +53,14 @@
     margin: 0 auto;
 }
 
+.guidebook-text-qrCode {
+    max-width: 100%;
+}
+
+
 @media only screen and (min-width: 601px) {
     #generic-info-section {
+        width: 85%;
         margin: 5px auto 50px auto;
         font-size: 30px;
     }
@@ -58,11 +68,6 @@
     .guidebook-text {
         font-size: 0.6em;
         margin-top: 15px;
-    }
-
-    .guidebook-text-qrCode {
-        max-width: 35%;
-        margin: 0 0 0 0;
     }
 
     .qrCode {
@@ -74,6 +79,7 @@
 
 @media only screen and (max-width: 600px) {
     #generic-info-section {
+        width: 90%;
         margin: 5px auto 30px auto;
         font-size: 20px;
     }
@@ -83,18 +89,8 @@
         margin-top: 15px;
     }
 
-    .guidebook-text-qrCode {
-        max-width: 100%;
-    }
-
     .qrCode {
-        width: 80%;
-    }
-
-    .flexed-content-generic {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        width: 40%;
     }
 }
 

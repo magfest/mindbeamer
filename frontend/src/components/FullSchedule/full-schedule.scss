@@ -2,9 +2,7 @@
 
 .individual-rows.full-version {
     font-family: 'Helvetica Neue';
-    width: 70%;
     margin: 0 auto 30px auto;
-    padding: 20px;
 }
 
 // Alternates the row colors
@@ -58,13 +56,11 @@
 // ----- Styles the icon end -------
 
 
-// time and panel section
 .text-area-full.top {
-    vertical-align: middle;
+    vertical-align: top;
     display: flex;
-
-    grid-row: 1/1;
-    grid-column: 2/2;
+    flex-direction: column;
+    text-align: left;
 }
 
 // location section
@@ -101,7 +97,7 @@
 
 .panel-name-full {
     display: inline-block;
-    margin-left: 15px;
+    margin-left: 5px;
     text-align: left;
 }
 
@@ -110,26 +106,14 @@
     .time-area {
         margin-top: 0%;
     }
-}
 
-@media only screen and (max-width: 975px) {
     .individual-rows.full-version {
-        width: auto;
-        margin: auto;
-        padding: 20px 0px;
-    }
-
-    .text-area-full.top {
-        vertical-align: top;
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-    }
-    
-    .panel-name-full {
-        margin-left: 5px;
+        width: 95%;
+        padding: 10px;
+        margin-bottom: 2%;
     }
 }
+
 
 @media only screen and (max-width: 600px) {
     .time-area {
@@ -138,5 +122,11 @@
 
     .gridded-area {
         font-size: 0.8em;
+    }
+
+    .individual-rows.full-version {
+        width: auto;
+        margin: auto;
+        padding: 20px 0px;
     }
 }

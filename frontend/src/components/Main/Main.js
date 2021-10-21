@@ -4,7 +4,8 @@ import SingleRoom from '../SingleRoom/SingleRoom';
 import FullSchedule from '../FullSchedule/FullSchedule';
 import GenericInfoSection from '../GenericInfoSection/GenericInfoSection';
 import Loading from '../Loading/Loading';
-import "./main.scss";
+import Map from '../Map/Map';
+import './main.scss';
 
 import * as example from 'testConfig/testconfig1.json';
 import * as fullSchedule from 'testConfig/super_2019_panels_json.json';
@@ -42,17 +43,26 @@ class Main extends React.Component {
                 <div id="header">
                     <img src={ mountainsTextCombined } className="mountainsCombined" />
                 </div><div id="background-colors" className={(loading) ? "loading-background": "non-loading-background"}>
-                    <div id="panels-info">
-                        <GenericInfoSection isFull={isFull} />
-                        {
-                        (loading) ? (
-                            <Loading />
-                        ):((isFull) ?
-                            <FullSchedule fullSchedule={ schedule } />
-                            :
-                            <SingleRoom schedule={ example.default.rooms.main_event.schedule } />
-                        )
-                        }
+                    <div id="panels-info" 
+                    className={(isFull) ? "is-full-class": "is-small-class"}
+                    >
+                        <div className="left-side">
+                            <GenericInfoSection isFull={isFull} />
+                            <Map isFull={isFull} />
+                        </div>
+                        <div className="right-side">
+                            {
+                            (loading) ? (
+                                <Loading />
+                            ):((isFull) ?
+                                <div>
+                                    <FullSchedule fullSchedule={ schedule } />
+                                </div>
+                                :
+                                <SingleRoom schedule={ example.default.rooms.main_event.schedule } />
+                            )
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
