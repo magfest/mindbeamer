@@ -36,11 +36,6 @@
     background-color: #F2CC8A;
 }
 
-// .flexed-content-generic {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-evenly;
-// }
 .flexed-content-generic {
     display: flex;
     flex-direction: column;
@@ -58,22 +53,13 @@
 }
 
 
-@media only screen and (min-width: 601px) {
+
+
+@media only screen and (max-width: 400px) {
     #generic-info-section {
-        width: 85%;
-        margin: 5px auto 50px auto;
-        font-size: 30px;
+        width: auto;
+        padding: 5px 0px;
     }
-
-    .guidebook-text {
-        font-size: 0.6em;
-        margin-top: 15px;
-    }
-
-    .qrCode {
-        width: 50%;
-    }
-
 }
 
 
@@ -95,10 +81,43 @@
 }
 
 
-
-@media only screen and (max-width: 400px) {
+@media only screen and (min-width: 601px) {
     #generic-info-section {
-        width: auto;
-        padding: 5px 0px;
+        width: 85%;
+        margin: 5px auto 50px auto;
+        font-size: 30px;
     }
+
+    .guidebook-text {
+        font-size: 0.8em;
+        margin-top: 15px;
+    }
+
+    .qrCode {
+        width: 40%;
+    }
+
+}
+
+@media only screen and (min-width: 2500px) {
+    .guidebook-text, #generic-info-section h4 {
+        font-size: 0.9em;
+    }
+
+    .qrCode {
+        width: 25%;
+    }
+    
+}
+
+
+@media only screen and (min-width: 3500px) {
+    .guidebook-text, #generic-info-section h4 {
+        font-size: 1.3em;
+    }
+
+    .qrCode {
+        width: 30%;
+    }
+    
 }

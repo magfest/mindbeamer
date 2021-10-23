@@ -63,6 +63,23 @@
     }
 }
 
+
+@media only screen and (max-width: 600px) {
+    #map-section {
+        width: 90%;
+    }
+
+    #header-text {
+        font-size: 0.7em;
+    }
+
+    #map-toggle {
+        font-size: 0.7em;
+    }
+}
+
+
+
 @media only screen and (min-width: 601px) {
     #map-section {
         width: 85%;
@@ -70,8 +87,17 @@
 }
 
 
-@media only screen and (max-width: 600px) {
-    #map-section {
-        width: 90%;
+
+@media only screen and (min-width: 3500px) {
+    #header-text {
+        font-size: 1.3em;
+    }
+
+    #map-toggle {
+        font-size: 1.3em;
+    }
+    
+    .map-header {
+        height: 50px;
     }
 }

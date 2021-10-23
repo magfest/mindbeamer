@@ -36,43 +36,9 @@
 
 
 
-@media only screen and (min-width: 601px) {
-    .individual-rows {
-        font-size: 30px;
-    }
-
-
-    #background-colors {
-        margin-top: 0px;
-    }
-
-    .non-loading-background {
-        height: 100%;
-    }
-
-    .loading-background {
-        height: 100%;
-    }
-
-    #panels-info {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .is-full-class {
-        .left-side, .right-side {
-            width: 50%;
-        }
-    }
-    
-    .is-small-class {
-        .left-side {
-            width: 40%;
-        }
-    
-        .right-side {
-            width: 60%;
-        }
+@media only screen and (max-width: 400px) {
+    #main-container {
+        margin: 0;
     }
 
 }
@@ -92,14 +58,87 @@
     .left-side, .right-side {
         width: 100%;
     }
+
+    .loading-background {
+        height: 100vh;
+    }
 }
 
-@media only screen and (max-width: 400px) {
-    #main-container {
-        margin: 0;
+@media only screen and (min-width: 601px) {
+    .individual-rows {
+        font-size: 1.4em;
+    }
+
+
+    #background-colors {
+        margin-top: 0px;
+    }
+
+    .non-loading-background {
+        height: 100%;
     }
 
     .loading-background {
-        height: auto;
+        height: 100vh;
     }
+
+    #panels-info {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .is-full-class {
+        .left-side {
+            width: 40%;
+        }
+
+        .right-side {
+            width: 60%;
+        }
+    }
+    
+    .is-small-class {
+        .left-side {
+            width: 40%;
+        }
+    
+        .right-side {
+            width: 60%;
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1500px) {
+    .individual-rows {
+        font-size: 1.8em;
+    }
+}
+
+
+@media only screen and (min-width: 3500px) {
+    .individual-rows {
+        font-size: 3.4em;
+    }
+
+    .is-full-class {
+        .left-side {
+            width: 40%;
+        }
+    
+        .right-side {
+            width: 60%;
+        }
+    }
+    
+    .is-small-class {
+        .left-side {
+            width: 40%;
+        }
+    
+        .right-side {
+            width: 60%;
+        }
+    }
+    
 }

@@ -102,18 +102,6 @@
 }
 
 
-@media only screen and (min-width: 601px) {
-    .time-area {
-        margin-top: 0%;
-    }
-
-    .individual-rows.full-version {
-        width: 95%;
-        padding: 10px;
-        margin-bottom: 2%;
-    }
-}
-
 
 @media only screen and (max-width: 600px) {
     .time-area {
@@ -128,5 +116,18 @@
         width: auto;
         margin: auto;
         padding: 20px 0px;
+    }
+}
+
+
+@media only screen and (min-width: 601px) {
+    .time-area {
+        margin-top: 0%;
+    }
+
+    .individual-rows.full-version {
+        width: 95%;
+        padding: 10px;
+        margin-bottom: 2%;
     }
 }
