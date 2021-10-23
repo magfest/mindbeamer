@@ -42,7 +42,7 @@ class Main extends React.Component {
             <div id="main-container">
                 <div id="header">
                     <img src={ mountainsTextCombined } className="mountainsCombined" />
-                </div><div id="background-colors" className={(loading) ? "loading-background": "non-loading-background"}>
+                </div><div id="background-colors">
                     <div id="panels-info" 
                     className={(isFull) ? "is-full-class": "is-small-class"}
                     >
