@@ -24,6 +24,15 @@ class Main extends React.Component {
     }
 
     componentDidMount() {
+        this.getPanelInfo();
+        this.interval = setInterval(this.getPanelInfo, 600000);
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.interval);
+      }
+
+    getPanelInfo = () => {
         axios.get('https://super2019.reggie.magfest.org/schedule/panels_json')
         .then( response => {
             console.log(response);
@@ -38,6 +47,7 @@ class Main extends React.Component {
 
     render(){
         const { schedule, loading, isFull } = this.state;
+        const { main_event: smallSchedule } = example.default.rooms;
         return (
             <div id="main-container">
                 <div id="header">
@@ -59,7 +69,12 @@ class Main extends React.Component {
                                     <FullSchedule fullSchedule={ schedule } />
                                 </div>
                                 :
-                                <SingleRoom schedule={ example.default.rooms.main_event.schedule } />
+                                <div>
+                                    <div className="single-room-panel-name">
+                                        Panel: { smallSchedule.human_name }
+                                    </div>
+                                    <SingleRoom schedule={ smallSchedule.schedule } />
+                                </div>
                             )
                             }
                         </div>

@@ -69,12 +69,15 @@
         width: 90%;
     }
 
-    #header-text {
-        font-size: 0.7em;
-    }
-
     #map-toggle {
         font-size: 0.7em;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    #header-text {
+        font-size: 0.7em;
+        line-height: 0.8em;
     }
 }
 
