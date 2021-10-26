@@ -52,5 +52,5 @@ touch /opt/mindbeamer/install1
 # Reboot
 sudo reboot
 
-#sudo -E java -Droot="/greengrass/v2" -Dlog.store=FILE -jar ./GreengrassCore/lib/Greengrass.jar --aws-region us-east-1 --thing-name Mindbeamer-test1 --thing-group-name MindbeamerDisplayGroup --component-default-user ggc_user:ggc_group --provision true --setup-system-seservice true --deploy-dev-tools true
+#sudo -E java -Droot="/greengrass/v2" -Dlog.store=FILE -jar ./GreengrassCore/lib/Greengrass.jar --aws-region us-east-1 --thing-name Mindbeamer-$(cat /proc/cpuinfo | grep Serial | cut -d ' ' -f 2) --thing-group-name MindbeamerDisplayGroup --component-default-user ggc_user:ggc_group --provision true --setup-system-service true --deploy-dev-tools true
 
