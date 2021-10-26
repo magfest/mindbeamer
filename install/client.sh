@@ -35,6 +35,7 @@ unzip greengrass-nucleus-latest.zip -d GreengrassCore
 # Add system vars
 sudo su -c 'echo "fs.protected_hardlinks = 1" >> /etc/sysctl.d/97-custom.conf' -
 sudo su -c 'echo "fs.protected_symlinks = 1" >> /etc/sysctl.d/97-custom.conf' -
+sudo su -c 'echo "disable_overscan=1" >> /boot/config.txt' -
 
 # Create mindbeamer client data directories
 sudo mkdir /opt/mindbeamer
