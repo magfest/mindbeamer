@@ -7,7 +7,7 @@
 # Run as the `pi` user
 
 # Check to see if this has run before, otherwise exit
-if [ -f /opt/mindbeamer_install1 ]; then
+if [ -f /opt/mindbeamer/install1 ]; then
     echo "Install script 1 already run, exiting."
     exit 0
 fi
@@ -24,6 +24,9 @@ sudo apt-get upgrade -y         # Get anything else we may have missed
 
 # Install prereqs
 sudo apt install openjdk-8-jdk -y
+sudo apt-get install -y gcc g++ make
+curl -sSL https://deb.nodesource.com/setup_14.x | sudo bash -
+sudo apt-get install -y nodejs
 
 # Download and unpack Greengrass Nucleus
 curl -s https://d2s8p88vqu9w66.cloudfront.net/releases/greengrass-nucleus-latest.zip > greengrass-nucleus-latest.zip
@@ -35,10 +38,19 @@ echo "fs.protected_hardlinks = 1" >> /etc/sysctl.d/97-custom.conf
 echo "fs.protected_symlinks = 1" >> /etc/sysctl.d/97-custom.conf
 exit
 
-touch /opt/mindbeamer_install1
+# Create mindbeamer client data directories
+sudo mkdir /opt/mindbeamer
+sudo chown pi:pi /opt/mindbeamer
+
+# Download client software
+cd /opt/mindbeamer
+git clone https://github.com/magfest/mindbeamer.git repo
+
+# Done with this install, let's make sure it doesnt run again
+touch /opt/mindbeamer/install1
 
 # Reboot
 sudo reboot
 
-#sudo -E java -Droot="/greengrass/v2" -Dlog.store=FILE -jar ./GreengrassCore/lib/Greengrass.jar --aws-region us-east-1 --thing-name GreengrassQuickStartCore-17cb35bb2ef --thing-group-name GreengrassQuickStartGroup --component-default-user ggc_user:ggc_group --provision true --setup-system-service true --deploy-dev-tools true
+#sudo -E java -Droot="/greengrass/v2" -Dlog.store=FILE -jar ./GreengrassCore/lib/Greengrass.jar --aws-region us-east-1 --thing-name Mindbeamer-test1 --thing-group-name MindbeamerDisplayGroup --component-default-user ggc_user:ggc_group --provision true --setup-system-seservice true --deploy-dev-tools true
 
