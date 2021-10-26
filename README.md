@@ -35,6 +35,7 @@ Beaming the bits into the minds of the masses at MAGFest
 # Project Components
 
 * /examples - Example configuration files to test with. In the format that uber-parser will output.
+* /install - Install scripts to get clients online
 * /terraform/backend - Backend code terraform
 * /terraform/frontend - Frontend code terraform (may not be needed)
 * /uber-parser - Script that transforms uber scheduling to mindbeamer config
@@ -48,3 +49,6 @@ Beaming the bits into the minds of the masses at MAGFest
 3. Display computers running `mindbeamer-client` get an MQTT notification to download the latest version of the config from S3, do so, and then update their shadow with the most up to date version of the json file to reflect the download has happened and succeeded.
 4. The `react-frontend` running on all display computers notice a new config downloaded and update their contents with the most recent config data. 
 
+# AWS IoT Components 
+
+Documentation: https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html
