@@ -33,24 +33,27 @@ curl -s https://d2s8p88vqu9w66.cloudfront.net/releases/greengrass-nucleus-latest
 unzip greengrass-nucleus-latest.zip -d GreengrassCore
 
 # Add system vars
-sudo su -
-echo "fs.protected_hardlinks = 1" >> /etc/sysctl.d/97-custom.conf
-echo "fs.protected_symlinks = 1" >> /etc/sysctl.d/97-custom.conf
-exit
+sudo su -c 'echo "fs.protected_hardlinks = 1" >> /etc/sysctl.d/97-custom.conf' -
+sudo su -c 'echo "fs.protected_symlinks = 1" >> /etc/sysctl.d/97-custom.conf' -
 
 # Create mindbeamer client data directories
 sudo mkdir /opt/mindbeamer
 sudo chown pi:pi /opt/mindbeamer
 
-# Download client software
-cd /opt/mindbeamer
+# Download and install client software
+cd /opt/mindbeamer/
 git clone https://github.com/magfest/mindbeamer.git repo
+cd repo/
+git checkout initial-frontend
+cd frontend/
+npm install
+
+# Install AWS IoT Greengrass Core v2 client
+sudo -E java -Droot="/greengrass/v2" -Dlog.store=FILE -jar ./GreengrassCore/lib/Greengrass.jar --aws-region us-east-1 --thing-name Mindbeamer-$(cat /proc/cpuinfo | grep Serial | cut -d ' ' -f 2) --thing-group-name MindbeamerDisplayGroup --component-default-user ggc_user:ggc_group --provision true --setup-system-service true --deploy-dev-tools true
 
 # Done with this install, let's make sure it doesnt run again
 touch /opt/mindbeamer/install1
 
 # Reboot
 sudo reboot
-
-#sudo -E java -Droot="/greengrass/v2" -Dlog.store=FILE -jar ./GreengrassCore/lib/Greengrass.jar --aws-region us-east-1 --thing-name Mindbeamer-$(cat /proc/cpuinfo | grep Serial | cut -d ' ' -f 2) --thing-group-name MindbeamerDisplayGroup --component-default-user ggc_user:ggc_group --provision true --setup-system-service true --deploy-dev-tools true
 
