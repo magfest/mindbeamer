@@ -1,5 +1,6 @@
 import { 
     faDesktop, faMicrophone, faFastForward, faGamepad, faBrain, faChess, faTools, faThLarge, faMusic, faGhost, faProjectDiagram, faDrum, faMicrophoneAlt, faCouch, faDiceD20, faTheaterMasks, faEdit, faHandRock, faMask, faRobot, faBook, faCocktail, faVrCardboard, faGlassCheers } from '@fortawesome/free-solid-svg-icons';
+    import dayjs from 'dayjs';
 
 export const determineIcon = (location) => {
     let keywords = [
@@ -37,4 +38,21 @@ export const determineIcon = (location) => {
         }
     });
     return choosenIcon;
+}
+
+
+export const filterTimes = (schedule) => {
+    let now = dayjs();
+    const filteredSchedule = schedule.filter( key => {
+        return now.isBefore(dayjs.unix(key.end_unix))
+    });
+
+    return filteredSchedule;
+}
+
+
+export const orderTimes = (schedule) => {
+    return schedule.sort( (a, b) => {
+        return a.start_unix - b.start_unix
+    });
 }

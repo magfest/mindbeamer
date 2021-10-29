@@ -5,6 +5,7 @@ import FullSchedule from '../FullSchedule/FullSchedule';
 import GenericInfoSection from '../GenericInfoSection/GenericInfoSection';
 import Loading from '../Loading/Loading';
 import Map from '../Map/Map';
+import { filterTimes, orderTimes } from '../../utils/helpers';
 import './main.scss';
 
 import * as example from 'testConfig/testconfig1.json';
@@ -24,13 +25,12 @@ class Main extends React.Component {
     }
 
     componentDidMount() {
-        this.getPanelInfo();
-        this.interval = setInterval(this.getPanelInfo, 600000);
+        this.interval = setInterval(this.getPanelInfo(), 600000);
     }
 
     componentWillUnmount() {
         clearInterval(this.interval);
-      }
+    }
 
     getPanelInfo = () => {
         axios.get('https://super2019.reggie.magfest.org/schedule/panels_json')
@@ -41,9 +41,25 @@ class Main extends React.Component {
         .catch( error => {
             this.setState({ loading: false });
             console.log(error);
+        }).finally( () => {
+            // do some processing or cleanup once the promise is settled, regardless of its outcome
+
+            // NOTE: Uncomment this when filtering and ordering is desired
+            // this.cleanPanelInfo();
         });
     }
 
+
+    cleanPanelInfo = ( inputSchedule ) => {
+        let { schedule: tempSchedule } = this.state;
+
+        if (inputSchedule)
+            tempSchedule = inputSchedule;
+
+        tempSchedule = orderTimes(filterTimes(tempSchedule));
+
+        this.setState({ schedule: tempSchedule });
+    }
 
     render(){
         const { schedule, loading, isFull } = this.state;
