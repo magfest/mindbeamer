@@ -25,7 +25,8 @@ class Main extends React.Component {
     }
 
     componentDidMount() {
-        this.interval = setInterval(this.getPanelInfo(), 600000);
+        this.getPanelInfo();
+        this.interval = setInterval(this.getPanelInfo, 600000);
     }
 
     componentWillUnmount() {
@@ -41,7 +42,8 @@ class Main extends React.Component {
         .catch( error => {
             this.setState({ loading: false });
             console.log(error);
-        }).finally( () => {
+        })
+        .finally( () => {
             // do some processing or cleanup once the promise is settled, regardless of its outcome
 
             // NOTE: Uncomment this when filtering and ordering is desired
