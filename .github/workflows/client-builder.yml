@@ -33,6 +33,10 @@ jobs:
         path: repository
         submodules: true
 
+    - name: Link FullPageOS Module
+      run: |
+        ln -s FullPageOS/src/modules/fullpageos repository/client-builder/src/modules/fullpageos
+
     - name: Download Raspbian Image
       run: |
         cd repository/client-builder/src/image
