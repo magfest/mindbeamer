@@ -41,7 +41,7 @@ jobs:
     - name: Update CustomPiOS Paths
       run: |
         cd repository/client-builder/src
-        ../../CustomPiOS/src/update-custompios-paths
+        ../../../CustomPiOS/src/update-custompios-paths
     
     - name: Force apt mirror to work around intermittent mirror hiccups
       run: |
