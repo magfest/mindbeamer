@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
-# <Script Name>
-# <Description what this module does>
-# Written by <Author>
+# Mindbeamer CustomPiOS Module Install Script
+# Script to install mindbeamer dependencies on CustomPiOS.
+# Written by Jason Spriggs
 # GPL V3
 ########
-
 
 # Source error handling, leave this in place
 set -x
@@ -14,14 +13,14 @@ source /common.sh
 install_cleanup_trap
 
 unpack /filesystem/home/pi /home/"${BASE_USER}" "${BASE_USER}"
+unpack /filesystem/etc /etc
 unpack /filesystem/boot /boot
-#unpack /filesystem/opt /opt
+unpack /filesystem/opt /opt
 
+echo "disable_overscan=1" >> /boot/config.txt
 apt-get update -y
 apt full-upgrade -y
-mkdir -p /opt/mindbeamer
 chown pi:pi /opt/mindbeamer
-mkdir -p /opt/greengrass
 chown pi:pi /opt/greengrass
 adduser --system ggc_user
 addgroup --system ggc_group
@@ -29,13 +28,6 @@ apt install openjdk-8-jdk -y
 apt-get install -y gcc g++ make
 curl -sSL https://deb.nodesource.com/setup_14.x | bash -
 apt-get install -y nodejs
-echo "fs.protected_hardlinks = 1" >> /etc/sysctl.d/97-custom.conf
-echo "fs.protected_symlinks = 1" >> /etc/sysctl.d/97-custom.conf
-echo "disable_overscan=1" >> /boot/config.txt
-curl -s https://d2s8p88vqu9w66.cloudfront.net/releases/greengrass-nucleus-latest.zip > /opt/greengrass/greengrass-nucleus-latest.zip
-
-echo "This is an example module, install and set up what you need here!"
-echo "$MINDBEAMER_VAR"
 
 # Unpack root at the end, so files are modified before
 #unpack /filesystem/root /

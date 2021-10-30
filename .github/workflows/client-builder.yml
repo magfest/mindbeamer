@@ -42,6 +42,11 @@ jobs:
         cd repository/client-builder/src/image
         wget -c --trust-server-names 'https://downloads.raspberrypi.org/raspios_lite_armhf_latest'
 
+    - name: Download AWS IOT Greengrass Core
+      run: |
+        cd repository/client-builder/src/modules/mindbeamer/filesystem/opt/greengrass
+        wget -c --trust-server-names 'https://d2s8p88vqu9w66.cloudfront.net/releases/greengrass-nucleus-latest.zip'
+
     - name: Update CustomPiOS Paths
       run: |
         cd repository/client-builder/src
@@ -57,20 +62,20 @@ jobs:
         cd repository/client-builder/src
         sudo bash -x ./build_dist
 
-    # - name: Copy output
-    #   id: copy
-    #   run: |
-    #     source repository/client-builder/src/config
-    #     NOW=$(date +"%Y-%m-%d-%H%M")
-    #     IMAGE=$NOW-octopi-$DIST_VERSION
+    - name: Copy output
+      id: copy
+      run: |
+        source repository/client-builder/src/config
+        NOW=$(date +"%Y-%m-%d-%H%M")
+        IMAGE=$NOW-mindbeamer-$DIST_VERSION
 
-    #     cp repository/src/workspace/*.img $IMAGE.img
+        cp repository/client-builder/src/workspace/*.img $IMAGE.img
 
-    #     echo "::set-output name=image::$IMAGE"
+        echo "::set-output name=image::$IMAGE"
 
-    # # artifact upload will take care of zipping for us
-    # - uses: actions/upload-artifact@v1
-    #   if: github.event_name == 'schedule'
-    #   with:
-    #     name: ${{ steps.copy.outputs.image }}
-    #     path: ${{ steps.copy.outputs.image }}.img
+    # artifact upload will take care of zipping for us
+    - uses: actions/upload-artifact@v1
+      #if: github.event_name == 'schedule'
+      with:
+        name: ${{ steps.copy.outputs.image }}
+        path: ${{ steps.copy.outputs.image }}.img
