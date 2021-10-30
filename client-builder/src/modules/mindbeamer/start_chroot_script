@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+# Mindbeamer CustomPiOS Module Install Script
+# Script to install mindbeamer dependencies on CustomPiOS.
+# Written by Jason Spriggs
+# GPL V3
+########
+
+# Source error handling, leave this in place
+set -x
+set -e
+
+source /common.sh
+install_cleanup_trap
+
+unpack /filesystem/home/pi /home/"${BASE_USER}" "${BASE_USER}"
+unpack /filesystem/etc /etc
+unpack /filesystem/boot /boot
+unpack /filesystem/opt /opt
+
+echo "disable_overscan=1" >> /boot/config.txt
+apt-get update -y
+apt full-upgrade -y
+chown pi:pi /opt/mindbeamer
+chown pi:pi /opt/greengrass
+adduser --system ggc_user
+addgroup --system ggc_group
+apt install openjdk-8-jdk -y
+apt-get install -y gcc g++ make
+curl -sSL https://deb.nodesource.com/setup_14.x | bash -
+apt-get install -y nodejs
+
+# Unpack root at the end, so files are modified before
+#unpack /filesystem/root /
