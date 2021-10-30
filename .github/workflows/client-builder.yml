@@ -33,19 +33,21 @@ jobs:
         path: repository
         submodules: true
 
-    - name: Link FullPageOS Module
+    - name: Copy FullPageOS Module
       run: |
-        ln -s FullPageOS/src/modules/fullpageos repository/client-builder/src/modules/fullpageos
+        cp -r FullPageOS/src/modules repository/client-builder/src/modules
 
     - name: Download Raspbian Image
       run: |
         cd repository/client-builder/src/image
         wget -c --trust-server-names 'https://downloads.raspberrypi.org/raspios_lite_armhf_latest'
 
-    - name: Download AWS IOT Greengrass Core
+    - name: Download and Unpack AWS IOT Greengrass Core
       run: |
         cd repository/client-builder/src/modules/mindbeamer/filesystem/opt/greengrass
         wget -c --trust-server-names 'https://d2s8p88vqu9w66.cloudfront.net/releases/greengrass-nucleus-latest.zip'
+        unzip greengrass-nucleus-latest.zip
+        rm greengrass-nucleus-latest.zip
 
     - name: Update CustomPiOS Paths
       run: |

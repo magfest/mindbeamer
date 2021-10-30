@@ -1,6 +1,6 @@
 export DIST_NAME=mindbeamer
 export DIST_VERSION=0.1.0
-export MODULES="base(raspicam, network, mindbeamer, disable-services(gui(fullpageos), usage-statistics))"
+export MODULES="base(raspicam, network, disable-services(gui(fullpageos), usage-statistics), mindbeamer)"
 
 # if set will enlarge root parition prior to build by provided size in MB
 export BASE_IMAGE_ENLARGEROOT=1000
