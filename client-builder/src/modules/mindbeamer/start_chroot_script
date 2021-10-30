@@ -17,6 +17,8 @@ unpack /filesystem/home/pi /home/"${BASE_USER}" "${BASE_USER}"
 unpack /filesystem/boot /boot
 #unpack /filesystem/opt /opt
 
+apt-get update -y
+apt full-upgrade -y
 mkdir -p /opt/mindbeamer
 chown pi:pi /opt/mindbeamer
 mkdir -p /opt/greengrass
