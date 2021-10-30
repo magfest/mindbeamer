@@ -14,11 +14,11 @@ source /common.sh
 install_cleanup_trap
 
 unpack /filesystem/home/pi /home/"${BASE_USER}" "${BASE_USER}"
-unpack /filesystem/home/root /root root
 unpack /filesystem/boot /boot
+unpack /filesystem/opt/mindbeamer /opt/mindbeamer
 
 echo "This is an example module, install and set up what you need here!"
 echo "$MINDBEAMER_VAR"
 
 # Unpack root at the end, so files are modified before
-unpack /filesystem/root /
+#unpack /filesystem/root /
