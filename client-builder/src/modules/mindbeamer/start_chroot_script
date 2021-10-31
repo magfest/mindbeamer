@@ -24,7 +24,7 @@ chown pi:pi /opt/mindbeamer
 chown pi:pi /opt/greengrass
 adduser --system ggc_user
 addgroup --system ggc_group
-apt install openjdk-8-jdk -y
+apt install openjdk-8-jdk usbmount -y
 apt-get install -y gcc g++ make
 curl -sSL https://deb.nodesource.com/setup_14.x | bash -
 apt-get install -y nodejs
