@@ -49,6 +49,9 @@ jobs:
         wget -c --trust-server-names 'https://d2s8p88vqu9w66.cloudfront.net/releases/greengrass-nucleus-latest.zip'
         unzip greengrass-nucleus-latest.zip
         rm greengrass-nucleus-latest.zip
+        wget -c --trust-server-names 'https://github.com/aws-samples/aws-greengrass-samples/raw/master/greengrass-dependency-checker-GGCv1.11.x.zip'
+        unzip greengrass-dependency-checker-GGCv1.11.x.zip
+        rm greengrass-dependency-checker-GGCv1.11.x.zip
 
     - name: Update CustomPiOS Paths
       run: |
