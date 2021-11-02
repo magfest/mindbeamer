@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { withRouter } from 'react-router';
 import SingleRoom from '../SingleRoom/SingleRoom';
 import FullSchedule from '../FullSchedule/FullSchedule';
 import GenericInfoSection from '../GenericInfoSection/GenericInfoSection';
@@ -25,12 +26,21 @@ class Main extends React.Component {
     }
 
     componentDidMount() {
-        this.getPanelInfo();
-        this.interval = setInterval(this.getPanelInfo, 600000);
+        this.doPanelThings();
+        this.interval = setInterval(this.doPanelThings, 600000);
     }
 
     componentWillUnmount() {
         clearInterval(this.interval);
+    }
+
+    doPanelThings = () => {
+        this.getPanelInfo();
+        if (this.props.location.pathname.includes("single")) {
+            this.setState({ isFull: false });
+        } else {
+            this.setState({ isFull: true });
+        };
     }
 
     getPanelInfo = () => {
@@ -46,13 +56,18 @@ class Main extends React.Component {
         .finally( () => {
             // do some processing or cleanup once the promise is settled, regardless of its outcome
 
+            if (!this.state.isFull && this.props.location.pathname.includes("single")) {
+                const returnedQuery = this.getQueryString();
+                this.filterByName(returnedQuery);
+            }
+
             // NOTE: Uncomment this when filtering and ordering is desired
-            // this.cleanPanelInfo();
+            // this.cleanPanelInfoTimes();
         });
     }
 
 
-    cleanPanelInfo = ( inputSchedule ) => {
+    cleanPanelInfoTimes = ( inputSchedule ) => {
         let { schedule: tempSchedule } = this.state;
 
         if (inputSchedule)
@@ -61,6 +76,22 @@ class Main extends React.Component {
         tempSchedule = orderTimes(filterTimes(tempSchedule));
 
         this.setState({ schedule: tempSchedule });
+    }
+
+    getQueryString = () => {
+        const queryToParse = new URLSearchParams(this.props.location.search);
+        const query = queryToParse.get('place');
+        return query;
+    }
+
+    filterByName = ( filterKeyword ) => {
+        let { schedule: tempPanels } = this.state;
+
+        const filteredPanels = tempPanels.filter( key => { 
+            return key.location.includes(filterKeyword) 
+        });
+
+        this.setState({ schedule: filteredPanels });
     }
 
     render(){
@@ -89,9 +120,9 @@ class Main extends React.Component {
                                 :
                                 <div>
                                     <div className="single-room-panel-name">
-                                        Panel: { smallSchedule.human_name }
+                                        Panel Room: { this.getQueryString() }
                                     </div>
-                                    <SingleRoom schedule={ smallSchedule.schedule } />
+                                    <SingleRoom schedule={ schedule } />
                                 </div>
                             )
                             }
@@ -105,4 +136,4 @@ class Main extends React.Component {
 
 
 
-export default Main;
+export default withRouter(Main);

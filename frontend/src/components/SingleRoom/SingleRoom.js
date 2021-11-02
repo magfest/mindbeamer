@@ -8,7 +8,7 @@ const SingleRoom = ({schedule}) => (
         return (
             <div className="individual-rows single-row">
                 <span className="panel-time">
-                    {dayjs(element.start_time).format('h:mm A')}
+                    {dayjs.unix(element.start_unix).format('h:mm A')}
                 </span>
                 <span className="panel-name">
                     {element.name}
