@@ -25,7 +25,8 @@ chown pi:pi /opt/greengrass
 adduser --system ggc_user
 addgroup --system ggc_group
 apt install openjdk-8-jdk usbmount -y
-apt-get install -y gcc g++ make
+apt-get install -y gcc g++ make ntfs-3g
+sed -i 's/MountFlags=slave/MountFlags=shared/g' /lib/systemd/system/systemd-udevd.service
 curl -sSL https://deb.nodesource.com/setup_14.x | bash -
 apt-get install -y nodejs
 npm install -g pnpm
