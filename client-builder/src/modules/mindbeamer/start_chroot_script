@@ -25,7 +25,8 @@ chown pi:pi /opt/greengrass
 adduser --system ggc_user
 addgroup --system ggc_group
 apt install openjdk-8-jdk usbmount -y
-apt-get install -y gcc g++ make ntfs-3g
+apt-get install -y gcc g++ make ntfs-3g unclutter
+echo "unclutter -idle 0.01 -root" >> /etc/X11/xinit/xinitrc
 sed -i 's/MountFlags=slave/MountFlags=shared/g' /lib/systemd/system/systemd-udevd.service
 curl -sSL https://deb.nodesource.com/setup_14.x | bash -
 apt-get install -y nodejs
