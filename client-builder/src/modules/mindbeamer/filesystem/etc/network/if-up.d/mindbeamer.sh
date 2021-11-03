@@ -1,7 +1,28 @@
-#!/bin/bash
+#!/bin/sh
+
+FLAGFILE=/var/run/mindbeamer-network
+
+case "$IFACE" in
+    lo)
+        # The loopback interface does not count.
+        # only run when some other interface comes up
+        exit 0
+        ;;
+    *)
+        ;;
+esac
+
+if [ -e $FLAGFILE ]; then
+    exit 0
+else
+    touch $FLAGFILE
+fi
 
 # If this is a new install of Mindbeamer...
 if [ ! -f /opt/mindbeamer/provisioned ]; then
+    # Set the Timezone
+    timedatectl set-timezone America/New_York 
+    
     # If the USB drive is plugged in and has a provision.sh file...
     if [ -f /media/usb/provision.sh ]; then
     # Check to see if the file is signed by a key we trust
