@@ -21,7 +21,7 @@ echo "disable_overscan=1" >> /boot/config.txt
 apt-get update -y
 apt full-upgrade -y
 chown pi:pi /opt/mindbeamer
-chmod +x /etc/mindbeamer/if-up.d/mindbeamer.sh
+chmod +x /etc/network/if-up.d/mindbeamer.sh
 gpg --no-default-keyring --keyring /opt/mindbeamer/signer.kbx --import /opt/mindbeamer/pgp_keys.asc
 chmod 555 /opt/mindbeamer/signer.kbx
 chown pi:pi /opt/greengrass
