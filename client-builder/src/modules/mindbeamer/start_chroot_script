@@ -21,7 +21,7 @@ unpack /filesystem/opt /opt
 echo "disable_overscan=1" >> /boot/config.txt
 apt-get update -y
 apt full-upgrade -y
-curl https://keybase.io/spriggs/pgp_keys.asc | gpg --import
+#curl https://keybase.io/spriggs/pgp_keys.asc | gpg --import
 chown pi:pi /opt/mindbeamer
 chown pi:pi /opt/mindbeamer/provision.sh
 chmod +x /opt/mindbeamer/provision.sh
