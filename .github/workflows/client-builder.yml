@@ -38,7 +38,15 @@ jobs:
         cp -r FullPageOS/src/modules/fullpageos repository/client-builder/src/modules/fullpageos
         ls -lah repository/client-builder/src/modules
 
+    - name: Cache Raspbian
+      id: cache-raspbian
+      uses: actions/cache@v2
+      with:
+        path: repository/client-builder/src/image/2021-05-07-raspios-buster-armhf-lite.zip
+        key: ${{ runner.os }}-raspbian
+
     - name: Download Raspbian Image
+      if: steps.cache-raspbian.outputs.cache-hit != 'true'
       run: |
         cd repository/client-builder/src/image
         wget -c --trust-server-names 'https://downloads.raspberrypi.org/raspios_lite_armhf_latest'
