@@ -1,0 +1,4 @@
+# /etc/cron.d/mindbeamer: crontab fragment for mindbeamer
+
+@reboot root /bin/bash /opt/mindbeamer/wpa-supplicant.sh
+@reboot root timedatectl set-timezone America/New_York

@@ -1,22 +1,4 @@
-#!/bin/sh
-
-FLAGFILE=/var/run/mindbeamer-network
-
-case "$IFACE" in
-    lo)
-        # The loopback interface does not count.
-        # only run when some other interface comes up
-        exit 0
-        ;;
-    *)
-        ;;
-esac
-
-if [ -e $FLAGFILE ]; then
-    exit 0
-else
-    touch $FLAGFILE
-fi
+#!/bin/bash
 
 # If this is a new install of Mindbeamer...
 if [ ! -f /opt/mindbeamer/provisioned ]; then
@@ -37,7 +19,7 @@ if [ ! -f /opt/mindbeamer/provisioned ]; then
             rm /boot/splash.png
             mv /boot/splash-ready.png /boot/splash.png
         else
-            echo Signature is not valid.
+            echo Provision script signature is not valid.
         fi
     fi
 fi

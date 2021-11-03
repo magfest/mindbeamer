@@ -1,0 +1,20 @@
+#!/bin/sh
+
+FLAGFILE=/var/run/mindbeamer-network
+
+case "$IFACE" in
+    lo)
+        # The loopback interface does not count.
+        # only run when some other interface comes up
+        exit 0
+        ;;
+    *)
+        ;;
+esac
+
+if [ -e $FLAGFILE ]; then
+    exit 0
+else
+    /bin/bash /opt/mindbeamer/provision.sh
+    touch $FLAGFILE
+fi
