@@ -9,6 +9,6 @@ if [ -f /media/usb/mindbeamer-wpa-supplicant.txt ]; then
         # If it does, copy the new config over
         cp /media/usb/mindbeamer-wpa-supplicant.txt /boot/mindbeamer-wpa-supplicant.txt
     else
-        echo WPA Supplicant signature is not valid.
+        echo WPA Supplicant signature is not valid. Not copying.
     fi
 fi

@@ -15,6 +15,7 @@ esac
 if [ -e $FLAGFILE ]; then
     exit 0
 else
+    sleep 30
     /bin/bash /opt/mindbeamer/provision.sh
     touch $FLAGFILE
 fi
