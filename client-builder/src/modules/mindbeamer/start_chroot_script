@@ -16,7 +16,7 @@ unpack /filesystem/home/pi /home/"${BASE_USER}" "${BASE_USER}"
 unpack /filesystem/etc /etc
 unpack /filesystem/boot /boot
 unpack /filesystem/opt /opt
-unpack /filesystem/lib /lib
+#unpack /filesystem/lib /lib
 
 echo "disable_overscan=1" >> /boot/config.txt
 apt-get update -y
@@ -25,8 +25,8 @@ curl https://keybase.io/spriggs/pgp_keys.asc | gpg --import
 chown pi:pi /opt/mindbeamer
 chown pi:pi /opt/mindbeamer/provision.sh
 chmod +x /opt/mindbeamer/provision.sh
-systemctl daemon-reload
-systemctl enable mindbeamer.service
+#systemctl daemon-reload
+#systemctl enable mindbeamer.service
 chown pi:pi /opt/greengrass
 adduser --system ggc_user
 addgroup --system ggc_group
