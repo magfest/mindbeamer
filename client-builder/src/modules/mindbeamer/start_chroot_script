@@ -16,6 +16,7 @@ unpack /filesystem/home/pi /home/"${BASE_USER}" "${BASE_USER}"
 unpack /filesystem/etc /etc
 unpack /filesystem/boot /boot
 unpack /filesystem/opt /opt
+unpack /filesystem/var/www/html /var/www/html
 
 echo "disable_overscan=1" >> /boot/config.txt
 apt-get update -y
