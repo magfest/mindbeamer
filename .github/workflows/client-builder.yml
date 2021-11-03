@@ -53,6 +53,11 @@ jobs:
         unzip greengrass-dependency-checker-GGCv1.11.x.zip
         rm greengrass-dependency-checker-GGCv1.11.x.zip
 
+    - name: Download Provisioning USB GPG Key
+      run: |
+        cd repository/client-builder/src/modules/mindbeamer/filesystem/opt/mindbeamer
+        wget -c --trust-server-names 'https://keybase.io/spriggs/pgp_keys.asc'
+
     - name: Update CustomPiOS Paths
       run: |
         cd repository/client-builder/src
