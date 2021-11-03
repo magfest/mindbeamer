@@ -57,6 +57,7 @@ jobs:
       run: |
         cd repository/client-builder/src/modules/mindbeamer/filesystem/opt/mindbeamer
         wget -c --trust-server-names 'https://keybase.io/spriggs/pgp_keys.asc'
+        gpg --no-default-keyring --keyring signer.kbx --import pgp_keys.asc
 
     - name: Update CustomPiOS Paths
       run: |
