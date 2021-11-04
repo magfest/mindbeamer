@@ -29,7 +29,7 @@ chown pi:pi /opt/greengrass
 adduser --system ggc_user
 addgroup --system ggc_group
 apt autoremove
-apt-get install -y gcc g++ make ntfs-3g unclutter openjdk-8-jdk usbmount chrony netcat
+apt-get install -y gcc g++ make ntfs-3g unclutter openjdk-8-jdk usbmount chrony netcat jq
 echo "unclutter -idle 0.01 -root" >> /etc/X11/xinit/xinitrc
 sed -i 's/PrivateMounts=yes/PrivateMounts=no/g' /usr/lib/systemd/system/systemd-udevd.service
 curl -sSL https://deb.nodesource.com/setup_14.x | bash -
