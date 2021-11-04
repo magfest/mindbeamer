@@ -23,10 +23,9 @@ apt-get update -y
 #apt full-upgrade -y
 chown pi:pi /opt/mindbeamer
 chmod 544 /opt/mindbeamer/signer.kbx
-chmod +x /etc/mindbeamer/node-splash.sh
-chmod +x /etc/mindbeamer/provision.sh
-chmod +x /etc/mindbeamer/wpa-supplicant.sh
-chmod +x /etc/network/if-up.d/mindbeamer
+chmod +x /opt/mindbeamer/node-splash.sh
+chmod +x /opt/mindbeamer/provision.sh
+chmod +x /opt/mindbeamer/wpa-supplicant.sh
 chown pi:pi /opt/greengrass
 adduser --system ggc_user
 addgroup --system ggc_group
