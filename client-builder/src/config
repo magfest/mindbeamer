@@ -1,6 +1,6 @@
 export DIST_NAME=mindbeamer
 export DIST_VERSION=0.1.0
-export MODULES="base(raspicam, network, disable-services(gui(fullpageos), usage-statistics, mindbeamer))"
+export MODULES="base(network, disable-services(gui(fullpageos), mindbeamer))"
 
 # if set will enlarge root parition prior to build by provided size in MB
 export BASE_IMAGE_ENLARGEROOT=1200
@@ -9,5 +9,3 @@ export BASE_IMAGE_ENLARGEROOT=1200
 # provided size in MB
 export BASE_IMAGE_RESIZEROOT=200
 export GUI_STARTUP_SCRIPT=/home/pi/scripts/run_onepageos
-
-export USAGE_STATISTICS_URL=https://fullpageos-tracking.gnethomelinux.com

@@ -48,11 +48,11 @@
 
 # Uncomment the country your Pi is in to activate Wifi in RaspberryPi 3 B+ and above
 # For full list see: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
-country=GB # United Kingdom
+#country=GB # United Kingdom
 #country=CA # Canada
 #country=DE # Germany
 #country=FR # France
-#country=US # United States
+country=US # United States
 
 ### You should not have to change the lines below #####################
 

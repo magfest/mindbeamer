@@ -1,10 +1,11 @@
 # Adapted from https://github.com/guysoft/OctoPi/blob/devel/.github/workflows/build.yml/
-name: Build Image
+name: Build Raspbian Image
 
 on: 
   push:
-  # schedule: 
-  #   - cron: '0 0 * * *'
+    paths:
+      - client-builder/src/**
+      - .github/workflows/client-builder.yml
 
 jobs:
   build:

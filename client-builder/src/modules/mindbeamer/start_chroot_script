@@ -12,15 +12,15 @@ set -e
 source /common.sh
 install_cleanup_trap
 
-unpack /filesystem/home/pi /home/"${BASE_USER}" "${BASE_USER}"
 unpack /filesystem/etc /etc
 unpack /filesystem/boot /boot
 unpack /filesystem/opt /opt
 unpack /filesystem/var/www/html /var/www/html
 
 echo "disable_overscan=1" >> /boot/config.txt
+curl -sSL https://deb.nodesource.com/setup_14.x | bash -
 apt-get update -y
-#apt full-upgrade -y
+apt-get install -y gcc g++ make ntfs-3g unclutter openjdk-8-jdk usbmount chrony netcat jq nodejs
 chown pi:pi /opt/mindbeamer
 chmod 544 /opt/mindbeamer/signer.kbx
 chmod +x /opt/mindbeamer/node-splash.sh
@@ -29,15 +29,8 @@ chmod +x /opt/mindbeamer/wpa-supplicant.sh
 chown pi:pi /opt/greengrass
 adduser --system ggc_user
 addgroup --system ggc_group
-apt autoremove
-apt-get install -y gcc g++ make ntfs-3g unclutter openjdk-8-jdk usbmount chrony netcat jq
 echo "unclutter -idle 0.01 -root" >> /etc/X11/xinit/xinitrc
 sed -i 's/PrivateMounts=yes/PrivateMounts=no/g' /usr/lib/systemd/system/systemd-udevd.service
-curl -sSL https://deb.nodesource.com/setup_14.x | bash -
-apt-get install -y nodejs
 apt autoremove
 apt-get clean
 npm install -g pnpm
-
-# Unpack root at the end, so files are modified before
-#unpack /filesystem/root /
