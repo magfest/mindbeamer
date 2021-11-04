@@ -34,8 +34,9 @@ Beaming the bits into the minds of the masses at MAGFest
 
 # Project Components
 
+* /client-builder/provision-stick - Files needed to connect client to WiFi and join to AWS IOT
+* /client-builder/src - Files needed to create client image
 * /examples - Example configuration files to test with. In the format that uber-parser will output.
-* /install - Install scripts to get clients online
 * /terraform/backend - Backend code terraform
 * /terraform/frontend - Frontend code terraform (may not be needed)
 * /uber-parser - Script that transforms uber scheduling to mindbeamer config
