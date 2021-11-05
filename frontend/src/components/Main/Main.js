@@ -1,12 +1,13 @@
 import React from 'react';
 import axios from 'axios';
+import dayjs from 'dayjs';
 import { withRouter } from 'react-router';
 import SingleRoom from '../SingleRoom/SingleRoom';
 import FullSchedule from '../FullSchedule/FullSchedule';
 import GenericInfoSection from '../GenericInfoSection/GenericInfoSection';
 import Loading from '../Loading/Loading';
 import Map from '../Map/Map';
-import { filterTimes, orderTimes } from '../../utils/helpers';
+import { filterTimes, filterToday, orderTimes } from '../../utils/helpers';
 import './main.scss';
 
 import * as example from 'testConfig/testconfig1.json';
@@ -21,7 +22,8 @@ class Main extends React.Component {
         this.state = {
             isFull: true,
             schedule: fullSchedule.default,
-            loading: true
+            loading: true,
+            filtered: false
         }
     }
 
@@ -35,12 +37,18 @@ class Main extends React.Component {
     }
 
     doPanelThings = () => {
-        this.getPanelInfo();
+        if (this.props.location.pathname.includes("filtered")) {
+            this.setState({ filtered: true });
+        } else {
+            this.setState({ filtered: false });
+        }
+
         if (this.props.location.pathname.includes("single")) {
             this.setState({ isFull: false });
         } else {
             this.setState({ isFull: true });
         };
+        this.getPanelInfo();
     }
 
     getPanelInfo = () => {
@@ -59,19 +67,25 @@ class Main extends React.Component {
             if (!this.state.isFull && this.props.location.pathname.includes("single")) {
                 const returnedQuery = this.getQueryString();
                 this.filterByName(returnedQuery);
+                this.cleanPanelInfoTimes(true);
             }
 
             // NOTE: Uncomment this when filtering and ordering is desired
-            // this.cleanPanelInfoTimes();
+            if (this.state.isFull) {
+                this.cleanPanelInfoTimes();
+            }
         });
     }
 
 
-    cleanPanelInfoTimes = ( inputSchedule ) => {
-        let { schedule: tempSchedule } = this.state;
+    cleanPanelInfoTimes = ( isSingleSchedule = false ) => {
+        let { schedule: tempSchedule, filtered } = this.state;
 
-        if (inputSchedule)
-            tempSchedule = inputSchedule;
+        if (!filtered)
+            return;
+
+        if ( isSingleSchedule )
+            tempSchedule = filterToday(tempSchedule);
 
         tempSchedule = orderTimes(filterTimes(tempSchedule));
 
@@ -113,7 +127,12 @@ class Main extends React.Component {
                             {
                             (loading) ? (
                                 <Loading />
-                            ):((isFull) ?
+                            ):(this.state.schedule.length === 0) ? (
+                                <div className={"empty-message " + ((isFull)? "tan" : "orange")}>
+                                    Nothing to show here!
+                                </div>
+                            ): 
+                            ((isFull) ?
                                 <div>
                                     <FullSchedule fullSchedule={ schedule } />
                                 </div>
@@ -124,8 +143,7 @@ class Main extends React.Component {
                                     </div>
                                     <SingleRoom schedule={ schedule } />
                                 </div>
-                            )
-                            }
+                            )}
                         </div>
                     </div>
                 </div>

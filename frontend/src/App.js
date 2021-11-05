@@ -17,6 +17,7 @@ function App() {
           <Route path="/full" component={ Main } />
           <Route path="/single" component={ Main } />
           <Route path="/single/:place" component={ Main } />
+          <Route path="/:filtered" component={ Main } />
         </Switch>
       </div>
     </HashRouter>

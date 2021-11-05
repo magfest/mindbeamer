@@ -1,3 +1,42 @@
+# mindbeamer - frontend
+The ReactJS based frontend for mindbeamer.
+This app has two displays which is the full panel display displaying all the events across the convention and the single room display which displays events for the specified room.
+There is also a live clock, qr code, and map of the convention on both displays.
+To get to the endpoints for either displays look at the [Endpoints](#endpoints) section. This app uses virtual routing thanks to [react-router-dom](https://www.npmjs.com/package/react-router-dom) node package.
+
+Look at the instructions in [Getting Started with Create React App](#getting-started-with-create-react-app) section on how to run the frontend.
+
+## Endpoints
+- `http://localhost:3000/#/`
+- `http://localhost:3000/#/filtered`
+- `http://localhost:3000/#/single?place=MAGES+1`
+- `http://localhost:3000/#/filtered&single?place=MAGES+1`
+
+
+### Full Panel Display
+**Example:** `http://localhost:3000/#/`
+
+Returns all of the panels for the full schedule display regardless if it's expired
+
+### Full Panel Display Filtered
+**Example:** `http://localhost:3000/#/filtered`
+
+Filters the full schedule display based on if the end time has expired and also orders the times
+
+### Room Specific Display
+**Example:** `http://localhost:3000/#/single?place=MAGES+1`
+
+Returns all the panels for the specificed location (single panel room display) which in this example is MAGES 1. There can be any location specified as long as it's after the `place=`. If there are no panels assigned to that location then nothing is returned.
+You must concat with a plus sign `+` if the place is more than one word as shown in the example above, otherwise no plus sign is necessary and can be done like so:
+`http://localhost:3000/#/single?place=Consoles`
+
+**Note:** This is case sensitive.
+
+### Room Specific Display Filtered
+**Example:** `http://localhost:3000/#/filtered&single?place=MAGES+1`
+
+Filters the above single panel room display based off of if the event is today, if the end time of the event is expired and then the order of events is ordered.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

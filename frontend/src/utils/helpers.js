@@ -51,6 +51,15 @@ export const filterTimes = (schedule) => {
 }
 
 
+export const filterToday = (schedule) => {
+
+    const filteredSchedule = schedule.filter( key => {
+        return dayjs().isSame(dayjs.unix(key.start_unix), 'day');
+    });
+    return filteredSchedule;
+}
+
+
 export const orderTimes = (schedule) => {
     return schedule.sort( (a, b) => {
         return a.start_unix - b.start_unix
