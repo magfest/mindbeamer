@@ -37,7 +37,6 @@ jobs:
     - name: Copy FullPageOS Module
       run: |
         cp -r FullPageOS/src/modules/fullpageos repository/client-builder/src/modules/fullpageos
-        ls -lah repository/client-builder/src/modules
 
     - name: Cache Raspbian
       id: cache-raspbian
