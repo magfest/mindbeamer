@@ -1,0 +1,68 @@
+@import "../../assets/styles/panel-layout";
+
+
+.single-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.panel-time, .panel-name {
+    border-bottom: 4px solid white;
+}
+
+
+.panel-time {
+    display: inline-block;
+    vertical-align: bottom;
+    padding-bottom: 3%;
+    align-self: flex-end;
+}
+
+
+.panel-name {
+    display: inline-flex;
+    text-align: left;
+    width: 50%;
+    vertical-align: center;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .panel-time {
+        vertical-align: bottom;
+        width: auto;
+    }
+}
+
+
+@media only screen and (min-width: 601px) {
+    .single-row {
+        margin-bottom: 4%;
+    }
+
+    .panel-time {
+        vertical-align: middle;
+        width: 17%;
+    }
+}
+
+
+@media only screen and (min-width: 3500px) {
+    .single-row {
+        margin-bottom: 2%;
+    }
+
+    .panel-time {
+        padding-bottom: 1%;
+    }
+    
+    
+    .panel-name {
+        width: 60%;
+        padding-bottom: 1%;
+    }
+}

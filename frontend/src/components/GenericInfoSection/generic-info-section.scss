@@ -1,0 +1,123 @@
+#generic-info-section {
+    box-sizing: content-box;
+    padding: 5px;
+    color: #1F0A02;
+    font-family: 'Helvetica Neue';
+}
+
+#generic-info-section {
+    h4 {
+        margin: 10px auto 0 auto;
+    }
+
+    .generic-horizontal {
+        width: 50%;
+        border-color: #1F0A02;
+        margin-bottom: 3px;
+    }
+
+    .guidebook-text {
+        font-weight: 700;
+        margin-bottom: 0px;
+        display: block;
+    }
+
+    .guidebook-text-qrCode {
+        display: block;
+    }
+}
+
+.orangish {
+   background-color: #C67B62;
+   border-radius: 10px;
+}
+
+.yellowish {
+    background-color: #F2CC8A;
+}
+
+.flexed-content-generic {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.qrCode {
+    display: block;
+    margin: 0 auto;
+}
+
+.guidebook-text-qrCode {
+    max-width: 100%;
+}
+
+
+
+
+@media only screen and (max-width: 400px) {
+    #generic-info-section {
+        width: auto;
+        padding: 5px 0px;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    #generic-info-section {
+        width: 90%;
+        margin: 5px auto 30px auto;
+        font-size: 20px;
+    }
+
+    .guidebook-text {
+        font-size: 0.8em;
+        margin-top: 15px;
+    }
+
+    .qrCode {
+        width: 40%;
+    }
+}
+
+
+@media only screen and (min-width: 601px) {
+    #generic-info-section {
+        width: 85%;
+        margin: 5px auto 50px auto;
+        font-size: 30px;
+    }
+
+    .guidebook-text {
+        font-size: 0.8em;
+        margin-top: 15px;
+    }
+
+    .qrCode {
+        width: 40%;
+    }
+
+}
+
+@media only screen and (min-width: 2500px) {
+    .guidebook-text, #generic-info-section h4 {
+        font-size: 0.9em;
+    }
+
+    .qrCode {
+        width: 25%;
+    }
+    
+}
+
+
+@media only screen and (min-width: 3500px) {
+    .guidebook-text, #generic-info-section h4 {
+        font-size: 1.3em;
+    }
+
+    .qrCode {
+        width: 30%;
+    }
+    
+}
