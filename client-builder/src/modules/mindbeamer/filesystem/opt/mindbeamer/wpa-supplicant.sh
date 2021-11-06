@@ -9,7 +9,7 @@ if [ -f /media/usb/mindbeamer-wpa-supplicant.txt ]; then
         diff /media/usb/mindbeamer-wpa-supplicant.txt /boot/mindbeamer-wpa-supplicant.txt
 
         # If there's new content
-        if [ ! $? -q 0 ]; then
+        if [ ! $? -eq 0 ]; then
             # If it does, copy the new config over
             cp /media/usb/mindbeamer-wpa-supplicant.txt /boot/mindbeamer-wpa-supplicant.txt
 
