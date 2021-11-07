@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import dayjs from 'dayjs';
-import { withRouter } from 'react-router';
+import { withRouter } from 'react-router-dom';
 import SingleRoom from '../SingleRoom/SingleRoom';
 import FullSchedule from '../FullSchedule/FullSchedule';
 import GenericInfoSection from '../GenericInfoSection/GenericInfoSection';
