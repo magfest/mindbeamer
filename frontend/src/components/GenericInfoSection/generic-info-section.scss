@@ -6,14 +6,11 @@
 }
 
 #generic-info-section {
-    h4 {
-        margin: 10px auto 0 auto;
-    }
 
     .generic-horizontal {
         width: 50%;
         border-color: #1F0A02;
-        margin-bottom: 3px;
+        margin-bottom: 0px;
     }
 
     .guidebook-text {
@@ -38,18 +35,11 @@
 
 .flexed-content-generic {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 
 .qrCode {
     display: block;
-    margin: 0 auto;
-}
-
-.guidebook-text-qrCode {
-    max-width: 100%;
 }
 
 
@@ -64,6 +54,21 @@
 
 
 @media only screen and (max-width: 600px) {
+
+    .guidebook-text {
+        text-align: center;
+    }
+
+    .guidebook-text-qrCode {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .flexed-content-generic {
+        flex-direction: column;
+        justify-content: center;
+    }
+
     #generic-info-section {
         width: 90%;
         margin: 5px auto 30px auto;
@@ -72,16 +77,39 @@
 
     .guidebook-text {
         font-size: 0.8em;
-        margin-top: 15px;
+        margin-top: 5px;
     }
 
     .qrCode {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 790px) {
+
+    .guidebook-text-qrCode {
         width: 40%;
     }
 }
 
 
 @media only screen and (min-width: 601px) {
+
+    .guidebook-text {
+        text-align: left;
+        margin-left: 16px;
+        font-size: 0.5em;
+    }
+
+    .guidebook-text-qrCode {
+        width: 60%;
+    }
+
+    .flexed-content-generic {
+        flex-direction: row;
+        justify-content: center;
+    }
+
     #generic-info-section {
         width: 85%;
         margin: 5px auto 50px auto;
@@ -89,34 +117,49 @@
     }
 
     .guidebook-text {
-        font-size: 0.8em;
-        margin-top: 15px;
+        font-size: 0.7em;
+        margin-top: 5px;
     }
 
     .qrCode {
-        width: 40%;
+        width: 90%;
+    }
+
+    .guidebook-text-qrCode {
+        margin: auto 0;
     }
 
 }
 
-@media only screen and (min-width: 2500px) {
-    .guidebook-text, #generic-info-section h4 {
+@media only screen and (min-width: 1280px) {
+    .guidebook-text {
+        text-align: left;
+        margin-left: 12px;
+        font-size: 0.7em;
+    }
+
+    .guidebook-text-qrCode {
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 2050px) {
+    .guidebook-text {
+        text-align: left;
+        margin-left: 20px;
         font-size: 0.9em;
     }
 
-    .qrCode {
-        width: 25%;
+    .guidebook-text-qrCode {
+        width: 40%;
     }
-    
 }
 
-
-@media only screen and (min-width: 3500px) {
-    .guidebook-text, #generic-info-section h4 {
-        font-size: 1.3em;
+@media only screen and (min-width: 2500px) {
+    .guidebook-text {
+        margin-left: 10%;
     }
-
-    .qrCode {
+    .guidebook-text-qrCode {
         width: 30%;
     }
     

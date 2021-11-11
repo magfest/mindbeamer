@@ -21,7 +21,7 @@ const FullSchedule = ({ fullSchedule }) => (
                     <span className="text-area-full top">
                         <span className="time-area">
                             <span className="times start-time">
-                                {dayjs.unix(element.start_unix).format('dddd, h:mm')}
+                                {dayjs.unix(element.start_unix).format('ddd, h:mm')}
                             </span>       
                             &mdash;
                             <span className="times end-time">

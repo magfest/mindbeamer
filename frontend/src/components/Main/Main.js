@@ -18,7 +18,6 @@ import mountainsTextCombined from '../../assets/pictures/mountainsTextCombined.s
 class Main extends React.Component {
     constructor(props){
         super(props);
-        // TODO: change what state it is based on api
         this.state = {
             isFull: true,
             schedule: fullSchedule.default,
@@ -120,8 +119,8 @@ class Main extends React.Component {
                     className={(isFull) ? "is-full-class": "is-small-class"}
                     >
                         <div className="left-side">
-                            <GenericInfoSection isFull={isFull} />
                             <Map isFull={isFull} />
+                            <GenericInfoSection isFull={isFull} />
                         </div>
                         <div className="right-side">
                             {

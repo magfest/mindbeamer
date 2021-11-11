@@ -58,8 +58,6 @@
 
 .text-area-full.top {
     vertical-align: top;
-    display: flex;
-    flex-direction: column;
     text-align: left;
 }
 
@@ -127,7 +125,7 @@
 
     .individual-rows.full-version {
         width: 95%;
-        padding: 10px;
+        padding: 12px 10px;
         margin-bottom: 2%;
     }
 }

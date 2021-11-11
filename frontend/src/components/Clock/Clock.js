@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTable, faClock } from '@fortawesome/free-solid-svg-icons';
+import { faTable, faClock, faPhone } from '@fortawesome/free-solid-svg-icons';
 import "./clock.scss";
 
 
@@ -42,6 +42,10 @@ class Clock extends React.Component {
           <div className="informational-section">
             <FontAwesomeIcon className="clock-icon" icon={faClock} />&nbsp;
             <b>Time:</b> {this.state.date.toLocaleTimeString('en-US', { hour12: true })}
+          </div>
+          <div className="informational-section">
+            <FontAwesomeIcon className="phone-icon" icon={faPhone} />&nbsp;
+            <b>Security/Info Desk Phone:</b> (301) 965-4520
           </div>
         </div>
       );

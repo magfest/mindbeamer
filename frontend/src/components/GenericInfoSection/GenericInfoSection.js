@@ -7,8 +7,6 @@ import superMagfestMainQR from '../../assets/pictures/superMagfestMainQR.png';
 const GenericInfoSection = ({ isFull }) => {
     return (
         <div id="generic-info-section" className={(!isFull) ? "orangish" : "yellowish"}>
-            <h4>Generic Info</h4>
-            <hr className="generic-horizontal" />
             <div className="flexed-content-generic">
                 <span className="guidebook-text-qrCode">
                     <span className="guidebook-text">
