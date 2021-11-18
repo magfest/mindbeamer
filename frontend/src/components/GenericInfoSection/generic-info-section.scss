@@ -60,7 +60,7 @@
     }
 
     .guidebook-text-qrCode {
-        width: 70%;
+        width: 50%;
         margin: 0 auto;
     }
 
@@ -82,6 +82,7 @@
 
     .qrCode {
         width: 90%;
+        margin: 0 auto;
     }
 }
 
@@ -134,7 +135,7 @@
 @media only screen and (min-width: 1280px) {
     .guidebook-text {
         text-align: left;
-        margin-left: 12px;
+        margin-left: 16px;
         font-size: 0.7em;
     }
 
