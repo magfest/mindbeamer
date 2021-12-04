@@ -16,8 +16,8 @@ jobs:
         sudo apt install coreutils p7zip-full qemu-user-static
     - name: Checkout Project Repository
       uses: actions/checkout@v2
-    # - name: Package frontend
-    #   run: "zip -r mindbeamer-$(git rev-parse --short "$GITHUB_SHA").zip frontend"
+    - name: Package frontend
+      run: "zip -r mindbeamer-$(git rev-parse --short "$GITHUB_SHA").zip frontend"
     # - name: Upload to S3
     #   uses: shallwefootball/s3-upload-action@master # https://github.com/marketplace/actions/upload-s3
     #     with:
