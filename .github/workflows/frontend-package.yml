@@ -20,11 +20,13 @@ jobs:
       id: get_sha
       run: echo "::set-output name=short-sha::$(git rev-parse --short "$GITHUB_SHA")"
     - name: Package frontend
-      run: zip -r mindbeamer-${{ steps.get_sha.outputs.short-sha }}.zip frontend
+      run: |
+        mkdir build
+        zip -r build/mindbeamer-${{ steps.get_sha.outputs.short-sha }}.zip frontend
     - name: Upload to S3
       uses: shallwefootball/s3-upload-action@master
       with:
         aws_key_id: "${{ secrets.AWS_KEY_ID }}"
         aws_secret_access_key: "${{ secrets.AWS_SECRET_ACCESS_KEY}}"
         aws_bucket: mindbeamer
-        source_dir: "mindbeamer-${{ steps.get_sha.outputs.short-sha }}.zip"
+        source_dir: build
