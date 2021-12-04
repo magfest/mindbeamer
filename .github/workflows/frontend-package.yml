@@ -30,3 +30,4 @@ jobs:
         aws_secret_access_key: "${{ secrets.AWS_SECRET_ACCESS_KEY}}"
         aws_bucket: mindbeamer
         source_dir: build
+        destination_dir: ''
