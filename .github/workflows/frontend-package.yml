@@ -16,12 +16,12 @@ jobs:
         sudo apt install coreutils p7zip-full qemu-user-static
     - name: Checkout Project Repository
       uses: actions/checkout@v2
-    - name: Package frontend
-      run: "zip -r mindbeamer-$(git rev-parse --short "$GITHUB_SHA").zip frontend"
-    - name: Upload to S3
-      uses: shallwefootball/s3-upload-action@master # https://github.com/marketplace/actions/upload-s3
-        with:
-          aws_key_id: ${{ secrets.AWS_KEY_ID }}
-          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
-          aws_bucket: mindbeamer
-          source_dir: 'build'
+    # - name: Package frontend
+    #   run: "zip -r mindbeamer-$(git rev-parse --short "$GITHUB_SHA").zip frontend"
+    # - name: Upload to S3
+    #   uses: shallwefootball/s3-upload-action@master # https://github.com/marketplace/actions/upload-s3
+    #     with:
+    #       aws_key_id: ${{ secrets.AWS_KEY_ID }}
+    #       aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
+    #       aws_bucket: mindbeamer
+    #       source_dir: 'mindbeamer-$(git rev-parse --short "$GITHUB_SHA").zip'
