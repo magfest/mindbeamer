@@ -22,9 +22,9 @@ jobs:
     - name: Package frontend
       run: zip -r mindbeamer-${{ steps.get_sha.outputs.short-sha }}.zip frontend
     - name: Upload to S3
-      uses: shallwefootball/s3-upload-action@master # https://github.com/marketplace/actions/upload-s3
-        with:
-          aws_key_id: ${{ secrets.AWS_KEY_ID }}
-          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
-          aws_bucket: mindbeamer
-          source_dir: mindbeamer-${{ steps.get_sha.outputs.short-sha }}.zip
+      uses: shallwefootball/s3-upload-action@master
+      with:
+        aws_key_id: "${{ secrets.AWS_KEY_ID }}"
+        aws_secret_access_key: "${{ secrets.AWS_SECRET_ACCESS_KEY}}"
+        aws_bucket: mindbeamer
+        source_dir: "mindbeamer-${{ steps.get_sha.outputs.short-sha }}.zip"
