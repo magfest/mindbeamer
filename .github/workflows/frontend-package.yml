@@ -1,0 +1,16 @@
+name: Build Frontend Package
+
+on: 
+  push:
+    paths:
+      - frontend/**
+      - .github/workflows/frontend-package.yml
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install Dependencies
+      run: |
+        sudo apt update
+        sudo apt install coreutils p7zip-full qemu-user-static
