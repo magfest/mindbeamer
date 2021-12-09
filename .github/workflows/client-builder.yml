@@ -49,7 +49,7 @@ jobs:
       if: steps.cache-raspbian.outputs.cache-hit != 'true'
       run: |
         cd repository/client-builder/src/image
-        wget -c --trust-server-names 'https://downloads.raspberrypi.org/raspios_lite_armhf_latest'
+        wget -c --trust-server-names 'https://downloads.raspberrypi.org/raspios_lite_armhf/images/raspios_lite_armhf-2021-05-28/2021-05-07-raspios-buster-armhf-lite.zip'
 
     - name: Download and Unpack AWS IOT Greengrass Core
       run: |
