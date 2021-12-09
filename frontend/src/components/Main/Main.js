@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import dayjs from 'dayjs';
-import { withRouter } from 'react-router-dom';
 import SingleRoom from '../SingleRoom/SingleRoom';
 import FullSchedule from '../FullSchedule/FullSchedule';
 import GenericInfoSection from '../GenericInfoSection/GenericInfoSection';
@@ -27,27 +26,12 @@ class Main extends React.Component {
     }
 
     componentDidMount() {
-        this.doPanelThings();
-        this.interval = setInterval(this.doPanelThings, 600000);
+        this.getPanelInfo();
+        this.interval = setInterval(this.getPanelInfo, 600000);
     }
 
     componentWillUnmount() {
         clearInterval(this.interval);
-    }
-
-    doPanelThings = () => {
-        if (this.props.location.pathname.includes("filtered")) {
-            this.setState({ filtered: true });
-        } else {
-            this.setState({ filtered: false });
-        }
-
-        if (this.props.location.pathname.includes("single")) {
-            this.setState({ isFull: false });
-        } else {
-            this.setState({ isFull: true });
-        };
-        this.getPanelInfo();
     }
 
     getPanelInfo = () => {
@@ -153,4 +137,4 @@ class Main extends React.Component {
 
 
 
-export default withRouter(Main);
+export default Main;
