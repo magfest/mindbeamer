@@ -21,7 +21,8 @@ jobs:
       run: echo "::set-output name=short-sha::$(git rev-parse --short "$GITHUB_SHA")"
     - name: Install pnpm
       run: |
-        curl -fsSL https://get.pnpm.io/install.sh | sh -
+        npx pnpm add -g pnpm
+        pnpm add -g pnpm
         pnpm env use --global 16
     - name: Install dependencies
       run: |
