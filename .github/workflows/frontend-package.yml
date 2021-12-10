@@ -19,6 +19,11 @@ jobs:
     - name: Get SHA
       id: get_sha
       run: echo "::set-output name=short-sha::$(git rev-parse --short "$GITHUB_SHA")"
+    - name: NPM Cache
+      run: | 
+        cd frontend
+        npm set cache .npm
+        npm ci
     - name: Package frontend
       run: |
         mkdir build
