@@ -22,7 +22,7 @@ jobs:
     - name: Package frontend
       run: |
         mkdir build
-        zip -r build/mindbeamer-${{ steps.get_sha.outputs.short-sha }}.zip frontend
+        zip -r build/mindbeamer-${{ steps.get_sha.outputs.short-sha }}.zip frontend examples
     - name: Upload to S3
       uses: shallwefootball/s3-upload-action@master
       with:
