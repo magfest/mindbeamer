@@ -9,6 +9,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16]
     steps:
     - name: Install Dependencies
       run: |
@@ -19,11 +22,13 @@ jobs:
     - name: Get SHA
       id: get_sha
       run: echo "::set-output name=short-sha::$(git rev-parse --short "$GITHUB_SHA")"
-    - name: NPM Cache
-      run: | 
-        cd frontend
-        npm set cache .npm
-        npm ci
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'pnpm'
+    - name: Install dependencies
+      run: pnpm install
     - name: Package frontend
       run: |
         mkdir build
