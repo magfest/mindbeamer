@@ -3,10 +3,14 @@
     margin: auto 0;
     padding-right: 10px;
     font-size: 0.9em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
-.table-icon, .clock-icon {
+.table-icon, .clock-icon, .phone-icon {
     display: inline-block;
+    margin: 0 3px;
 }
 
 .date-area {
@@ -22,22 +26,61 @@
     }
 
     .informational-section {
-        margin: 10px 10%;
+        margin-bottom: 10px;
     }
+    
+    .informational-section.date-area {
+        margin-top: 0px;
+    }
+    
+    .informational-section.time-stuff {
+        margin-left: 0px;
+    }
+
 }
 
 
 @media only screen and (min-width: 601px) {
     #clock-container {
-        margin: 20px 10px;
-        text-align: center;
+        margin: 5px 10px;
+        text-align: left;
+        font-size: 0.7em;
+        justify-content: space-evenly;
+    }
+
+    .informational-section {
+        margin-bottom: 20px;
+    }
+    
+    .informational-section.date-area {
+        margin-top: 10px;
+    }
+    
+    .informational-section.time-stuff {
+        margin-left: 5px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    #clock-container {
+        font-size: 0.7em;
+        justify-content: space-evenly;
+    }
+    .informational-section {
+        margin-bottom: 5px;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    #clock-container {
+        font-size: 0.9em;
     }
 }
 
 
 @media only screen and (min-width: 3500px) {
     #clock-container {
-        font-size: 1.3em;
+        font-size: 1.2em;
     }
     
 }
