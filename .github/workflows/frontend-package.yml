@@ -20,14 +20,10 @@ jobs:
     - name: Get SHA
       id: get_sha
       run: echo "::set-output name=short-sha::$(git rev-parse --short "$GITHUB_SHA")"
-    - name: Install pnpm
-      run: |
-        npm i -g pnpm
-        pnpm env use --global 16
     - name: Prepare examples directory
       run: |
         cd examples
-        npm install
+        npm install --only=production
     - name: Install dependencies
       run: |
         cd frontend
