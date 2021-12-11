@@ -19,8 +19,7 @@
     "react-scripts": "4.0.3",
     "testConfig": "file:../examples/",
     "web-vitals": "^1.1.2",
-    "webpack": "^5.65.0",
-    "webpack-dev-server": "^4.6.0"
+    "webpack": "^5.65.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -52,6 +51,7 @@
     "babel-loader": "^8.2.3",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
-    "webpack-cli": "^4.9.1"
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.6.0"
   }
 }
