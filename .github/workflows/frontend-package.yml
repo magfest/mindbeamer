@@ -35,7 +35,7 @@ jobs:
     - name: Run npm build
       run: |
         cd frontend
-        npm run build
+        CI='' npm run build
     - name: Package frontend
       run: |
         mkdir build
