@@ -36,31 +36,27 @@
     font-size: 1.2em;
 }
 
-.map-header {
-    #header-text {
-        align-self: center;
-        text-align: center;
-        margin: 0 0 0 auto;
-    }
+.map-header #header-text {
+    align-self: center;
+    text-align: center;
+    margin: 0 0 0 auto;
+}
 
-    #map-toggle {
-        margin: 0 3px 0 auto;
-        background-color: #F2CC8A;
-        color: #1F0A02;
-        text-align: right;
-        cursor: pointer;
-    }
+.map-header #map-toggle {
+    margin: 0 3px 0 auto;
+    background-color: #F2CC8A;
+    color: #1F0A02;
+    text-align: right;
+    cursor: pointer;
 }
 
 
-.map-orangish {
-    #map-toggle, #show-map, .map-header {
-        background-color: #C67B62;
-    }
+.map-orangish #map-toggle, #show-map, .map-header {
+    background-color: #C67B62;
+}
 
-    #map-section {
-        border: 2px solid #C67B62;
-    }
+.map-orangish #map-section {
+    border: 2px solid #C67B62;
 }
 
 

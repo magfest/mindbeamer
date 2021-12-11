@@ -1,6 +1,6 @@
 import React from 'react';
 import Clock from '../Clock/Clock';
-import './generic-info-section.scss';
+import './generic-info-section.css';
 import superMagfestMainQR from '../../assets/pictures/superMagfestMainQR.png';
 
 

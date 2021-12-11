@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTable, faClock, faPhone } from '@fortawesome/free-solid-svg-icons';
-import "./clock.scss";
+import "./clock.css";
 
 
 

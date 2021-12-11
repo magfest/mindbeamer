@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './map.scss';
+import './map.css';
 import map1 from '../../assets/pictures/map1.jpg';
 import map2 from '../../assets/pictures/map2.jpg';
 

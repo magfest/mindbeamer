@@ -1,6 +1,3 @@
-@import "../../assets/styles/panel-layout";
-
-
 .single-row {
     display: flex;
     flex-direction: row;

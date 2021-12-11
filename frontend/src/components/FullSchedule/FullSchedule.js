@@ -1,7 +1,7 @@
 import React from 'react';
 import dayjs from 'dayjs';
 import { determineIcon } from '../../utils/helpers';
-import "./full-schedule.scss";
+import "./full-schedule.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAt } from '@fortawesome/free-solid-svg-icons';
 
