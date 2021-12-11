@@ -26,11 +26,11 @@ jobs:
     - name: Install dependencies
       run: |
         cd frontend
-        pnpm install --only=production
+        npm install
     - name: Run npm build
       run: |
         cd frontend
-        pnpm run build
+        npm run build
     - name: Package frontend
       run: |
         mkdir build
