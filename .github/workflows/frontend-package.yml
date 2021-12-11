@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - frontend/**
+      - examples/**
       - .github/workflows/frontend-package.yml
 
 jobs:
@@ -23,6 +24,10 @@ jobs:
       run: |
         npm i -g pnpm
         pnpm env use --global 16
+    - name: Prepare examples directory
+      run: |
+        cd examples
+        npm install
     - name: Install dependencies
       run: |
         cd frontend
