@@ -27,6 +27,10 @@ jobs:
       run: |
         cd frontend
         pnpm install --only=production
+    - name: Run npm build
+      run: |
+        cd frontend
+        pnpm run build
     - name: Package frontend
       run: |
         mkdir build
