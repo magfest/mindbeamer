@@ -1,6 +1,7 @@
 import React from 'react';
-import axios from 'axios';
-import dayjs from 'dayjs';
+//removed axios for space. Add back in as needed
+// import axios from 'axios';
+
 import { withRouter } from 'react-router-dom';
 import SingleRoom from '../SingleRoom/SingleRoom';
 import FullSchedule from '../FullSchedule/FullSchedule';
@@ -8,7 +9,7 @@ import GenericInfoSection from '../GenericInfoSection/GenericInfoSection';
 import Loading from '../Loading/Loading';
 import Map from '../Map/Map';
 import { filterTimes, filterToday, orderTimes } from '../../utils/helpers';
-import './main.scss';
+import './main.css';
 
 import * as example from 'testConfig/testconfig1.json';
 import * as fullSchedule from 'testConfig/super_2019_panels_json.json';
@@ -21,7 +22,7 @@ class Main extends React.Component {
         this.state = {
             isFull: true,
             schedule: fullSchedule.default,
-            loading: true,
+            loading: false,
             filtered: false
         }
     }
@@ -51,16 +52,16 @@ class Main extends React.Component {
     }
 
     getPanelInfo = () => {
-        axios.get('https://super2019.reggie.magfest.org/schedule/panels_json')
-        .then( response => {
-            console.log(response);
-            this.setState({ schedule: response.data, loading: false });
-        })
-        .catch( error => {
-            this.setState({ loading: false });
-            console.log(error);
-        })
-        .finally( () => {
+        // axios.get('https://super2019.reggie.magfest.org/schedule/panels_json')
+        // .then( response => {
+        //     console.log(response);
+        //     this.setState({ schedule: response.data, loading: false });
+        // })
+        // .catch( error => {
+        //     this.setState({ loading: false });
+        //     console.log(error);
+        // })
+        // .finally( () => {
             // do some processing or cleanup once the promise is settled, regardless of its outcome
 
             if (!this.state.isFull && this.props.location.pathname.includes("single")) {
@@ -73,7 +74,7 @@ class Main extends React.Component {
             if (this.state.isFull) {
                 this.cleanPanelInfoTimes();
             }
-        });
+        // });
     }
 
 

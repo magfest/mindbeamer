@@ -5,23 +5,21 @@
     font-family: 'Helvetica Neue';
 }
 
-#generic-info-section {
 
-    .generic-horizontal {
-        width: 50%;
-        border-color: #1F0A02;
-        margin-bottom: 0px;
-    }
+#generic-info-section .generic-horizontal {
+    width: 50%;
+    border-color: #1F0A02;
+    margin-bottom: 0px;
+}
 
-    .guidebook-text {
-        font-weight: 700;
-        margin-bottom: 0px;
-        display: block;
-    }
+#generic-info-section .guidebook-text {
+    font-weight: 700;
+    margin-bottom: 0px;
+    display: block;
+}
 
-    .guidebook-text-qrCode {
-        display: block;
-    }
+#generic-info-section .guidebook-text-qrCode {
+    display: block;
 }
 
 .orangish {

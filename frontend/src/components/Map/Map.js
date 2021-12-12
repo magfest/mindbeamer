@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import './map.scss';
+import './map.css';
 import map1 from '../../assets/pictures/map1.jpg';
 import map2 from '../../assets/pictures/map2.jpg';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWindowClose } from '@fortawesome/free-solid-svg-icons';
+import squareXmark from '../../assets/icons/square-xmark.svg';
 
 const Map = ({isFull}) => {
     const [ mapVisible, changeVisibility ] = useState(true);
@@ -15,8 +13,8 @@ const Map = ({isFull}) => {
                     <div className="map-header">
                         <span id="header-text">Convention Maps</span>
                         <span id="map-toggle" onClick={ () => changeVisibility(false)}>
-                            <FontAwesomeIcon 
-                            icon={faWindowClose} />
+                            <img
+                            src={squareXmark} />
                         </span>
                     </div>
                 <img src={map1} className="mapPictures" />

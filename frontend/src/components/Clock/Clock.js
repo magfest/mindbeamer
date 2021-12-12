@@ -1,7 +1,8 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTable, faClock, faPhone } from '@fortawesome/free-solid-svg-icons';
-import "./clock.scss";
+import faTable from '../../assets/icons/table.svg';
+import faClock from '../../assets/icons/clock.svg';
+import faPhone from '../../assets/icons/phone.svg';
+import "./clock.css";
 
 
 
@@ -36,15 +37,15 @@ class Clock extends React.Component {
       return (
         <div id="clock-container">
           <div className="informational-section date-area">
-            <FontAwesomeIcon className="table-icon" icon={faTable} />&nbsp;
+            <img className="table-icon" src={faTable} />&nbsp;
             <b>Date:</b> {this.state.date.toLocaleDateString('en-US', options)}
           </div>
           <div className="informational-section">
-            <FontAwesomeIcon className="clock-icon" icon={faClock} />&nbsp;
+            <img className="clock-icon" src={faClock} />&nbsp;
             <b>Time:</b> {this.state.date.toLocaleTimeString('en-US', { hour12: true })}
           </div>
           <div className="informational-section">
-            <FontAwesomeIcon className="phone-icon" icon={faPhone} />&nbsp;
+            <img className="phone-icon" src={faPhone} />&nbsp;
             <b>Security/Info Desk Phone:</b> 1-833-337-8732
           </div>
         </div>
