@@ -28,14 +28,6 @@ jobs:
       run: |
         cd examples
         npm install --only=production
-    - name: Install node dependencies
-      run: |
-        cd frontend
-        npm install --only=production
-    - name: Run npm build
-      run: |
-        cd frontend
-        CI='' npm run build
     - name: Package frontend
       run: |
         mkdir build
