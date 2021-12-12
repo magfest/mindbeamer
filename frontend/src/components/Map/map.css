@@ -50,8 +50,12 @@
     cursor: pointer;
 }
 
+#map-toggle img {
+    width: 25px;
+}
 
-.map-orangish #map-toggle, #show-map, .map-header {
+
+.map-orangish #map-toggle, .map-orangish #show-map, .map-orangish .map-header {
     background-color: #C67B62;
 }
 

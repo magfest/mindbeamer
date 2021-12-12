@@ -1,6 +1,28 @@
-import { 
-    faDesktop, faMicrophone, faFastForward, faGamepad, faBrain, faChess, faTools, faThLarge, faMusic, faGhost, faProjectDiagram, faDrum, faMicrophoneAlt, faCouch, faDiceD20, faTheaterMasks, faEdit, faHandRock, faMask, faRobot, faBook, faCocktail, faVrCardboard, faGlassCheers } from '@fortawesome/free-solid-svg-icons';
-    import dayjs from 'dayjs';
+import faDesktop from '../assets/icons/desktop.svg';
+import faMicrophone from '../assets/icons/microphone.svg';
+import faFastForward from '../assets/icons/forward-fast.svg';
+import faGamepad from '../assets/icons/gamepad.svg';
+import faBrain from '../assets/icons/brain.svg';
+import faChess from '../assets/icons/chess-king.svg';
+import faTools from '../assets/icons/toolbox.svg';
+import faThLarge from '../assets/icons/th-large-solid.svg';
+import faMusic from '../assets/icons/music.svg';
+import faGhost from '../assets/icons/ghost.svg';
+import faProjectDiagram from '../assets/icons/project-diagram-solid.svg';
+import faDrum from '../assets/icons/drum.svg';
+import faMicrophoneAlt from '../assets/icons/microphone-alt-solid.svg';
+import faCouch from '../assets/icons/couch.svg';
+import faDiceD20 from '../assets/icons/dice-d20.svg';
+import faTheaterMasks from '../assets/icons/theater-masks-solid.svg';
+import faEdit from '../assets/icons/edit-solid.svg';
+import faHandRock from '../assets/icons/hand-rock-solid.svg';
+import faMask from '../assets/icons/mask.svg';
+import faRobot from '../assets/icons/robot.svg';
+import faBook from '../assets/icons/book.svg';
+import faCocktail from '../assets/icons/cocktail-solid.svg';
+import faVrCardboard from '../assets/icons/vr-cardboard.svg';
+import faGlassCheers from '../assets/icons/glass-cheers-solid.svg';
+import dayjs from 'dayjs';
 
 export const determineIcon = (location) => {
     let keywords = [

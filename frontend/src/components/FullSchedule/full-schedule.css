@@ -18,9 +18,20 @@
     font-size: 1.3em;
     justify-content: center;
     flex-direction: column;
+    color: white;
  }
 
 
+ .one-icon {
+     width: 30px;
+     background-color: #F2CC8A;
+     padding: 5px 5px 1px 5px;
+     border-radius: 5px;
+ }
+
+ .at-icon {
+    width: 20px;
+ }
 
 
 .time-area {

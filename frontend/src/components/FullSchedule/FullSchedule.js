@@ -2,8 +2,7 @@ import React from 'react';
 import dayjs from 'dayjs';
 import { determineIcon } from '../../utils/helpers';
 import "./full-schedule.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAt } from '@fortawesome/free-solid-svg-icons';
+import { ReactComponent as FaAt } from '../../assets/icons/at.svg';
 
 
 const FullSchedule = ({ fullSchedule }) => (
@@ -14,7 +13,7 @@ const FullSchedule = ({ fullSchedule }) => (
 
                     {/* Icon on the left */}
                     <span className="icon-area">
-                        <FontAwesomeIcon className="one-icon" icon={determineIcon(element.location)} />
+                        <img className="one-icon" src={determineIcon(element.location)} />
                     </span>
 
                     {/* Time and panel name area */}
@@ -38,7 +37,7 @@ const FullSchedule = ({ fullSchedule }) => (
 
                     {/* Location area */}
                     <span className="text-area-full bottom">
-                        <FontAwesomeIcon icon={faAt} />
+                        <FaAt fill={((index % 2 !== 0) ?  "#1F0A02" : "white")} stroke={((index % 2 !== 0) ? "#1F0A02" : "white")} className="at-icon" />
                         &nbsp;
                         <span className="location-area">
                             {element.location}
