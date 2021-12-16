@@ -46,7 +46,7 @@ class Clock extends React.Component {
           </div>
           <div className="informational-section">
             <img className="phone-icon" src={faPhone} />&nbsp;
-            <b>Security/Info Desk Phone:</b> 1-833-337-8732
+            <b>Security Phone:</b> 1-833-337-8732
           </div>
         </div>
       );

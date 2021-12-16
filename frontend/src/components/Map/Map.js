@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './map.css';
-import map1 from '../../assets/pictures/map1.jpg';
-import map2 from '../../assets/pictures/map2.jpg';
+import map1 from '../../assets/pictures/mapRatio.jpg';
+// import map2 from '../../assets/pictures/map2.jpg';
 import squareXmark from '../../assets/icons/square-xmark.svg';
 
 const Map = ({isFull}) => {
@@ -18,7 +18,7 @@ const Map = ({isFull}) => {
                         </span>
                     </div>
                 <img src={map1} className="mapPictures" />
-                <img src={map2} className="mapPictures" />
+                {/* <img src={map2} className="mapPictures" /> */}
             </div>
             :
             <div id="show-map" onClick={ () => changeVisibility(true)}>

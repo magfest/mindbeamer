@@ -1,6 +1,6 @@
 #map-section {
-    width: 70%;
-    margin: 0 auto 30px auto;
+    width: 98%;
+    margin: 0 auto 0 auto;
     padding: 0px 0px 20px 0px;
     border: 2px solid #F2CC8A;
 }
@@ -20,7 +20,7 @@
 
 
 .mapPictures {
-    width: 40%;
+    width: 100%;
 } 
 
 #show-map {
@@ -65,9 +65,9 @@
 
 
 @media only screen and (max-width: 600px) {
-    #map-section {
+    /* #map-section {
         width: 90%;
-    }
+    } */
 
     #map-toggle {
         font-size: 0.7em;
@@ -84,9 +84,9 @@
 
 
 @media only screen and (min-width: 601px) {
-    #map-section {
+    /* #map-section {
         width: 85%;
-    }
+    } */
 }
 
 

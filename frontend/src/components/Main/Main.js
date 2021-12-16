@@ -114,6 +114,9 @@ class Main extends React.Component {
         return (
             <div id="main-container">
                 <div id="header">
+                    <div className="generic-info-box">
+                        <GenericInfoSection isFull={isFull} />
+                    </div>
                     <img src={ mountainsTextCombined } className="mountainsCombined" />
                 </div><div id="background-colors">
                     <div id="panels-info" 
@@ -121,7 +124,6 @@ class Main extends React.Component {
                     >
                         <div className="left-side">
                             <Map isFull={isFull} />
-                            <GenericInfoSection isFull={isFull} />
                         </div>
                         <div className="right-side">
                             {
