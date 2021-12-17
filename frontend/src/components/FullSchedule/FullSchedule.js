@@ -2,7 +2,6 @@ import React from 'react';
 import dayjs from 'dayjs';
 import { determineIcon } from '../../utils/helpers';
 import "./full-schedule.css";
-import { ReactComponent as FaAt } from '../../assets/icons/at.svg';
 
 
 const FullSchedule = ({ fullSchedule }) => {
@@ -17,10 +16,6 @@ const FullSchedule = ({ fullSchedule }) => {
              return (
                 <div className={"individual-rows full-version" + ((index % 2 !== 0) ? " tanned" : "")}>
                 <div className="gridded-area">
-
-
-                    {/* Time and panel name area */}
-                    {/* <span className="text-area-full top"> */}
                         <span className="time-area">
                             <span className="times start-time">
                                 {dayjs.unix(element.start_unix).format('ddd, h:mm')}
@@ -37,22 +32,15 @@ const FullSchedule = ({ fullSchedule }) => {
                             <span className="icon-area">
                                 <img className="one-icon" src={determineIcon(element.location)} />
                             </span>
-                            {element.name}
+                            <span className="panel-name-long">
+                            {
+                             element.name 
+                             }
+                             </span>
                         </span>
-                    {/* </span> */}
-
-                    {/* Visual divider */}
-                    {/* <hr className={"tanned-border" + ((index % 2 !== 0) ? " spacier" : " smaller")} /> */}
-
-                    {/* Location area */}
-                    {/* <span className="text-area-full bottom"> */}
-                        {/* <FaAt fill={((index % 2 !== 0) ?  "#1F0A02" : "white")} stroke={((index % 2 !== 0) ? "#1F0A02" : "white")} className="at-icon" />
-                        &nbsp; */}
                         <span className="location-area">
                             {element.location}
                         </span>
-                    {/* </span> */}
-
                 </div>
             </div>
             )
