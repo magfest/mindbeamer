@@ -3,6 +3,5 @@
 @reboot root /bin/bash /opt/mindbeamer/wpa-supplicant.sh
 @reboot root /bin/bash /opt/mindbeamer/node-splash.sh
 @reboot root sleep 60 && /bin/bash /opt/mindbeamer/provision.sh
-#*/5 * * * * root /bin/bash /opt/mindbeamer/node-splash.sh
-#* * * * * pi sleep 5 && /bin/bash /home/pi/scripts/refresh
+* * * * * root /bin/bash /opt/mindbeamer/node-splash.sh
 @reboot root timedatectl set-timezone America/New_York
