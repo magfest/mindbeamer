@@ -1,0 +1,11 @@
+{
+    "options": {
+      "version": "0.1"
+    },
+    "urls": [
+      {
+        "title": "Mindbeamer",
+        "url": "http://localhost/waiting.html"
+      }
+    ]
+  }
