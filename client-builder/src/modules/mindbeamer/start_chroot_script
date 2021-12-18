@@ -23,7 +23,7 @@ apt-get update -y
 apt-get install -y gcc g++ make ntfs-3g unclutter openjdk-8-jdk usbmount chrony netcat jq nodejs python3-distutils
 curl https://bootstrap.pypa.io/get-pip.py | python3
 python3 -m pip install -U setuptools
-python3 -m pip install aws-cli
+python3 -m pip install awscli
 chown pi:pi /opt/mindbeamer
 chmod 544 /opt/mindbeamer/signer.kbx
 chmod +x /opt/mindbeamer/*.sh
