@@ -1,7 +1,8 @@
 # /etc/cron.d/mindbeamer: crontab fragment for mindbeamer
 
+@reboot root /usr/bin/timedatectl set-timezone America/New_York
 @reboot root /bin/bash /opt/mindbeamer/wpa-supplicant.sh
 @reboot root /bin/bash /opt/mindbeamer/node-splash.sh
 @reboot root sleep 60 && /bin/bash /opt/mindbeamer/provision.sh
 * * * * * root /bin/bash /opt/mindbeamer/node-splash.sh
-@reboot root timedatectl set-timezone America/New_York
+* * * * * root sleep 30 && /bin/bash /opt/mindbeamer/node-splash.sh
