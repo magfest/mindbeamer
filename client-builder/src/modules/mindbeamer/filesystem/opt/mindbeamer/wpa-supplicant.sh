@@ -13,12 +13,14 @@ if [ -f /media/usb/mindbeamer-wpa-supplicant.txt ]; then
             # If it does, copy the new config over
             cp /media/usb/mindbeamer-wpa-supplicant.txt /boot/mindbeamer-wpa-supplicant.txt
 
-            # And then reboot this bad boy
-            reboot
+            # And then restart the DHCPcd service to apply the changes
+            systemctl daemon-reload
+            systemctl restart dhcpcd
         else 
             echo No new WiFi config to update.
         fi
     else
         echo WPA Supplicant signature is not valid. Not copying.
+        exit 1
     fi
 fi
