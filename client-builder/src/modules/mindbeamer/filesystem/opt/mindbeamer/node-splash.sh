@@ -17,5 +17,5 @@ tmpsum=$(md5sum "$tmp" | cut -d ' ' -f 1)
 if [ "$currentsum" != "$tmpsum" ] ; then
   chown www-data:www-data "$tmp"
   mv "$tmp" "$fpdconfig"
-  /bin/su -c "/home/pi/scripts/refresh" - pi
+  /bin/su -c "/home/pi/scripts/reload_fullpageos_txt" - pi
 fi
