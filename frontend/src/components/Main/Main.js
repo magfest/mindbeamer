@@ -64,7 +64,7 @@ class Main extends React.Component {
         // .finally( () => {
             // do some processing or cleanup once the promise is settled, regardless of its outcome
 
-            if (!this.state.isFull && this.props.location.pathname.includes("single")) {
+            if (!this.state.isFull || this.props.location.pathname.includes("single")) {
                 const returnedQuery = this.getQueryString();
                 this.filterByName(returnedQuery);
                 this.cleanPanelInfoTimes(true);
