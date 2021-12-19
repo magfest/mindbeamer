@@ -37,51 +37,41 @@ class Main extends React.Component {
     }
 
     doPanelThings = () => {
+        let { isFull, filtered } = this.state;
         if (this.props.location.pathname.includes("filtered")) {
-            this.setState({ filtered: true });
+            filtered = true;
         } else {
-            this.setState({ filtered: false });
+            filtered = false;
         }
 
         if (this.props.location.pathname.includes("single")) {
-            this.setState({ isFull: false });
+            isFull = false;
         } else {
-            this.setState({ isFull: true });
+            isFull = true;
         };
-        this.getPanelInfo();
+        this.setState({ isFull, filtered });
+        this.getPanelInfo(isFull, filtered)
     }
 
-    getPanelInfo = () => {
-        // axios.get('https://super2019.reggie.magfest.org/schedule/panels_json')
-        // .then( response => {
-        //     console.log(response);
-        //     this.setState({ schedule: response.data, loading: false });
-        // })
-        // .catch( error => {
-        //     this.setState({ loading: false });
-        //     console.log(error);
-        // })
-        // .finally( () => {
-            // do some processing or cleanup once the promise is settled, regardless of its outcome
+    getPanelInfo = (isFullCopy, isFiltered) => {
 
-            if (!this.state.isFull || this.props.location.pathname.includes("single")) {
-                const returnedQuery = this.getQueryString();
-                this.filterByName(returnedQuery);
-                this.cleanPanelInfoTimes(true);
-            }
+        if (!isFullCopy) {
+            const returnedQuery = this.getQueryString();
+            this.filterByName(returnedQuery);
+            this.cleanPanelInfoTimes(true, isFiltered);
+        }
 
-            // NOTE: Uncomment this when filtering and ordering is desired
-            if (this.state.isFull) {
-                this.cleanPanelInfoTimes();
-            }
-        // });
+        // NOTE: Uncomment this when filtering and ordering is desired
+        if (isFullCopy) {
+            this.cleanPanelInfoTimes(false, isFiltered);
+        }
     }
 
 
-    cleanPanelInfoTimes = ( isSingleSchedule = false ) => {
-        let { schedule: tempSchedule, filtered } = this.state;
+    cleanPanelInfoTimes = ( isSingleSchedule = false, isFiltered = false ) => {
+        let { schedule: tempSchedule } = this.state;
 
-        if (!filtered)
+        if (!isFiltered)
             return;
 
         if ( isSingleSchedule )
