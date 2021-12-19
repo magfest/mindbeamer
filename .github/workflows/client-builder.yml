@@ -73,6 +73,11 @@ jobs:
       run: |
         echo "OCTOPI_APTMIRROR=http://mirror.us.leaseweb.net/raspbian/raspbian" > repository/client-builder/src/config.local
 
+    - name: Set OS Build file
+      run: |
+        cd repository/client-builder/src/modules/mindbeamer/filesystem/opt/mindbeamer
+        echo "mindbeamer-os-$(git rev-parse --short "$GITHUB_SHA") > os-build"
+
     - name: Build Image
       run: |
         sudo modprobe loop
