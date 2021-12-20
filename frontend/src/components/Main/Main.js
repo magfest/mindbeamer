@@ -137,9 +137,9 @@ class Main extends React.Component {
                                     { gaylordRoom &&
                                     <div className="single-room-panel-name">
                                         <span>
-                                        Panel Room: { this.getQueryString() }
+                                        <b>Panel Room:</b> { this.getQueryString() }
                                         </span>
-                                        <span>Gaylord Room: { gaylordRoom}
+                                        <span><b>Gaylord Room:</b> { gaylordRoom}
                                         </span>
                                     </div>
                                     }

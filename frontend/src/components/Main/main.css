@@ -46,13 +46,14 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-bottom: 4%;
+    margin-bottom: 1%;
+    color: #EBAD43;
 }
 
 #main-container .single-room-panel-name span:first-child{
     margin-right: 0.3em;
     padding-right: 0.3em;
-    border-right: 2px solid white;
+    border-right: 4px solid white;
 }
 
 
@@ -121,7 +122,7 @@
     }
 
     .single-room-panel-name {
-        font-size: 2.4em;
+        font-size: 2.3em;
     }
 
     #background-colors {
@@ -165,7 +166,7 @@
     }
 
     .single-room-panel-name {
-        font-size: 3.8em;
+        font-size: 3em;
     }
 
     .is-full-class .left-side {
