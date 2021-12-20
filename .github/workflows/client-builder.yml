@@ -76,7 +76,7 @@ jobs:
     - name: Set OS Build file
       run: |
         cd repository/client-builder/src/modules/mindbeamer/filesystem/opt/mindbeamer
-        echo "mindbeamer-os-$(git rev-parse --short "$GITHUB_SHA") > os-build"
+        echo "mindbeamer-os-$(git rev-parse --short "$GITHUB_SHA")" > os-build
 
     - name: Build Image
       run: |
