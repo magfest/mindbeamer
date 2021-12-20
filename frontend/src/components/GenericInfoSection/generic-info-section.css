@@ -60,7 +60,7 @@
 @media only screen and (min-width: 1280px) {
     .flexed-content-generic {
         flex-direction: row;
-        justify-content: flex-end;
+        justify-content: center;
         width: 35%;
         font-size: 20px;
     }
@@ -76,7 +76,28 @@
 @media only screen and (min-width: 2050px) {
 
     .flexed-content-generic {
-        width: 17%;
+        width: 24%;
         padding: 2px 0;
+    }
+}
+
+@media only screen and (min-width: 3000px) {
+
+    .flexed-content-generic {
+        width: 20%;
+    }
+}
+
+@media only screen and (min-width: 3500px) {
+
+    .flexed-content-generic {
+        width: 15%;
+    }
+}
+
+@media only screen and (min-width: 4000px) {
+
+    .flexed-content-generic {
+        width: 16%;
     }
 }
