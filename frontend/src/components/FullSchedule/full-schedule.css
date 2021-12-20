@@ -52,11 +52,11 @@
 
 
  .one-icon {
-     width: 30px;
-     background-color: #bbb5b3;
-     padding: 5px 5px 1px 5px;
-     border-radius: 5px;
- }
+    width: 30px;
+    background-color: #bbb5b3;
+    padding: 5px 5px 1px 5px;
+    border-radius: 5px;
+}
 
 
 .time-area {
@@ -79,106 +79,18 @@
 }
 
 
-
-
-
-
-@media only screen and (max-width: 3199px) {
-    .column-headers, .gridded-area {
-        display: grid;
-        grid-template-columns: 18% 41% 41%;
-    }
-
-    .panel-name-long, .location-area {
-        width: 580px;
-    }
-}
-
-@media only screen and (max-width: 2700px) {
-    .column-headers, .gridded-area {
-        display: grid;
-        grid-template-columns: 19% 40.5% 40.5%;
-    }
-
-    .individual-rows.full-version {
-        font-size: 1.4em;
-    }
-
-    .panel-name-long, .location-area {
-        width: 430px;
-    }
+.column-headers, .gridded-area {
+    display: grid;
 }
 
 
-@media only screen and (max-width: 2050px) {
+@media only screen and (max-width: 1000px) {
     .column-headers, .gridded-area {
-        display: grid;
-        grid-template-columns: 20% 40% 40%;
-    }
-
-    .individual-rows.full-version {
-        font-size: 1.2em;
-    }
-
-    .panel-name-long, .location-area {
-        width: 300px;
-    }
-}
-
-
-@media only screen and (max-width: 1570px) {
-    .column-headers, .gridded-area {
-        display: grid;
-        grid-template-columns: 24% 38% 38%;
-    }
-
-    .individual-rows.full-version {
-        font-size: 1.2em;
-    }
-    .panel-name-long, .location-area {
-        width: 230px;
-    }
-}
-
-
-@media only screen and (max-width: 1300px) {
-    .column-headers, .gridded-area {
-        display: grid;
-        grid-template-columns: 26% 37% 37%;
-    }
-
-    .individual-rows.full-version {
-        font-size: 1.2em;
-    }
-
-    .panel-name-long, .location-area {
-        width: 180px;
-    }
-}
-
-@media only screen and (max-width: 1150px) {
-    .column-headers, .gridded-area {
-        display: grid;
         grid-template-columns: 30% 35% 35%;
     }
 
     .individual-rows.full-version {
         font-size: 1.2em;
-    }
-
-    .panel-name-long, .location-area {
-        width: 140px;
-    }
-}
-
-@media only screen and (max-width: 1010px) {
-    .column-headers, .gridded-area {
-        display: grid;
-        grid-template-columns: auto auto auto;
-    }
-
-    .individual-rows.full-version {
-        font-size: 1em;
     }
 
     .panel-name-long, .location-area {
@@ -199,22 +111,58 @@
 
 
 @media only screen and (min-width: 1001px) {
+    .column-headers, .gridded-area {
+        grid-template-columns: 24% 38% 38%;
+    }
+
+    .individual-rows.full-version {
+        font-size: 1.2em;
+        margin-bottom: 0.1%;
+        padding: 0px;
+    }
+    .panel-name-long, .location-area {
+        width: 230px;
+    }
+
     .icon-area {
         display: inline;
         margin: 0px 16px 0px 10px;
     }
 
+}
 
-    .individual-rows.full-version {
-        margin-bottom: 0.1%;
-        padding: 0px;
+
+
+@media only screen and (min-width: 2000px) {
+    .column-headers, .gridded-area {
+        grid-template-columns: 20% 40% 40%;
     }
 
+    .individual-rows.full-version {
+        font-size: 1.2em;
+    }
+
+    .panel-name-long, .location-area {
+        width: 300px;
+    }
+}
+
+@media only screen and (min-width: 2500px) {
+    .column-headers, .gridded-area {
+        grid-template-columns: 19% 40.5% 40.5%;
+    }
+
+    .individual-rows.full-version {
+        font-size: 1.5em;
+    }
+
+    .panel-name-long, .location-area {
+        width: 430px;
+    }
 }
 
 @media only screen and (min-width: 3200px) {
     .column-headers, .gridded-area {
-        display: grid;
         grid-template-columns: 15% 42.5% 42.5%;
     }
 
@@ -228,6 +176,14 @@
 }
 
 @media only screen and (min-width: 4200px) {
+
+    .individual-rows.full-version {
+        font-size: 1.7em;
+    }
+
+    .location-area {
+        width: auto;
+    }
 
     .panel-name-long {
         width: 1000px;
