@@ -16,7 +16,7 @@ const SingleRoom = ({schedule}) => {
                     <div className={"individual-rows single-row" + ((index % 2 !== 0) ? " orangish" : "")}>
                         <span className="time-area-single">
                             <span className="times-sing start-time-sing">
-                                {dayjs.unix(element.start_unix).format('h:mm A')}
+                                {dayjs.unix(element.start_unix).format('ddd, h:mm')}
                             </span>       
                             &mdash;
                             <span className="times-sing end-time-sing">
