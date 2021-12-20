@@ -45,9 +45,16 @@
 #main-container .single-room-panel-name {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     margin-bottom: 4%;
 }
+
+#main-container .single-room-panel-name span:first-child{
+    margin-right: 0.3em;
+    padding-right: 0.3em;
+    border-right: 2px solid white;
+}
+
 
 #main-container .empty-message {
     font-size: 2em;

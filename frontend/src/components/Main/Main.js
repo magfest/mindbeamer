@@ -23,7 +23,8 @@ class Main extends React.Component {
             isFull: true,
             schedule: fullSchedule.default,
             loading: false,
-            filtered: false
+            filtered: false,
+            gaylordRoom: ""
         }
     }
 
@@ -90,16 +91,19 @@ class Main extends React.Component {
 
     filterByName = ( filterKeyword ) => {
         let { schedule: tempPanels } = this.state;
-
+        let gaylordRoomExtr = "";
         const filteredPanels = tempPanels.filter( key => { 
             return key.location.includes(filterKeyword) 
         });
 
-        this.setState({ schedule: filteredPanels });
+        if (filteredPanels.length > 1)
+            gaylordRoomExtr = filteredPanels[0].location.match(/\(([^)]+)\)/)[1];
+
+        this.setState({ schedule: filteredPanels, gaylordRoom: gaylordRoomExtr });
     }
 
     render(){
-        const { schedule, loading, isFull } = this.state;
+        const { schedule, loading, isFull, gaylordRoom } = this.state;
         const { main_event: smallSchedule } = example.default.rooms;
         return (
             <div id="main-container">
@@ -130,9 +134,15 @@ class Main extends React.Component {
                                 </div>
                                 :
                                 <div>
+                                    { gaylordRoom &&
                                     <div className="single-room-panel-name">
+                                        <span>
                                         Panel Room: { this.getQueryString() }
+                                        </span>
+                                        <span>Gaylord Room: { gaylordRoom}
+                                        </span>
                                     </div>
+                                    }
                                     <SingleRoom schedule={ schedule } />
                                 </div>
                             )}
