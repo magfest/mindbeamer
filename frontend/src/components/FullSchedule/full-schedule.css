@@ -84,33 +84,10 @@
 }
 
 
-@media only screen and (max-width: 1000px) {
-    .column-headers, .gridded-area {
-        grid-template-columns: 30% 35% 35%;
-    }
-
-    .individual-rows.full-version {
-        font-size: 1.2em;
-    }
-
-    .panel-name-long, .location-area {
-        width: 140px;
-    }
-
-    .icon-area {
-        display: flex;
-        margin: 0px 30px 0px 10px;
-        grid-row: 1/4;
-        grid-column: 1/1;
-    }
-
-    .at-icon {
-        width: 20px;
-     }
-}
 
 
-@media only screen and (min-width: 1001px) {
+
+@media only screen and (min-width: 1301px) {
     .column-headers, .gridded-area {
         grid-template-columns: 24% 38% 38%;
     }
@@ -188,4 +165,100 @@
     .panel-name-long {
         width: 1000px;
     }
+}
+
+@media only screen and (max-width: 1300px) {
+    .column-headers, .gridded-area {
+        grid-template-columns: 32% 33% 33%;
+    }
+
+    .individual-rows.full-version {
+        font-size: 1.2em;
+        margin: 0;
+        padding: 0px;
+    }
+
+    .panel-name-long, .location-area {
+        width: 110px;
+    }
+
+    .icon-area {
+        margin: 0px 10px;
+    }
+
+    .at-icon {
+        width: 20px;
+     }
+}
+
+@media only screen and (max-width: 890px) {
+    .column-headers, .gridded-area {
+        grid-template-columns: 37% 38% 25%;
+    }
+
+    .individual-rows.full-version {
+        font-size: 1em;
+        margin: 0;
+        padding: 0px;
+    }
+
+    .panel-name-long, .location-area {
+        width: 70px;
+    }
+
+    .icon-area {
+        margin: 0px 10px;
+    }
+
+    .at-icon {
+        width: 20px;
+     }
+}
+
+@media only screen and (max-width: 650px) {
+    .column-headers, .gridded-area {
+        grid-template-columns: 35% 45% 20%;
+    }
+
+    .individual-rows.full-version {
+        font-size: 1em;
+        margin: 0;
+        padding: 0px;
+    }
+
+    .panel-name-long, .location-area {
+        width: 90px;
+    }
+
+    .icon-area {
+        margin: 0px 10px;
+    }
+
+    .at-icon {
+        width: 20px;
+     }
+}
+
+@media only screen and (max-width: 600px) {
+    .column-headers, .gridded-area {
+        grid-template-columns: 35% 35.5% 29.5%;
+    }
+
+    .individual-rows.full-version {
+        font-size: 1em;
+        margin: 0;
+        padding: 0px;
+    }
+
+    .panel-name-long, .location-area {
+        width: 90px;
+    }
+
+    .icon-area {
+        margin: 0px 10px;
+    }
+
+    .at-icon {
+        width: 20px;
+     }
 }
