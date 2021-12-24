@@ -58,8 +58,8 @@ class Main extends React.Component {
 
         if (!isFullCopy) {
             const returnedQuery = this.getQueryString();
-            this.filterByName(returnedQuery);
-            this.cleanPanelInfoTimes(true, isFiltered);
+            let filteredPanels = this.filterByName(returnedQuery);
+            this.cleanPanelInfoTimes(true, isFiltered, filteredPanels);
         }
 
         // NOTE: Uncomment this when filtering and ordering is desired
@@ -69,14 +69,15 @@ class Main extends React.Component {
     }
 
 
-    cleanPanelInfoTimes = ( isSingleSchedule = false, isFiltered = false ) => {
+    cleanPanelInfoTimes = ( isSingleSchedule = false, isFiltered = false,  filteredPanels = []) => {
         let { schedule: tempSchedule } = this.state;
 
         if (!isFiltered)
             return;
 
-        if ( isSingleSchedule )
-            tempSchedule = filterToday(tempSchedule);
+        if ( isSingleSchedule && filteredPanels.length > 0 ){
+            tempSchedule = filterToday(filteredPanels);
+        }
 
         tempSchedule = orderTimes(filterTimes(tempSchedule));
 
@@ -100,6 +101,7 @@ class Main extends React.Component {
             gaylordRoomExtr = filteredPanels[0].location.match(/\(([^)]+)\)/)[1];
 
         this.setState({ schedule: filteredPanels, gaylordRoom: gaylordRoomExtr });
+        return filteredPanels;
     }
 
     render(){
