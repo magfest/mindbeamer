@@ -10,13 +10,6 @@ import mockSchedule from '../../../__mocks__/super_2019_panels_json.json';
 jest.setMock('../../../../../examples/super_2019_panels_json.json', require('../../../__mocks__/super_2019_panels_json.json'));
 
 
-  const mockUseLocationValue = {
-    pathname: "/testroute",
-    search: '',
-    hash: '',
-    state: null
-}
-
 describe('Test if panels display', () => {
 
     afterEach(() => {

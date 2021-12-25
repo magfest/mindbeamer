@@ -107,7 +107,6 @@ class Main extends React.Component {
     render(){
         const { schedule, loading, isFull, gaylordRoom } = this.state;
         const { main_event: smallSchedule } = example.default.rooms;
-        console.log(this.state.schedule);
         return (
             <div id="main-container">
                 <div id="header">
