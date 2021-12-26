@@ -1,34 +1,23 @@
 #generic-info-section {
     box-sizing: content-box;
-    padding: 5px;
     color: #1F0A02;
     font-family: 'Helvetica Neue';
 }
 
 
-#generic-info-section .generic-horizontal {
-    width: 50%;
-    border-color: #1F0A02;
-    margin-bottom: 0px;
+#generic-info-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
-#generic-info-section .guidebook-text {
-    font-weight: 700;
-    margin-bottom: 0px;
-    display: block;
+.flexed-content-generic {
+    background: rgba(242, 204, 138, 0.7);
 }
 
-#generic-info-section .guidebook-text-qrCode {
-    display: block;
-}
-
-.orangish {
-   background-color: #C67B62;
-   border-radius: 10px;
-}
-
-.yellowish {
-    background-color: #F2CC8A;
+.qrCode {
+    width: 20%;
+    margin-right: 10px;
 }
 
 .flexed-content-generic {
@@ -43,123 +32,74 @@
 
 
 
-@media only screen and (max-width: 400px) {
-    #generic-info-section {
-        width: auto;
-        padding: 5px 0px;
-    }
-}
 
 
-@media only screen and (max-width: 600px) {
-
-    .guidebook-text {
-        text-align: center;
-    }
-
-    .guidebook-text-qrCode {
-        width: 50%;
-        margin: 0 auto;
-    }
-
-    .flexed-content-generic {
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    #generic-info-section {
-        width: 90%;
-        margin: 5px auto 30px auto;
-        font-size: 20px;
-    }
-
-    .guidebook-text {
-        font-size: 0.8em;
-        margin-top: 5px;
-    }
-
-    .qrCode {
-        width: 90%;
-        margin: 0 auto;
-    }
-}
-
-@media only screen and (max-width: 790px) {
-
-    .guidebook-text-qrCode {
-        width: 40%;
-    }
-}
-
-
-@media only screen and (min-width: 601px) {
-
-    .guidebook-text {
-        text-align: left;
-        margin-left: 16px;
-        font-size: 0.5em;
-    }
-
-    .guidebook-text-qrCode {
-        width: 60%;
-    }
-
+@media only screen and (min-width: 1280px) {
     .flexed-content-generic {
         flex-direction: row;
         justify-content: center;
+        width: 35%;
+        font-size: 20px;
     }
+}
 
-    #generic-info-section {
-        width: 85%;
-        margin: 5px auto 50px auto;
-        font-size: 30px;
+@media only screen and (max-width: 2049px) {
+    .flexed-content-generic {
+        padding: 2px 0;
     }
+}
 
-    .guidebook-text {
-        font-size: 0.7em;
-        margin-top: 5px;
+
+@media only screen and (min-width: 2050px) {
+
+    .flexed-content-generic {
+        width: 24%;
+        padding: 2px 0;
+    }
+}
+
+@media only screen and (min-width: 3000px) {
+
+    .flexed-content-generic {
+        width: 20%;
+    }
+}
+
+@media only screen and (min-width: 3500px) {
+
+    .flexed-content-generic {
+        width: 15%;
+    }
+}
+
+@media only screen and (min-width: 4000px) {
+
+    .flexed-content-generic {
+        width: 16%;
+    }
+}
+
+@media only screen and (max-width: 1279px) {
+    .flexed-content-generic {
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 45%;
+        font-size: 18px;
+        text-align: left;
     }
 
     .qrCode {
-        width: 90%;
-    }
-
-    .guidebook-text-qrCode {
-        margin: auto 0;
-    }
-
-}
-
-@media only screen and (min-width: 1280px) {
-    .guidebook-text {
-        text-align: left;
-        margin-left: 16px;
-        font-size: 0.7em;
-    }
-
-    .guidebook-text-qrCode {
-        width: 60%;
+        width: 25%;
+        margin: 0 auto;
     }
 }
 
-@media only screen and (min-width: 2050px) {
-    .guidebook-text {
-        text-align: left;
-        margin-left: 20px;
-        font-size: 0.9em;
+@media only screen and (max-width: 600px) {
+    .qrCode {
+        width: 20%;
+        margin: 0 auto;
     }
-
-    .guidebook-text-qrCode {
-        width: 40%;
+    .flexed-content-generic {
+        width: 100%;
     }
-}
-
-@media only screen and (min-width: 2500px) {
-    .guidebook-text {
-        margin-left: 10%;
-    }
-    .guidebook-text-qrCode {
-        width: 30%;
-    }
-    
 }

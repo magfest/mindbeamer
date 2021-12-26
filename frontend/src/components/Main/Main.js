@@ -23,7 +23,8 @@ class Main extends React.Component {
             isFull: true,
             schedule: fullSchedule.default,
             loading: false,
-            filtered: false
+            filtered: false,
+            gaylordRoom: ""
         }
     }
 
@@ -37,55 +38,46 @@ class Main extends React.Component {
     }
 
     doPanelThings = () => {
+        let { isFull, filtered } = this.state;
         if (this.props.location.pathname.includes("filtered")) {
-            this.setState({ filtered: true });
+            filtered = true;
         } else {
-            this.setState({ filtered: false });
+            filtered = false;
         }
 
         if (this.props.location.pathname.includes("single")) {
-            this.setState({ isFull: false });
+            isFull = false;
         } else {
-            this.setState({ isFull: true });
+            isFull = true;
         };
-        this.getPanelInfo();
+        this.setState({ isFull, filtered });
+        this.getPanelInfo(isFull, filtered)
     }
 
-    getPanelInfo = () => {
-        // axios.get('https://super2019.reggie.magfest.org/schedule/panels_json')
-        // .then( response => {
-        //     console.log(response);
-        //     this.setState({ schedule: response.data, loading: false });
-        // })
-        // .catch( error => {
-        //     this.setState({ loading: false });
-        //     console.log(error);
-        // })
-        // .finally( () => {
-            // do some processing or cleanup once the promise is settled, regardless of its outcome
+    getPanelInfo = (isFullCopy, isFiltered) => {
 
-            if (!this.state.isFull && this.props.location.pathname.includes("single")) {
-                const returnedQuery = this.getQueryString();
-                this.filterByName(returnedQuery);
-                this.cleanPanelInfoTimes(true);
-            }
+        if (!isFullCopy) {
+            const returnedQuery = this.getQueryString();
+            let filteredPanels = this.filterByName(returnedQuery);
+            this.cleanPanelInfoTimes(true, isFiltered, filteredPanels);
+        }
 
-            // NOTE: Uncomment this when filtering and ordering is desired
-            if (this.state.isFull) {
-                this.cleanPanelInfoTimes();
-            }
-        // });
+        // NOTE: Uncomment this when filtering and ordering is desired
+        if (isFullCopy) {
+            this.cleanPanelInfoTimes(false, isFiltered);
+        }
     }
 
 
-    cleanPanelInfoTimes = ( isSingleSchedule = false ) => {
-        let { schedule: tempSchedule, filtered } = this.state;
+    cleanPanelInfoTimes = ( isSingleSchedule = false, isFiltered = false,  filteredPanels = []) => {
+        let { schedule: tempSchedule } = this.state;
 
-        if (!filtered)
+        if (!isFiltered)
             return;
 
-        if ( isSingleSchedule )
-            tempSchedule = filterToday(tempSchedule);
+        if ( isSingleSchedule && filteredPanels.length > 0 ){
+            tempSchedule = filterToday(filteredPanels);
+        }
 
         tempSchedule = orderTimes(filterTimes(tempSchedule));
 
@@ -100,20 +92,27 @@ class Main extends React.Component {
 
     filterByName = ( filterKeyword ) => {
         let { schedule: tempPanels } = this.state;
-
+        let gaylordRoomExtr = "";
         const filteredPanels = tempPanels.filter( key => { 
             return key.location.includes(filterKeyword) 
         });
 
-        this.setState({ schedule: filteredPanels });
+        if (filteredPanels.length > 1)
+            gaylordRoomExtr = filteredPanels[0].location.match(/\(([^)]+)\)/)[1];
+
+        this.setState({ schedule: filteredPanels, gaylordRoom: gaylordRoomExtr });
+        return filteredPanels;
     }
 
     render(){
-        const { schedule, loading, isFull } = this.state;
+        const { schedule, loading, isFull, gaylordRoom } = this.state;
         const { main_event: smallSchedule } = example.default.rooms;
         return (
             <div id="main-container">
                 <div id="header">
+                    <div className="generic-info-box">
+                        <GenericInfoSection isFull={isFull} />
+                    </div>
                     <img src={ mountainsTextCombined } className="mountainsCombined" />
                 </div><div id="background-colors">
                     <div id="panels-info" 
@@ -121,7 +120,6 @@ class Main extends React.Component {
                     >
                         <div className="left-side">
                             <Map isFull={isFull} />
-                            <GenericInfoSection isFull={isFull} />
                         </div>
                         <div className="right-side">
                             {
@@ -138,9 +136,15 @@ class Main extends React.Component {
                                 </div>
                                 :
                                 <div>
+                                    { gaylordRoom &&
                                     <div className="single-room-panel-name">
-                                        Panel Room: { this.getQueryString() }
+                                        <span>
+                                        <b>Panel Room:</b> { this.getQueryString() }
+                                        </span>
+                                        <span><b>Gaylord Room:</b> { gaylordRoom}
+                                        </span>
                                     </div>
+                                    }
                                     <SingleRoom schedule={ schedule } />
                                 </div>
                             )}

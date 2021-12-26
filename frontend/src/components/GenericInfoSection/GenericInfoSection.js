@@ -8,12 +8,7 @@ const GenericInfoSection = ({ isFull }) => {
     return (
         <div id="generic-info-section" className={(!isFull) ? "orangish" : "yellowish"}>
             <div className="flexed-content-generic">
-                <span className="guidebook-text-qrCode">
-                    <span className="guidebook-text">
-                        Guidebook:
-                    </span>
-                    <img src={superMagfestMainQR} className="qrCode" />
-                </span>
+                <img src={superMagfestMainQR} className="qrCode" />
                 <Clock />
             </div>
         </div>

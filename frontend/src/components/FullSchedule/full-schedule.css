@@ -4,17 +4,46 @@
     margin: 0 auto 30px auto;
 }
 
-
-.tanned {
-    background-color: #F2CC8A;
-    color: #1F0A02;
+.panel-name-full, .location-area, .time-area {
+    vertical-align: middle;
+    margin: auto 0;
 }
 
 
+.tanned {
+    background-color: #4b3a34;
+    color: white;
+}
+
+
+.panel-name-long, .location-area {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 300px;
+    display: inline-block;
+    text-overflow: ellipsis;
+}
+
+.column-headers {
+    color: #bbb5b3;
+    font-size: 2.0em;
+    font-weight: 700;
+    border-bottom: 4px solid #786c67;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+
+.gridded-area {
+    text-align: left;
+}
+
+.time-area, .panel-name-full, .location-area {
+    text-align: left;
+}
 
 .icon-area {
     height: 100%;
-    text-align: right;
     font-size: 1.3em;
     justify-content: center;
     flex-direction: column;
@@ -23,21 +52,15 @@
 
 
  .one-icon {
-     width: 30px;
-     background-color: #F2CC8A;
-     padding: 5px 5px 1px 5px;
-     border-radius: 5px;
- }
-
- .at-icon {
-    width: 20px;
- }
+    width: 30px;
+    background-color: #bbb5b3;
+    padding: 5px 5px 1px 5px;
+    border-radius: 5px;
+}
 
 
 .time-area {
     white-space: nowrap;
-    margin: auto 0 0 0;
-    font-weight: 700;
 }
 
 
@@ -50,124 +73,32 @@
 }
 
 
-
-
-
-
-.text-area-full.top {
-    vertical-align: top;
-    text-align: left;
-}
-
-
-
-
-.tanned-border {
-    width: 90%;
-    grid-row: 2/2;
-    grid-column: 2/3;
-}
-
-
-.spacier {
-    border-bottom: 1px solid #1F0A02;
-    margin: 10px 0;
-}
-
-.smaller {
-    border-bottom: 1px solid white;
-    margin: 10px 0;
-}
-
-.show-none {
-    display: none;
-}
-
-
 .panel-name-full {
     display: inline-block;
-    margin-left: 13px;
     text-align: left;
 }
 
 
+.column-headers, .gridded-area {
+    display: grid;
+}
 
-@media only screen and (max-width: 600px) {
-    .time-area {
-        margin: auto 0 0 0;
-    }
 
-    .gridded-area {
-        font-size: 0.8em;
+
+
+
+@media only screen and (min-width: 1301px) {
+    .column-headers, .gridded-area {
+        grid-template-columns: 24% 38% 38%;
     }
 
     .individual-rows.full-version {
-        width: auto;
-        margin: auto;
-        padding: 20px 0px;
+        font-size: 1.2em;
+        margin-bottom: 0.1%;
+        padding: 0px;
     }
-}
-
-
-@media only screen and (min-width: 601px) {
-    .time-area {
-        margin-top: 0%;
-    }
-
-    .individual-rows.full-version {
-        width: 95%;
-        padding: 12px 10px;
-        margin-bottom: 2%;
-    }
-}
-
-@media only screen and (max-width: 1000px) {
-
-    .text-area-full.bottom {
-        text-align: left;
-        display: block;
-        grid-row: 3/3;
-        grid-column: 2/2;
-    }
-
-    .gridded-area {
-        display: grid;
-        grid-template-columns: auto 2fr;
-        grid-template-rows: auto auto;
-    }
-
-    .text-area-full.top {
-        vertical-align: top;
-        text-align: left;
-    }
-
-    .icon-area {
-        display: flex;
-        margin: 0px 30px 0px 10px;
-        grid-row: 1/4;
-        grid-column: 1/1;
-    }
-}
-
-
-@media only screen and (min-width: 1001px) {
-    .text-area-full.bottom {
-        text-align: left;
-        margin-left: 7px;
-    }
-
-    .text-area-full.top {
-        vertical-align: initial;
-        text-align: initial;
-    }
-
-    .gridded-area {
-        text-align: left;
-        margin-left: 2%;
-    }
-
-    .tanned-border {
-        display: none;
+    .panel-name-long, .location-area {
+        width: 230px;
     }
 
     .icon-area {
@@ -175,13 +106,159 @@
         margin: 0px 16px 0px 10px;
     }
 
+}
+
+
+
+@media only screen and (min-width: 2000px) {
+    .column-headers, .gridded-area {
+        grid-template-columns: 20% 40% 40%;
+    }
 
     .individual-rows.full-version {
-        margin-bottom: 0.6%;
+        font-size: 1.2em;
     }
 
-    .tanned {
-        padding: 12px 10px;
+    .panel-name-long, .location-area {
+        width: 300px;
+    }
+}
+
+@media only screen and (min-width: 2500px) {
+    .column-headers, .gridded-area {
+        grid-template-columns: 19% 40.5% 40.5%;
     }
 
+    .individual-rows.full-version {
+        font-size: 1.5em;
+    }
+
+    .panel-name-long, .location-area {
+        width: 430px;
+    }
+}
+
+@media only screen and (min-width: 3200px) {
+    .column-headers, .gridded-area {
+        grid-template-columns: 15% 42.5% 42.5%;
+    }
+
+    .location-area {
+        width: auto;
+    }
+
+    .panel-name-long {
+        width: 700px;
+    }
+}
+
+@media only screen and (min-width: 4200px) {
+
+    .individual-rows.full-version {
+        font-size: 1.7em;
+    }
+
+    .location-area {
+        width: auto;
+    }
+
+    .panel-name-long {
+        width: 1000px;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .column-headers, .gridded-area {
+        grid-template-columns: 32% 33% 33%;
+    }
+
+    .individual-rows.full-version {
+        font-size: 1.2em;
+        margin: 0;
+        padding: 0px;
+    }
+
+    .panel-name-long, .location-area {
+        width: 110px;
+    }
+
+    .icon-area {
+        margin: 0px 10px;
+    }
+
+    .at-icon {
+        width: 20px;
+     }
+}
+
+@media only screen and (max-width: 890px) {
+    .column-headers, .gridded-area {
+        grid-template-columns: 37% 38% 25%;
+    }
+
+    .individual-rows.full-version {
+        font-size: 1em;
+        margin: 0;
+        padding: 0px;
+    }
+
+    .panel-name-long, .location-area {
+        width: 70px;
+    }
+
+    .icon-area {
+        margin: 0px 10px;
+    }
+
+    .at-icon {
+        width: 20px;
+     }
+}
+
+@media only screen and (max-width: 650px) {
+    .column-headers, .gridded-area {
+        grid-template-columns: 35% 45% 20%;
+    }
+
+    .individual-rows.full-version {
+        font-size: 1em;
+        margin: 0;
+        padding: 0px;
+    }
+
+    .panel-name-long, .location-area {
+        width: 90px;
+    }
+
+    .icon-area {
+        margin: 0px 10px;
+    }
+
+    .at-icon {
+        width: 20px;
+     }
+}
+
+@media only screen and (max-width: 600px) {
+    .column-headers, .gridded-area {
+        grid-template-columns: 35% 35.5% 29.5%;
+    }
+
+    .individual-rows.full-version {
+        font-size: 1em;
+        margin: 0;
+        padding: 0px;
+    }
+
+    .panel-name-long, .location-area {
+        width: 90px;
+    }
+
+    .icon-area {
+        margin: 0px 10px;
+    }
+
+    .at-icon {
+        width: 20px;
+     }
 }
