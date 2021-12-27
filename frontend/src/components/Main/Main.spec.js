@@ -6,6 +6,9 @@ import Main from './Main';
 import mockSchedule from '../../../__mocks__/super_2019_panels_json.json';
 
 
+function checkTime(duration, timeType) {
+    return (dayjs().isSame(dayjs().add(duration, timeType), 'day'));
+}
 
 jest.setMock('../../../../../examples/super_2019_panels_json.json', require('../../../__mocks__/super_2019_panels_json.json'));
 
@@ -79,11 +82,12 @@ describe('Test if routes work properly', () => {
 });
 
 describe('Test timed events for Single Panels', () => {
-
+    let counter;
 
     afterEach(() => {
         delete window.location;
         jest.clearAllMocks();
+        counter = 0;
     });
 
     afterAll(() => {
@@ -95,6 +99,13 @@ describe('Test timed events for Single Panels', () => {
         mockSchedule[8].end_unix = 1546540200;
         mockSchedule[18].start_unix = 1546542000;
         mockSchedule[18].end_unix = 1546545600;
+        mockSchedule[19].start_unix = 1546543800;
+        mockSchedule[19].end_unix = 1546547400;
+
+        mockSchedule[4].start_unix = 1546534800;
+        mockSchedule[4].end_unix = 1546538400;
+        mockSchedule[11].start_unix = 1546540200;
+        mockSchedule[11].end_unix = 1546543800;
     });
 
     test('Correct time is displayed', () => {
@@ -110,49 +121,61 @@ describe('Test timed events for Single Panels', () => {
     });
 
     test('Goes to single panel display with 1 event today', () => {
+        // Checks to ensure mocks are within the same day before testing it
         mockSchedule[3].start_unix = dayjs().add(1, 'hour').unix();
         mockSchedule[3].end_unix = dayjs().add(2, 'hour').unix();
+        if (checkTime(1, 'hour')) counter += 1;
+
+        // Goes to the displays to test
         window.location = new URL('http://localhost:3000/#/filtered&single?place=Panels+1');
 
         const wrapper = mount(<Router><Main /></Router>);
 
         const singlePanelNameAmount = wrapper.find('.individual-rows.single-row').length;
-        const foundName = wrapper.find('.panel-name').at(0).text();
 
-        expect(foundName).toContain('Welcome to MAGFest!');
-        expect(singlePanelNameAmount).toBe(1);
+        expect(singlePanelNameAmount).toBe(counter);
     });
 
     test('Goes to single panel display with 2 events today', () => {
-        mockSchedule[3].start_unix = dayjs().add(1, 'hour').unix();
-        mockSchedule[3].end_unix = dayjs().add(2, 'hour').unix();
+        // Checks to ensure mocks are within the same day before testing it
+        mockSchedule[10].start_unix = dayjs().add(10, 'minute').unix();
+        mockSchedule[10].end_unix = dayjs().add(20, 'minute').unix();
+        if (checkTime(10, 'minute')) counter += 1;
 
-        mockSchedule[10].start_unix = dayjs().add(5, 'hour').unix();
-        mockSchedule[10].end_unix = dayjs().add(6, 'hour').unix();
+        // Checks to ensure mocks are within the same day before testing it
+        mockSchedule[19].start_unix = dayjs().add(20, 'minute').unix();
+        mockSchedule[19].end_unix = dayjs().add(30, 'minute').unix();
+        if (checkTime(20, 'minute')) counter += 1;
+
+        // Goes to the displays to test
         window.location = new URL('http://localhost:3000/#/filtered&single?place=Panels+1');
 
         const wrapper = mount(<Router><Main /></Router>);
 
         const singlePanelNameAmount = wrapper.find('.individual-rows.single-row').length;
+        const foundName = wrapper.find('.panel-name').at(0).text();
 
-        expect(singlePanelNameAmount).toBe(2);
+        expect(singlePanelNameAmount).toBe(counter);
+        if (checkTime(10, 'minute'))
+            expect(foundName).toContain('How To Swadge! Use your electronic badge for good not evil!');
     });
 
     test('Goes to single panel display with 1 event a day from now', () => {
-        mockSchedule[3].start_unix = dayjs().add(1, 'day').unix();
-        mockSchedule[3].end_unix = dayjs().add(2, 'day').unix();
+        mockSchedule[4].start_unix = dayjs().add(1, 'day').unix();
+        mockSchedule[4].end_unix = dayjs().add(2, 'day').unix();
 
-        mockSchedule[10].start_unix = dayjs().add(5, 'hour').unix();
-        mockSchedule[10].end_unix = dayjs().add(6, 'hour').unix();
-        window.location = new URL('http://localhost:3000/#/filtered&single?place=Panels+1');
+        // Checks to ensure mocks are within the same day before testing it
+        mockSchedule[11].start_unix = dayjs().add(20, 'minute').unix();
+        mockSchedule[11].end_unix = dayjs().add(30, 'minute').unix();
+        if (checkTime(20, 'minute')) counter += 1;
+
+        // Goes to the displays to test
+        window.location = new URL('http://localhost:3000/#/filtered&single?place=Panels+3');
 
         const wrapper = mount(<Router><Main /></Router>);
 
-        const foundName = wrapper.find('.panel-name').at(0).text();
         const singlePanelNameAmount = wrapper.find('.individual-rows.single-row').length;
-
-        expect(foundName).toContain('How To Swadge! Use your electronic badge for good not evil!');
-        expect(singlePanelNameAmount).toBe(1);
+        expect(singlePanelNameAmount).toBe(counter);
     });
 
 
@@ -162,17 +185,30 @@ describe('Test timed events for Single Panels', () => {
         //Tuesday, October 19, 2021 3:00:00 PM 
         mockSchedule[8].end_unix = 1634670000;
 
-        mockSchedule[18].start_unix = dayjs().add(3, 'hour').unix();
-        mockSchedule[18].end_unix = dayjs().add(4, 'hour').unix();
+        // Checks to ensure mocks are within the same day before testing it
+        mockSchedule[18].start_unix = dayjs().add(15, 'minute').unix();
+        mockSchedule[18].end_unix = dayjs().add(30, 'minute').unix();
+        if (checkTime(15, 'minute')) counter += 1;
+
+        // Goes to the displays to test
         window.location = new URL('http://localhost:3000/#/filtered&single?place=Tabletop+Discussions');
 
         const wrapper = mount(<Router><Main /></Router>);
 
-        const foundName = wrapper.find('.panel-name').at(0).text();
         const singlePanelNameAmount = wrapper.find('.individual-rows.single-row').length;
+        expect(singlePanelNameAmount).toBe(counter);
+    });
 
-        expect(foundName).toContain('When RPGs Go Wrong');
-        expect(singlePanelNameAmount).toBe(1);
+
+
+    test('Goes to single panel display with no future events', () => {
+        // Goes to the displays to test
+        window.location = new URL('http://localhost:3000/#/filtered&single?place=Panels+4');
+
+        const wrapper = mount(<Router><Main /></Router>);
+
+        const singlePanelNameAmount = wrapper.find('.individual-rows.single-row').length;
+        expect(singlePanelNameAmount).toBe(counter);
     });
 
 });
@@ -183,6 +219,26 @@ describe('Test timed events for Full Display', () => {
     afterEach(() => {
         delete window.location;
         jest.clearAllMocks();
+    });
+
+    afterAll(() => {
+        mockSchedule[4].start_unix = 1546534800;
+        mockSchedule[4].end_unix = 1546538400;
+        mockSchedule[7].start_unix = 1546536600;
+        mockSchedule[7].end_unix = 1546542000;
+        mockSchedule[9].start_unix = 1546536600;
+        mockSchedule[9].end_unix = 1546538400;
+    });
+
+    test('There are no events in the future', () => {
+        // Goes to the displays to test
+        window.location = new URL('http://localhost:3000/#/filtered');
+
+        const wrapper = mount(<Router><Main /></Router>);
+
+        const fullPanelNameAmount = wrapper.find('.individual-rows.full-version').length;
+
+        expect(fullPanelNameAmount).toBe(0);
     });
 
 
@@ -197,15 +253,14 @@ describe('Test timed events for Full Display', () => {
         mockSchedule[9].start_unix = dayjs().add(4, 'day').add(4, 'hour').unix();
         mockSchedule[9].end_unix = dayjs().add(4, 'day').add(5, 'hour').unix();
 
+        // Goes to the displays to test
         window.location = new URL('http://localhost:3000/#/filtered');
 
         const wrapper = mount(<Router><Main /></Router>);
 
         const singlePanelNameAmount = wrapper.find('.individual-rows.single-row').length;
         const fullPanelNameAmount = wrapper.find('.individual-rows.full-version').length;
-        const fullPanels = wrapper.find('.individual-rows.full-version');
 
-        
         expect(singlePanelNameAmount).toBe(0);
         expect(fullPanelNameAmount).toBe(3);
     });
