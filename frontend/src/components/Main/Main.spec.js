@@ -153,11 +153,13 @@ describe('Test timed events for Single Panels', () => {
         const wrapper = mount(<Router><Main /></Router>);
 
         const singlePanelNameAmount = wrapper.find('.individual-rows.single-row').length;
-        const foundName = wrapper.find('.panel-name').at(0).text();
 
         expect(singlePanelNameAmount).toBe(counter);
-        if (checkTime(10, 'minute'))
-            expect(foundName).toContain('TASBot and Tool-Assisted Speedruns: A History');
+        if (checkTime(10, 'minute')) {
+            expect(
+                wrapper.find('.panel-name').at(0).text()
+            ).toContain('TASBot and Tool-Assisted Speedruns: A History');
+        }
     });
 
     test('Goes to single panel display with 1 event a day from now', () => {
