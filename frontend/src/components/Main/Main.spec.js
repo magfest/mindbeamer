@@ -32,6 +32,13 @@ describe('Test if panels display', () => {
         const foundName = wrapper.find('.panel-name-long').at(0).text();
         expect(foundName).toBe('Open Jamaaaan');
     });
+
+    test('Clears Intervals', () => {
+        const wrapper = mount(<Router><Main /></Router>);
+        jest.useFakeTimers();
+        wrapper.unmount();
+        expect(clearInterval).toHaveBeenCalled();
+    });
 });
 
 describe('Test if routes work properly', () => {
@@ -93,6 +100,8 @@ describe('Test timed events for Single Panels', () => {
     afterAll(() => {
         mockSchedule[3].start_unix = 1546534800;
         mockSchedule[3].end_unix = 1546538400;
+        mockSchedule[9].start_unix = 1546536600;
+        mockSchedule[9].end_unix = 1546538400;
         mockSchedule[10].start_unix = 1546538400;
         mockSchedule[10].end_unix = 1546542000;
         mockSchedule[8].start_unix = 1546536600;
@@ -116,18 +125,20 @@ describe('Test timed events for Single Panels', () => {
 
         const wrapper = mount(<Router><Main /></Router>);
         const foundTime = wrapper.find('.times-sing.start-time-sing').at(0).text();
+        const singlePanelNameAmount = wrapper.find('.individual-rows.single-row').length;
 
         expect(foundTime).toBe('Fri, 11:00');
+        expect(singlePanelNameAmount).toBe(3);
     });
 
     test('Goes to single panel display with 1 event today', () => {
         // Checks to ensure mocks are within the same day before testing it
-        mockSchedule[3].start_unix = dayjs().add(1, 'hour').unix();
-        mockSchedule[3].end_unix = dayjs().add(2, 'hour').unix();
+        mockSchedule[9].start_unix = dayjs().add(1, 'hour').unix();
+        mockSchedule[9].end_unix = dayjs().add(2, 'hour').unix();
         if (checkTime(1, 'hour')) counter += 1;
 
         // Goes to the displays to test
-        window.location = new URL('http://localhost:3000/#/filtered&single?place=Panels+1');
+        window.location = new URL('http://localhost:3000/#/filtered&single?place=Tabletop+Indie+Showcase');
 
         const wrapper = mount(<Router><Main /></Router>);
 
@@ -241,6 +252,16 @@ describe('Test timed events for Full Display', () => {
         const fullPanelNameAmount = wrapper.find('.individual-rows.full-version').length;
 
         expect(fullPanelNameAmount).toBe(0);
+    });
+
+    test('The unfiltered full panel display', () => {
+        // Goes to the displays to test
+        window.location = new URL('http://localhost:3000/#/');
+
+        const wrapper = mount(<Router><Main /></Router>);
+        const fullPanelNameAmount = wrapper.find('.individual-rows.full-version').length;
+
+        expect(fullPanelNameAmount).toBe(20);
     });
 
 
