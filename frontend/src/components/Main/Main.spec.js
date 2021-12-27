@@ -138,14 +138,14 @@ describe('Test timed events for Single Panels', () => {
 
     test('Goes to single panel display with 2 events today', () => {
         // Checks to ensure mocks are within the same day before testing it
-        mockSchedule[10].start_unix = dayjs().add(10, 'minute').unix();
-        mockSchedule[10].end_unix = dayjs().add(20, 'minute').unix();
-        if (checkTime(10, 'minute')) counter += 1;
+        mockSchedule[10].start_unix = dayjs().add(20, 'minute').unix();
+        mockSchedule[10].end_unix = dayjs().add(30, 'minute').unix();
+        if (checkTime(20, 'minute')) counter += 1;
 
         // Checks to ensure mocks are within the same day before testing it
-        mockSchedule[19].start_unix = dayjs().add(20, 'minute').unix();
-        mockSchedule[19].end_unix = dayjs().add(30, 'minute').unix();
-        if (checkTime(20, 'minute')) counter += 1;
+        mockSchedule[19].start_unix = dayjs().add(10, 'minute').unix();
+        mockSchedule[19].end_unix = dayjs().add(20, 'minute').unix();
+        if (checkTime(10, 'minute')) counter += 1;
 
         // Goes to the displays to test
         window.location = new URL('http://localhost:3000/#/filtered&single?place=Panels+1');
@@ -157,7 +157,7 @@ describe('Test timed events for Single Panels', () => {
 
         expect(singlePanelNameAmount).toBe(counter);
         if (checkTime(10, 'minute'))
-            expect(foundName).toContain('How To Swadge! Use your electronic badge for good not evil!');
+            expect(foundName).toContain('TASBot and Tool-Assisted Speedruns: A History');
     });
 
     test('Goes to single panel display with 1 event a day from now', () => {
