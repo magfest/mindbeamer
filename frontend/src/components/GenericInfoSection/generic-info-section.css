@@ -68,14 +68,14 @@
 @media only screen and (min-width: 3500px) {
 
     .flexed-content-generic {
-        width: 15%;
+        width: 20%;
     }
 }
 
 @media only screen and (min-width: 4000px) {
 
     .flexed-content-generic {
-        width: 16%;
+        width: 20%;
     }
 }
 
