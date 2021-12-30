@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './map.css';
-import map1 from '../../assets/pictures/mapRatio.jpg';
-// import map2 from '../../assets/pictures/map2.jpg';
+import map1 from '../../assets/pictures/mapFloorPlan2022-roughDraft.jpg';
 import squareXmark from '../../assets/icons/square-xmark.svg';
 
 const Map = ({isFull}) => {
