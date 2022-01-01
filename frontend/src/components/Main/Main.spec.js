@@ -104,6 +104,8 @@ describe('Test timed events for Single Panels', () => {
         mockSchedule[9].end_unix = 1546538400;
         mockSchedule[10].start_unix = 1546538400;
         mockSchedule[10].end_unix = 1546542000;
+        mockSchedule[13].start_unix = 1546542000;
+        mockSchedule[13].end_unix = 1546556400;
         mockSchedule[8].start_unix = 1546536600;
         mockSchedule[8].end_unix = 1546540200;
         mockSchedule[18].start_unix = 1546542000;
@@ -117,7 +119,7 @@ describe('Test timed events for Single Panels', () => {
         mockSchedule[11].end_unix = 1546543800;
     });
 
-    test('Correct time is displayed', () => {
+    test('Correct time & panel name is displayed', () => {
         mockSchedule[3].start_unix = 1640361627;
         mockSchedule[3].end_unix = 1640363427;
 
@@ -127,8 +129,12 @@ describe('Test timed events for Single Panels', () => {
         const foundTime = wrapper.find('.times-sing.start-time-sing').at(0).text();
         const singlePanelNameAmount = wrapper.find('.individual-rows.single-row').length;
 
+        const panelRoomListing = wrapper.find('.single-room-panel-name').at(0).text();
+
         expect(foundTime).toBe('Fri, 11:00');
         expect(singlePanelNameAmount).toBe(3);
+
+        expect(panelRoomListing).toBe('Panel Room: Panels 1Gaylord Room: Cherry Blossom Ballroom');
     });
 
     test('Goes to single panel display with 1 event today', () => {
@@ -145,6 +151,30 @@ describe('Test timed events for Single Panels', () => {
         const singlePanelNameAmount = wrapper.find('.individual-rows.single-row').length;
 
         expect(singlePanelNameAmount).toBe(counter);
+    });
+
+
+    test('Display has 1 event today and timers are advanced', () => {
+        jest.useFakeTimers();
+
+        // Checks to ensure mocks are within the same day before testing it
+        mockSchedule[13].start_unix = dayjs().add(2, 'hour').unix();
+        mockSchedule[13].end_unix = dayjs().add(3, 'hour').unix();
+        if (checkTime(2, 'hour')) counter += 1;
+
+        // Goes to the displays to test
+        window.location = new URL('http://localhost:3000/#/filtered&single?place=Arcade');
+
+        const wrapper = mount(<Router><Main /></Router>);
+
+        const singlePanelNameAmountInitial = wrapper.find('.individual-rows.single-row').length;
+
+        jest.advanceTimersByTime(700000);
+
+        const singlePanelNameAmountAdvanced = wrapper.find('.individual-rows.single-row').length;
+
+        expect(singlePanelNameAmountInitial).toBe(counter);
+        expect(singlePanelNameAmountInitial).toEqual(singlePanelNameAmountAdvanced);
     });
 
     test('Goes to single panel display with 2 events today', () => {

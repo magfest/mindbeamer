@@ -11,7 +11,9 @@ describe('Clock Renders and Functions', () => {
 
     test('Checks date', () => {
         const wrapper = shallow(<Clock />);
-        expect(wrapper.find('.date-area').at(0).text()).toContain("Date: Friday, December 31, 2021");
+        const currentDate = new Date();
+        const formattedDate = currentDate.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour12: true });
+        expect(wrapper.find('.date-area').at(0).text()).toContain(formattedDate);
     });
 
     test('Check if tick called', () => {
