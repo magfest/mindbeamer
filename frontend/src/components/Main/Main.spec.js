@@ -17,6 +17,7 @@ describe('Test if panels display', () => {
 
     afterEach(() => {
         jest.clearAllMocks();
+        jest.useRealTimers();
     });
 
     test('Renders children', () => {
@@ -94,6 +95,7 @@ describe('Test timed events for Single Panels', () => {
     afterEach(() => {
         delete window.location;
         jest.clearAllMocks();
+        jest.useRealTimers()
         counter = 0;
     });
 

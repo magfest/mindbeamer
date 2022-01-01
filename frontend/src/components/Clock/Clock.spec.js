@@ -4,6 +4,11 @@ import Clock from './Clock';
 
 
 describe('Clock Renders and Functions', () => {
+
+    afterAll(() => {
+        jest.useRealTimers();
+    });
+
     test('Clock is defined', () => {
         const wrapper = shallow(<Clock />);
         expect(wrapper).toBeDefined();
