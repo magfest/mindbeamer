@@ -1,0 +1,44 @@
+{
+	"RecipeFormatVersion": "2020-01-25",
+	"ComponentName": "org.magfest.Mindbeamer",
+	"ComponentVersion": "GIT_TAG",
+	"ComponentType": "aws.greengrass.generic",
+	"ComponentDescription": "Deploys Mindbeamer to AWS IoT Devices.",
+	"ComponentPublisher": "MAGFest",
+	"ComponentDependencies": {
+		"aws.greengrass.TokenExchangeService": {
+			"VersionRequirement": ">=2.0.0 <3.0.0",
+			"DependencyType": "HARD"
+		}
+	},
+	"Manifests": [
+		{
+			"Platform": {
+				"os": "linux"
+			},
+			"Name": "Linux",
+			"Lifecycle": {
+				"Bootstrap": {
+					"Script": "rsync -r --exclude 'node_modules' --exclude '*.spec.js' --exclude '*.test.js' {artifacts:decompressedPath}/mindbeamer-GIT_HASH/* {work:path}/ --delete && cd {work:path}/frontend/ && npm install --only=production",
+					"Timeout": 1200
+				},
+				"Run": {
+					"Script": "cd {work:path}/frontend/ && npm start"
+				}
+			},
+			"Artifacts": [
+				{
+					"Uri": "s3://mindbeamer/mindbeamer-GIT_HASH.zip",
+					"Digest": "",
+					"Algorithm": "SHA-256",
+					"Unarchive": "ZIP",
+					"Permission": {
+						"Read": "ALL",
+						"Execute": "ALL"
+					}
+				}
+			]
+		}
+	],
+	"Lifecycle": {}
+}

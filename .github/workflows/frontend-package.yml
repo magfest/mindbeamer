@@ -36,7 +36,19 @@ jobs:
       uses: shallwefootball/s3-upload-action@master
       with:
         aws_key_id: "${{ secrets.AWS_KEY_ID }}"
-        aws_secret_access_key: "${{ secrets.AWS_SECRET_ACCESS_KEY}}"
+        aws_secret_access_key: "${{ secrets.AWS_SECRET_ACCESS_KEY }}"
         aws_bucket: mindbeamer
         source_dir: build
         destination_dir: ''
+    - name: Update Greengrass v2 Component
+      if: startsWith(github.ref, 'refs/tags/')
+      run: |
+        GIT_TAG=$(echo $GITHUB_REF | cut -d / -f 3)
+        GIT_HASH=${{ steps.get_sha.outputs.short-sha }}
+        sed -i 's/GIT_TAG/$GIT_TAG/g' greengrass.json
+        sed -i 's/GIT_HASH/$GIT_HASH/g' greengrass.json
+        aws greengrassv2 create-component-version --inline-recipe fileb://greengrass.json
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_DEFAULT_REGION: 'us-east-1'
