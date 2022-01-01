@@ -45,8 +45,8 @@ jobs:
       run: |
         GIT_TAG=$(echo $GITHUB_REF | cut -d / -f 3)
         GIT_HASH=${{ steps.get_sha.outputs.short-sha }}
-        sed -i 's/GIT_TAG/$GIT_TAG/g' greengrass.json
-        sed -i 's/GIT_HASH/$GIT_HASH/g' greengrass.json
+        sed -i "s/GIT_TAG/$GIT_TAG/g" greengrass.json
+        sed -i "s/GIT_HASH/$GIT_HASH/g" greengrass.json
         aws greengrassv2 create-component-version --inline-recipe fileb://greengrass.json
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_KEY_ID }}
