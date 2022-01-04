@@ -97,8 +97,9 @@ class Main extends React.Component {
             return key.location.includes(filterKeyword) 
         });
 
-        if (filteredPanels.length > 1)
-            gaylordRoomExtr = filteredPanels[0].location.match(/\(([^)]+)\)/)[1];
+        if (filteredPanels.length >= 1) {
+            gaylordRoomExtr = filteredPanels[0].location.match(/\(([^)]+)\)/)?.[1] ?? "N/A";
+        }
 
         this.setState({ schedule: filteredPanels, gaylordRoom: gaylordRoomExtr });
         return filteredPanels;
