@@ -12,7 +12,7 @@ import { filterTimes, filterToday, orderTimes } from '../../utils/helpers';
 import './main.css';
 
 import * as example from 'testConfig/testconfig1.json';
-import * as fullSchedule from 'testConfig/super_2019_panels_json.json';
+import * as fullSchedule from 'testConfig/super_2022.json';
 
 import mountainsTextCombined from '../../assets/pictures/mountainsTextCombined.svg';
 
