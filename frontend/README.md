@@ -58,6 +58,10 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+### `npx jest --coverage --colors`
+Launches the test runner with test coverage information collected and reported in the output.\
+See the section about [running test coverage](https://jestjs.io/docs/cli#--coverageboolean) for more information.
+
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\

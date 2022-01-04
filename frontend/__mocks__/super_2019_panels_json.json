@@ -1,0 +1,224 @@
+[
+    {
+        "name": "Open Jam",
+        "location": "Jamspace + Community Curated Stage (Eastern Shore 1,2,3)",
+        "start": "10AM Thu",
+        "end": "6PM Thu",
+        "start_unix": 1546527600,
+        "end_unix": 1546556400,
+        "duration": 480,
+        "description": "Jamspace Open Jam: Strawberry",
+        "panelists": []
+    },
+    {
+        "name": "Mega Man-athon: Pre-Show",
+        "location": "magFAST (Maryland Hallway)",
+        "start": "11AM Thu",
+        "end": "12PM Thu",
+        "start_unix": 1546531200,
+        "end_unix": 1546534800,
+        "duration": 60,
+        "description": "If we start on time this year, we might actually do this! Come early to watch us get ready and hype up the beginning of our 72 hour Mega Man Marathon to raise money for Child's Play!",
+        "panelists": []
+    },
+    {
+        "name": "Open and Guided Jams",
+        "location": "Jam Clinic (Chesapeake D,E,F)",
+        "start": "12PM Thu",
+        "end": "6PM Thu",
+        "start_unix": 1546534800,
+        "end_unix": 1546556400,
+        "duration": 360,
+        "description": "Bring your instrument (or try our in-house gear), grab a microphone, and get ready to jam with our highly-talented staff and guests! Or just swing by and enjoy the live music! Not sure where to start, or want to brush up on your chops? We have workshops scheduled throughout the weekend for all skill levels.\r\n\r\nNote: time ranges for Open and Guided Jams may vary slightly due to scheduled events in the Jam Clinic and Jam Shop.\r\n\r\n~~~\r\n\r\nThe Jam Clinic is a musician-to-musician education venue at the Music and Gaming Festival (MAGFest), dedicated to co-mentoring participants on how to play and improvise within genres such as jazz fusion, funk, and rock, as well as popular video game music.\r\n\r\nWe strive to teach participants and empower them with the language of musical communication, while embracing a leadership-centered, technology-powered, challenging, and fun atmosphere for our visitors.",
+        "panelists": []
+    },
+    {
+        "name": "Welcome to MAGFest!",
+        "location": "Panels 1 (Cherry Blossom Ballroom)",
+        "start": "12PM Thu",
+        "end": "1PM Thu",
+        "start_unix": 1546534800,
+        "end_unix": 1546538400,
+        "duration": 60,
+        "description": "",
+        "panelists": []
+    },
+    {
+        "name": "For those who are about to rock we educate you.",
+        "location": "Panels 3 (Woodrow Wilson Ballroom)",
+        "start": "12PM Thu",
+        "end": "1PM Thu",
+        "start_unix": 1546534800,
+        "end_unix": 1546538400,
+        "duration": 60,
+        "description": "One dose not simply go to a concert every week. But you can. Come and learn some advice to help you go to more concerts outside of MAGFest. Without destroying yourself or your bank account.",
+        "panelists": []
+    },
+    {
+        "name": "Mega Man X2",
+        "location": "magFAST (Maryland Hallway)",
+        "start": "12PM Thu",
+        "end": "1PM Thu",
+        "start_unix": 1546534800,
+        "end_unix": 1546540200,
+        "duration": 90,
+        "description": "Starting off the Mega Man-athon is KayeXP playing Mega Man X2!\r\n\r\nNoon to 1:30PM",
+        "panelists": []
+    },
+    {
+        "name": "Armour Academy: Chainmail!",
+        "location": "Makerspace (Magnolia 1)",
+        "start": "12PM Thu",
+        "end": "1PM Thu",
+        "start_unix": 1546536600,
+        "end_unix": 1546540200,
+        "duration": 60,
+        "description": "Want to learn how to make chainmail? Well good news! It's not that hard! \r\nIn this panel, we will teach the traditional European four-in-one weave, used for armor from the Roman Empire through middle ages, and send you home with a small piece forged by your own hands.\r\nThere will be a fifteen dollar materials fee to participate in this panel, but any may observe for free.",
+        "panelists": []
+    },
+    {
+        "name": "To End All Wars: Battlefield 1 And The First World War",
+        "location": "Panels 4 (Annapolis 2-4)",
+        "start": "12PM Thu",
+        "end": "2PM Thu",
+        "start_unix": 1546536600,
+        "end_unix": 1546542000,
+        "duration": 90,
+        "description": "After almost two years since launch, Battlefield 1 has presented The First World War to millions of gamers across the globe. But how does it portray the war compared to the real thing? How can a video game show the defining event of the 20th century? And what can we learn from this war today, a hundred years later? Join a man who willingly calls himself \u201cDerp\u201d on the Internet as we delve into the horrors and humanity of what has been ironically called The War To End All Wars.",
+        "panelists": []
+    },
+    {
+        "name": "Mastering Your Dungeons: Making D&D Adventures Like a Boss!",
+        "location": "Tabletop Discussions (Riverview Ballroom 1)",
+        "start": "12PM Thu",
+        "end": "1PM Thu",
+        "start_unix": 1546536600,
+        "end_unix": 1546540200,
+        "duration": 60,
+        "description": "Maps, traps, monsters, and mazes! Dastardly plots and secret places! What makes for a memorable Dungeons & Dragons adventure? How do you design a dungeon to entertain and delight? Join the Mythmakers team as we present tips and tricks on how to create D&D adventures that your players will rave about!",
+        "panelists": []
+    },
+    {
+        "name": "MITS Opens",
+        "location": "Tabletop Indie Showcase (MITS) (Riverview Ballroom 4,5)",
+        "start": "12PM Thu",
+        "end": "1PM Thu",
+        "start_unix": 1546536600,
+        "end_unix": 1546538400,
+        "duration": 30,
+        "description": "Come play and see games made by indie developers in various stages of development from playable prototype to complete project!\r\n\r\nMITS will close again at 4am.",
+        "panelists": []
+    },
+    {
+        "name": "How To Swadge! Use your electronic badge for good not evil!",
+        "location": "Panels 1 (Cherry Blossom Ballroom)",
+        "start": "1PM Thu",
+        "end": "2PM Thu",
+        "start_unix": 1546538400,
+        "end_unix": 1546542000,
+        "duration": 60,
+        "description": "What is this crazy MAGFest circuit board?  How do I use it?  What features does it have? An overview of the work that goes into creating the swadges, including mechanical, circuit, and firmware design. Come and ask the creators anything. You can even ask about the secret code, but don't expect an answer!\r\n\r\nWe are mostly _not_ techops now.  Techops kind of wanted to divorce from swadges.\r\n\r\nBut sure...\r\n\r\nSwadges are in their third year now, and are all designed, engineered and programmed in-house by MAGFest volunteers.  If you are interested in helping out with swadges in future years, join us!  You can email cnlohr@magfest.org",
+        "panelists": []
+    },
+    {
+        "name": "Ludomusicology: The Scholarly Study of Video Game Music",
+        "location": "Panels 3 (Woodrow Wilson Ballroom)",
+        "start": "1PM Thu",
+        "end": "2PM Thu",
+        "start_unix": 1546540200,
+        "end_unix": 1546543800,
+        "duration": 60,
+        "description": "What if you could teach and write about video game music for a living? This panel will feature four academics from different backgrounds to discuss video game music as an academic discipline, aka Ludomusicology. We\u2019ll cover our research and hot topics in the field, how it is different from standard journalistic game criticism, and offer resources for getting started. Followed by a Q&A.\r\n\r\nOur party of scholars includes:\r\nDr. Karen Cook, an Assistant Professor of Music History at the University of Hartford, who brings her Medievalist background to bear on medieval-flavored games and their music.\r\n\r\nJulianne Grasso (moderator), a PhD Candidate in Music Theory at the University of Chicago, whose dissertation uses music analysis and cognition studies to conceptualize our relationships to game music over the course of play.\r\n\r\nDr. Dana Plank comes from The Ohio State University with a PhD in Musicology and a penchant for 8-bit games. She offers an eclectic blend of approaches to understanding game sound, from disability theory to pornography studies. \r\n\r\nDr. Ryan Thompson teaches game history and game audio at Michigan State. A bona-fide Twitch teacher with a musicology background, Ryan leads our weekly Ludomusicology Twitch stream, where we discuss game music as it\u2019s happening.",
+        "panelists": []
+    },
+    {
+        "name": "Mega Man Zero 3",
+        "location": "magFAST (Maryland Hallway)",
+        "start": "1PM Thu",
+        "end": "3PM Thu",
+        "start_unix": 1546540200,
+        "end_unix": 1546545600,
+        "duration": 90,
+        "description": "Tterraj42 of Team BattleNetwork plays through Mega Man Zero 3 while Matt Papa of the games developer, Inti Creates joins him on the couch!\r\n\r\n1:40 - 3:10PM",
+        "panelists": []
+    },
+    {
+        "name": "Pinball Tournament Registration",
+        "location": "Arcade (Pinball)",
+        "start": "2PM Thu",
+        "end": "6PM Thu",
+        "start_unix": 1546542000,
+        "end_unix": 1546556400,
+        "duration": 240,
+        "description": "Register to play in the pinball tournament.",
+        "panelists": []
+    },
+    {
+        "name": "Party Unstoppable",
+        "location": "Arena (Maryland C)",
+        "start": "2PM Thu",
+        "end": "4PM Thu",
+        "start_unix": 1546542000,
+        "end_unix": 1546549200,
+        "duration": 120,
+        "description": "",
+        "panelists": []
+    },
+    {
+        "name": "Nelward Chipspace Kickoff Concert with your host Nelward",
+        "location": "Chipspace (Potomac Hallway)",
+        "start": "2PM Thu",
+        "end": "4PM Thu",
+        "start_unix": 1546542000,
+        "end_unix": 1546549200,
+        "duration": 120,
+        "description": "Nelward Chipspace Kickoff Concert with your host Nelward!",
+        "panelists": []
+    },
+    {
+        "name": "Cosplay 201: Building and Wearing Fursuits and Mascot Costumes",
+        "location": "Makerspace (Magnolia 1)",
+        "start": "2PM Thu",
+        "end": "3PM Thu",
+        "start_unix": 1546542000,
+        "end_unix": 1546545600,
+        "duration": 60,
+        "description": "While the concepts of cosplay and fursuit making have some overlap, there's special considerations of size, shape, comfort, and construction that go into making a fur or mascot style costume. Join divisionten as she walks you through the basics of foam work, handling fur and other non-standard fabrics, and well as designs considerations to keep the wearer cool and comfortable for as long as possible.",
+        "panelists": []
+    },
+    {
+        "name": "Drafts on Demand",
+        "location": "Tabletop CCG (National Harbor 1,2,3)",
+        "start": "2PM Thu",
+        "end": "2PM Thu",
+        "start_unix": 1546542000,
+        "end_unix": 1546543800,
+        "duration": 30,
+        "description": "",
+        "panelists": []
+    },
+    {
+        "name": "When RPGs Go Wrong",
+        "location": "Tabletop Discussions (Riverview Ballroom 1)",
+        "start": "2PM Thu",
+        "end": "3PM Thu",
+        "start_unix": 1546542000,
+        "end_unix": 1546545600,
+        "duration": 60,
+        "description": "We have all been there, just started a fresh D&D campaign, you found the weird splat books, or your ready top break out your weird all Monk game. Three weeks in chaos has struck, everyone is either at each other's throats, no one shows up, or perhaps worse, everyone is on their laptop playing side by side single player games. Fear not, with decades of gaming experience, Jordan and Corey will guide you through the dark waters of when Gaming Groups Go Wrong!",
+        "panelists": []
+    },
+    {
+        "name": "TASBot and Tool-Assisted Speedruns: A History",
+        "location": "Panels 1 (Cherry Blossom Ballroom)",
+        "start": "2PM Thu",
+        "end": "3PM Thu",
+        "start_unix": 1546543800,
+        "end_unix": 1546547400,
+        "duration": 60,
+        "description": "TASBot is like a player piano for classic video game consoles, sending a predefined sequence of button presses using only controller ports. TASBot plays games faster than any human possibly could and often glitches them beyond all recognition. He relies on humans to create those predefined sequences in the form of Tool-Assisted Speedrun movie files. This talk covers how the very first TAS runs were created and the history of how we got here. Come for the live demos, stay for the breakage and Q&A!",
+        "panelists": [
+            "Allan Cecil"
+        ]
+    }
+]
