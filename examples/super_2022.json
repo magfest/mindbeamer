@@ -253,17 +253,6 @@
     "panelists": []
   },
   {
-    "name": "The Music Problem: Streaming in the Wild World of DMCA",
-    "location": "Panels 5 (Chesapeake D,E,F)",
-    "start": "3PM Thu",
-    "end": "4PM Thu",
-    "start_unix": 1641501000,
-    "end_unix": 1641504600,
-    "duration": 60,
-    "description": "With the NMPA, RIAA, and other acronym organizations cracking down on music played either live or in the background of a stream, how can streamers and musicians create their content without takedowns? This panel of creators (and a lawyer) talk about the do’s, don’ts, and maybes of creating content with music.",
-    "panelists": []
-  },
-  {
     "name": "Quiet Room Open Hours",
     "location": "Quiet Room (Azalea 3)",
     "start": "3PM Thu",
@@ -360,7 +349,9 @@
     "end_unix": 1641508200,
     "duration": 60,
     "description": "Learn hand sewing while making a stuffed monster or your own design. *This class cost $5 for supplies. Must have cash on hand at time of panel*",
-    "panelists": []
+    "panelists": [
+      "0x0DDBA11 of Antipode"
+    ]
   },
   {
     "name": "Esports 101: Team Management",
@@ -471,19 +462,6 @@
     "duration": 510,
     "description": "Tiny Waves meetup and community mixer at our flagship event, CosRave!  Cosplay and/or pajamas strongly encouraged!! MASKS REQUIRED. SCHEDULE:  \r\n\r\n5:30 - DOORS OPEN + WARMUP\r\n6:40 - Raziki Slice\r\n7:20 - PHYSA\r\n8:00 - JamKam\r\n8:40 - Adora Blue\r\n9:20 - Padlock\r\n10:00 - Obi-Wan Shinobi\r\n10:40 - PolyKor B2B [SECRET GUEST]\r\n11:20 - K!LL Lyoko\r\n12:00 - arthur x medic\r\n12:40 - Baircave\r\n1:20 - Ben Briggs B2B H8Ø8",
     "panelists": []
-  },
-  {
-    "name": "Capt Crabs Presents: Becoming a VTuber",
-    "location": "Panels 1 (Cherry Blossom Ballroom)",
-    "start": "5PM Thu",
-    "end": "6PM Thu",
-    "start_unix": 1641508200,
-    "end_unix": 1641511800,
-    "duration": 60,
-    "description": "Learn all the ins and outs of being a VTuber. The streaming, the tech, software and more. Ask questions and get answers!",
-    "panelists": [
-      "Brian Arndt"
-    ]
   },
   {
     "name": "Microphone Choice and Technique: How to chose a microphone or use the one you’ve got.",
@@ -659,17 +637,6 @@
     "end_unix": 1641520800,
     "duration": 120,
     "description": "Bring your crochet, knit, sew, cosplay, writing, etc. projects that you're still working on! We'll chill, listen to music and vibe while you get closer to completing your projects. You can talk about what you're working on, but there's no pressure to share!",
-    "panelists": []
-  },
-  {
-    "name": "Zelda Universe Presents: It’s Dangerous to go Alone! Take Friends!",
-    "location": "Panels 1 (Cherry Blossom Ballroom)",
-    "start": "7PM Thu",
-    "end": "8PM Thu",
-    "start_unix": 1641513600,
-    "end_unix": 1641517200,
-    "duration": 60,
-    "description": "Link may be the Hero of Time, but he didn't get there on his own. Thirty-five years ago we learned it was dangerous to go alone and that sentiment has held true throughout the entire Zelda series. As the games grew, so did Link's support system. Whether it was receiving his first sword, having a traveling companion, or remembering his time with the Champions, there was always someone to give Link a helping hand. Celebrating 35 years of the Legend of Zelda, join the Zelda Universe staff and special guests SecretAgentJacob and AlecandStufff as we look at the friends, family, and rivals who drove Link forward and shaped him into the Hero he is today. Be sure to brush up on your Zelda knowledge, as there will be trivia and prizes!",
     "panelists": []
   },
   {
@@ -917,7 +884,9 @@
     "end_unix": 1641524400,
     "duration": 90,
     "description": "Have an video game arrangement written for orchestra that you want to hear in person? Print your parts and bring them along! Our pick up orchestra will read your new arrangement to the best of our ability! Want to play? Grab your instrument and give it a go!",
-    "panelists": []
+    "panelists": [
+      "Robert Martin"
+    ]
   },
   {
     "name": "The Midnight Train Royale: Featuring Railroad Ink",
@@ -1473,17 +1442,6 @@
     "panelists": []
   },
   {
-    "name": "Battle Jacket Workshop: Creating and Attaching Patches",
-    "location": "Makerspace Classroom (Chesapeake 4)",
-    "start": "11AM Fri",
-    "end": "12PM Fri",
-    "start_unix": 1641573000,
-    "end_unix": 1641576600,
-    "duration": 60,
-    "description": "Have you ever wanted to learn how to make your own customized patches to reflect your personal identity and interests? Feeling creative and want to take your jacket to the next level? Join the Battle Jacket Project in this all-ages interactive panel and learn different methods for designing and attaching patches to your garments, bags, and more. All materials included. Participants will be provided with a free limited-edition Battle Jacket Project patch.",
-    "panelists": []
-  },
-  {
     "name": "The VRchat Music Scene: How a virtual reality community of budding and seasoned talent grew together amid the pandemic",
     "location": "Panels 3 (Woodrow Wilson Ballroom B-C)",
     "start": "11AM Fri",
@@ -1653,17 +1611,6 @@
     ]
   },
   {
-    "name": "Battle Jacket Project Demo",
-    "location": "Makerspace Demo Room (Chesapeake 5)",
-    "start": "12PM Fri",
-    "end": "6PM Fri",
-    "start_unix": 1641576600,
-    "end_unix": 1641596400,
-    "duration": 330,
-    "description": "[Placeholder text - Will update by EOD 1/3]",
-    "panelists": []
-  },
-  {
     "name": "Let's Play: CUTE ANIMALS ON FIRE",
     "location": "Panels 2 (Woodrow Wilson Ballroom A)",
     "start": "12PM Fri",
@@ -1749,17 +1696,6 @@
     "end_unix": 1641596400,
     "duration": 300,
     "description": "It's back, it's basically the same, it's the League of Legends tournament! 5v5 single elimination with the semi-finals and finals casted in the evening on the LAN Theater Stage!",
-    "panelists": []
-  },
-  {
-    "name": "Blender Basics: DIY 3D Modeling and Animation",
-    "location": "Makerspace Classroom (Chesapeake 4)",
-    "start": "1PM Fri",
-    "end": "2PM Fri",
-    "start_unix": 1641578400,
-    "end_unix": 1641583800,
-    "duration": 90,
-    "description": "What if there was a single software that let you do 3D modeling, sculpture, animation, texture painting, video editing, and 3D print preparation?  What if that same tool was free and open source?  And what if it did it all that with an intuitive, beginner-friendly interface?  Introducing \"Blender,\" the tool that meets at least those first two criteria! (And with a little time and patience, even that third part isn't actually that hard, we promise!)\r\n\r\nWhether you work on gamedev, VR, animation, or even 3D printing, it would be hard to find a more versatile single-stop software than Blender. In this panel, I'll cover the beginner's basics of Blender, showing the start-to-finish process of creating a simple game-ready 3D model asset, as well as a quick overview of the more advanced workflows like sculpture and animation. Come see what Blender can do and then pick it up for yourself when you get home from MAGFest!\r\n\r\nI'll also preview some of the 3D assets and workflows that our MAGFest \"MAGLord\" VRChat team has created (using Blender!) and how they go from polygons to parties in VR. Questions welcome!",
     "panelists": []
   },
   {
@@ -2045,19 +1981,6 @@
     "panelists": []
   },
   {
-    "name": "Voice Acting During COVID-19",
-    "location": "Panels 1 (Cherry Blossom Ballroom)",
-    "start": "3PM Fri",
-    "end": "4PM Fri",
-    "start_unix": 1641585600,
-    "end_unix": 1641589200,
-    "duration": 60,
-    "description": "Wonder how your favorite games and TV shows get produced during a GLOBAL PANDEMIC? Voice Actor Jonah Scott has been at it for a whole year and will answer any questions you have!",
-    "panelists": [
-      "Jonah Scott"
-    ]
-  },
-  {
     "name": "Networking 101",
     "location": "Panels 4 (Annapolis 2-4)",
     "start": "3PM Fri",
@@ -2256,17 +2179,6 @@
     "panelists": []
   },
   {
-    "name": "A Decade of DEATH BATTLE!",
-    "location": "Panels 1 (Cherry Blossom Ballroom)",
-    "start": "4PM Fri",
-    "end": "5PM Fri",
-    "start_unix": 1641591000,
-    "end_unix": 1641594600,
-    "duration": 60,
-    "description": "Join Ben Singer (Wiz), Chad James (Boomstick) & Liam Swan as they discuss 10 years of pitting your favorite characters against each other in a fight to the death!",
-    "panelists": []
-  },
-  {
     "name": "That’s Probably Not Legal… Or Is It? A Lawyer AMA!",
     "location": "Panels 4 (Annapolis 2-4)",
     "start": "4PM Fri",
@@ -2366,28 +2278,17 @@
     "panelists": []
   },
   {
-    "name": "It’s Dangerous to Go Alone!: A Video Game Puppet Game Show",
+    "name": "Capt Crabs Presents: Becoming a VTuber",
     "location": "Panels 2 (Woodrow Wilson Ballroom A)",
     "start": "5PM Fri",
     "end": "6PM Fri",
     "start_unix": 1641592800,
     "end_unix": 1641596400,
     "duration": 60,
-    "description": "Puppet hosts will lead brave audience contestants through video game themed challenges. Fabulous fortunes await those brave enough to face their fickle fancies!",
+    "description": "Learn all the ins and outs of being a VTuber. The streaming, the tech, software and more. Ask questions and get answers!",
     "panelists": [
-      "Adam Stackhouse"
+      "Brian Arndt"
     ]
-  },
-  {
-    "name": "Live-to-Film Orchestra Session",
-    "location": "Panels 6 (Chesapeake A,B,C)",
-    "start": "5PM Fri",
-    "end": "6PM Fri",
-    "start_unix": 1641592800,
-    "end_unix": 1641596400,
-    "duration": 60,
-    "description": "Ever see a concert where a live orchestra plays to a film and wonder, \"how do they do that?\" This is your chance to find out! Bring your instruments and get a first hand look at bringing the score to life, live to video.",
-    "panelists": []
   },
   {
     "name": "Ultimate Masters",
@@ -2443,19 +2344,6 @@
     "duration": 60,
     "description": "In my presentation I want to share about Royalties. I love helping music artists and content creators register their royalties correctly and get paid.",
     "panelists": []
-  },
-  {
-    "name": "Figure It Out!",
-    "location": "Panels 5 (Chesapeake D,E,F)",
-    "start": "5PM Fri",
-    "end": "6PM Fri",
-    "start_unix": 1641594600,
-    "end_unix": 1641598200,
-    "duration": 60,
-    "description": "Some very special guests have secretly told us about a major gaming achievement they've unlocked. Our comedy crew of panelists are going to need to use their wits (and yes/no questions) to delve deep into these fantastic feats as they try to FIGURE IT OUT!",
-    "panelists": [
-      "Bobby Schweizer"
-    ]
   },
   {
     "name": "Running Tabletop Role-Playing Games Online",
@@ -2894,17 +2782,15 @@
     "panelists": []
   },
   {
-    "name": "Encounter Attack!",
-    "location": "Tabletop Panels/Discussions (Riverview Ballroom 1)",
+    "name": "Games At Work: A serious games primer",
+    "location": "Panels 5 (Chesapeake D,E,F)",
     "start": "8PM Fri",
     "end": "9PM Fri",
     "start_unix": 1641605400,
     "end_unix": 1641609000,
     "duration": 60,
-    "description": "Out of ideas to make your campaign fun and exciting? Need a scenario in your back pocket when all your plans have been thwarted? Want a jumping off point for something new? Encounter Attack is here to help. Using suggestions provided by the audience, we'll workshop a collection of hot n' fresh tabletop encounters before your very eyes. Bonus: after the panel you'll be able to take home our new crowd-sourced adventures as digital files from a provided QR code!",
-    "panelists": [
-      "Adam Stackhouse"
-    ]
+    "description": "For many years, games have been used as teaching tools, from rote repetition to complex simulations. Based on ideas from the book Serious Games, this discussion looks into the different patterns used by games to try and teach their players, what works, what doesn't, and what the future of serious games looks like.",
+    "panelists": []
   },
   {
     "name": "Final Fantasy II (Any% Pixel Remaster) by Ninnyz",
@@ -2948,6 +2834,17 @@
     "end_unix": 1641614400,
     "duration": 120,
     "description": "The Greatest Live Art Competition in the Known Universe RETURNS to MAGFest! Cheer your favorite artists onto victory, but watch out for the amazing topics of the crowd sourced WHEEL OF DEATH! You'll laugh, you'll cry, you'll have an unforgettable time!",
+    "panelists": []
+  },
+  {
+    "name": "Accountability and Toxicity in VGM Orchestras",
+    "location": "Panels 4 (Annapolis 2-4)",
+    "start": "9PM Fri",
+    "end": "10PM Fri",
+    "start_unix": 1641607200,
+    "end_unix": 1641610800,
+    "duration": 60,
+    "description": "From the Washington Metropolitan Gamer Symphony Orchestra,  Amanda, Soumya and Jasmine will address further Accountability and Toxicity in regards to keeping VGM Orchestras running. These are topics we touch on in \"So I started a VGM Orchestra, now how do I keep it running?\" We explore how to make sure to keep your organization accountable and how to reverse toxicity that may have taken root. This will include discussions on how to keep everyone on the same page for tasks, how to handle spicy interactions, formation of grievance committees and how to spot and reverse toxicity in a VGM Orchestra.",
     "panelists": []
   },
   {
@@ -3562,17 +3459,6 @@
     ]
   },
   {
-    "name": "Wake the Windwaker: A Conducting Workshop",
-    "location": "Panels 6 (Chesapeake A,B,C)",
-    "start": "11AM Sat",
-    "end": "12PM Sat",
-    "start_unix": 1641659400,
-    "end_unix": 1641663000,
-    "duration": 60,
-    "description": "The gestures and methods that conductors use to bring our favorite orchestral soundtracks to life remain a mystery to many. This workshop aims to clear the fog by providing a whirlwind master class in the art form, and providing select attendees the opportunity to conduct some VGM repertoire in front of a chamber orchestra. Instruction from LA based conductor and orchestrator, Robert Luke Martin (Irish Video Game Orchestra, Studio Orchestra of Long Beach)",
-    "panelists": []
-  },
-  {
     "name": "Initial D Arcade Stage ZERO",
     "location": "Arcade (Tournaments 1)",
     "start": "12PM Sat",
@@ -3794,17 +3680,6 @@
     "end_unix": 1641675600,
     "duration": 180,
     "description": "Back again is the 3v3 Rocket League tournament!",
-    "panelists": []
-  },
-  {
-    "name": "Intro to Knitting",
-    "location": "Makerspace Classroom (Chesapeake 4)",
-    "start": "1PM Sat",
-    "end": "2PM Sat",
-    "start_unix": 1641664800,
-    "end_unix": 1641668400,
-    "duration": 60,
-    "description": "Ever wanted to add something unique to your cosplay? Knitwear is an easy way to do that! Come join us for a crash course in knitting basics. You’ll learn how to make a slip knot, cast on, and work a basic garter stitch.",
     "panelists": []
   },
   {
@@ -4085,17 +3960,15 @@
     "panelists": []
   },
   {
-    "name": "Video Game Voice Acting: An AMA",
+    "name": "How to get in the game industry and reel review",
     "location": "Panels 2 (Woodrow Wilson Ballroom A)",
     "start": "3PM Sat",
     "end": "4PM Sat",
     "start_unix": 1641672000,
     "end_unix": 1641675600,
     "duration": 60,
-    "description": "Come ask prolific video game voice actor Jonah Scott your burning questions about vocal performance in video games! Wanna get into the industry? Curious about Mocap? Performance Capture? Ask away!",
-    "panelists": [
-      "Jonah Scott"
-    ]
+    "description": "A live Q and A with an 18 year marketing artist, game industry veteran and UI designer.  \r\nAsk the questions you've always wanted to ask about getting into and working in the game industry and get the unfiltered truth.\r\nBring your reels and get an honest review and learn what the industry is looking for in them.",
+    "panelists": []
   },
   {
     "name": "Pinball: How to Play With Purpose and Stop Just Smashing the Flippers",
@@ -4106,17 +3979,6 @@
     "end_unix": 1641675600,
     "duration": 60,
     "description": "Learn how to advance your pinball skills by getting tips from the experts.  Live demonstrations on real pinball tables will help you learn how to become a pinball wizard.",
-    "panelists": []
-  },
-  {
-    "name": "Getting Paid to Play Videogames for the Internet?",
-    "location": "Panels 5 (Chesapeake D,E,F)",
-    "start": "3PM Sat",
-    "end": "4PM Sat",
-    "start_unix": 1641672000,
-    "end_unix": 1641675600,
-    "duration": 60,
-    "description": "Do you want to try content creation for a job, but everyone tells you that you can’t make money playing videogames? Come listen as real-live nerds (and full time streamers) discuss how they built their careers, how to seize opportunity, and cover what it takes to make your gaming hobby into a career. Moderated by their lawyer!",
     "panelists": []
   },
   {
@@ -4161,17 +4023,6 @@
     "end_unix": 1641684600,
     "duration": 180,
     "description": "Part scavenger hunt, Part Larp. Explore the convention while searching for pictures and objects to complete your Poke Team. Join our 5h annual hunt!",
-    "panelists": []
-  },
-  {
-    "name": "DEATH BATTLE Q&A!",
-    "location": "Panels 1 (Cherry Blossom Ballroom)",
-    "start": "3PM Sat",
-    "end": "4PM Sat",
-    "start_unix": 1641673800,
-    "end_unix": 1641677400,
-    "duration": 60,
-    "description": "Join Ben Singer (Wiz), Chad James (Boomstick) & Liam Swan as they answer all your burning questions about DEATH BATTLE! The show that does the research to determine which of your favorite characters would win in a fight to the DEATH!",
     "panelists": []
   },
   {
@@ -4916,19 +4767,6 @@
     "panelists": []
   },
   {
-    "name": "Ultimate Puppet Ninja Warrior",
-    "location": "Panels 6 (Chesapeake A,B,C)",
-    "start": "8PM Sat",
-    "end": "10PM Sat",
-    "start_unix": 1641691800,
-    "end_unix": 1641697200,
-    "duration": 90,
-    "description": "An interactive workshop/contest on body mechanics & collaborative movement in tabletop puppetry. Open for six participants who will be chosen from a lottery. Who will be the Ultimate Puppet Ninja Warriors?!",
-    "panelists": [
-      "Beau Brown"
-    ]
-  },
-  {
     "name": "How to teach a Board Game: From Shelf to Table",
     "location": "Tabletop Panels/Discussions (Riverview Ballroom 1)",
     "start": "8PM Sat",
@@ -5146,17 +4984,6 @@
     ]
   },
   {
-    "name": "Caddy's Q+A with Awful Prizes",
-    "location": "Panels 1 (Cherry Blossom Ballroom)",
-    "start": "10PM Sat",
-    "end": "11PM Sat",
-    "start_unix": 1641699000,
-    "end_unix": 1641702600,
-    "duration": 60,
-    "description": "Caddicarus DID have a better idea for a live show at MAGFest, but then the world stopped working for 2 years. Now he's nervous. And he only wants to do a Q+A. Poor guy. Ask him anything about YouTube, games, or his life. He'll try not to bite.",
-    "panelists": []
-  },
-  {
     "name": "Mom! The Gacha stole my credit card again!",
     "location": "Panels 5 (Chesapeake D,E,F)",
     "start": "10PM Sat",
@@ -5236,19 +5063,15 @@
     "panelists": []
   },
   {
-    "name": "Video Game History Hot Sauce Gauntlet",
+    "name": "Can We Beat Beethoven on the Super Nintendo?",
     "location": "Panels 1 (Cherry Blossom Ballroom)",
     "start": "12AM Sun",
     "end": "1AM Sun",
     "start_unix": 1641704400,
     "end_unix": 1641708000,
     "duration": 60,
-    "description": "Join an all-star panel of video game historians as they share some of their favorite stories from their research… while they face a barrage of hot sauces! Learn about video game history while acclaimed historians suffer for your amusement! (We swore we wouldn't do this again, but we didn't learn last time!)",
-    "panelists": [
-      "Phil Salvador",
-      "Kelsey Lewin",
-      "Frank Cifaldi"
-    ]
+    "description": "The panel that was supposed to be here got canceled, which means there's only one thing to do: stay up late and see if we can collectively conquer the greatest game about a St. Bernard ever made. \r\nVery serious video game historians Frank Cifaldi and Kelsey Lewin from the Video Game History Foundation will lead this audience participation effort to see this game through to its end. If we succeed, there's a prize! If we fail, there is only shame.",
+    "panelists": []
   },
   {
     "name": "MIDNIGHT MOVIE: The Cabinet of Dr Caligari, with Live Improvised Soundtrack by Emperor Norton's Stationary Marching Band and Friends",
@@ -5407,19 +5230,6 @@
     "duration": 60,
     "description": "Last year PoGo celebrated their fifth anniversary (as best they could as a social game in a pandemic). This brought many new players in while convincing many more to return. Others found that because of the pandemic they no longer had the ability or drive to continue playing and are just now returning.\r\n\r\nThis panel aims to bring together information integral to success in the game. We will cover efficient tactics for leveling, earning coins, coin use, gathering stardust, and finding the best 'mons. There will be some discussion of PVP, without treading into the deep end of high-tier competitive play.",
     "panelists": []
-  },
-  {
-    "name": "The Rating Game",
-    "location": "Panels 3 (Woodrow Wilson Ballroom B-C)",
-    "start": "10AM Sun",
-    "end": "11AM Sun",
-    "start_unix": 1641740400,
-    "end_unix": 1641745800,
-    "duration": 90,
-    "description": "Guess the video game solely by its ESRB ratings. Our host reads off actual ratings for each game as audience contestants try to rack up the most points by guessing the game's title using as little clues as possible. The winner of each round moves on in this tournament-style game the ESRB describes as \"NSFW with descriptions of violence, naughty language and audience shenanigans.\"",
-    "panelists": [
-      "Adam Stackhouse"
-    ]
   },
   {
     "name": "Arcade Repair: How to be your own Fix-it Felix",
@@ -5650,17 +5460,6 @@
     "end_unix": 1641758400,
     "duration": 60,
     "description": "In 1990, Nintendo released a game called Fire Emblem. After years of highs and lows, more than 30 years later, Fire Emblem has finally come into its own as one of Nintendo’s top-tier franchises.\r\n\r\nJoin us as we celebrate and discuss the rise, fall and return of Fire Emblem, from the early Japan-only SNES titles Americans are only now discovering, how a pair of Smash Bros fighters finally saw the US exposed to the series. We'll talk about the near death of the franchise before Fire Emblem: Awakening saved (or ruined?) the series, to the release of Fire Emblem: Three Houses as one of the Switch’s killer apps. And where does the franchise go from here?\r\n\r\nWe’ll dig into just what makes the franchise special, such as mechanics like permadeath, how it works as a work of high fantasy, how big a role “shipping” has played in the series’ success (and why that’s realistic for a military game), and how a cult series grew to become beloved by fans, gamers and cosplayers the world over. \r\n\r\nThere will be prize giveaways, so grab your sword and brush up your support levels, as we celebrate three decades of Fire Emblem!",
-    "panelists": []
-  },
-  {
-    "name": "Japanese Exchange and Teaching Program",
-    "location": "Panels 5 (Chesapeake D,E,F)",
-    "start": "2PM Sun",
-    "end": "3PM Sun",
-    "start_unix": 1641754800,
-    "end_unix": 1641758400,
-    "duration": 60,
-    "description": "Come listen to the experiences of, and ask questions of alumni of the Japanese Exchange and Teaching Program. Hear what it's like to live, work and teach in locations throughout Japan and what it takes to get involved in the program.",
     "panelists": []
   },
   {
