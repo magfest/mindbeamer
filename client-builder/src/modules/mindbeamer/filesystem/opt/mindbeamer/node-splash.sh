@@ -9,7 +9,7 @@ if [[ $(netstat -ltn | grep ":3000" | wc -l) -eq "0" ]] ; then
   jq '.urls[0].url = "http:\/\/localhost\/waiting.html"' "$fpdconfig" > "$tmp"
 else
 # If it is listening, switch to the node port
-  jq '.urls[0].url = "http:\/\/localhost:3000"' "$fpdconfig" > "$tmp"
+  jq '.urls[0].url = "http:\/\/localhost:3000/#/filtered"' "$fpdconfig" > "$tmp"
 fi
 
 tmpsum=$(md5sum "$tmp" | cut -d ' ' -f 1)
