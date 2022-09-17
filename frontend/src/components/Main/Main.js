@@ -68,7 +68,7 @@ class Main extends React.Component {
         }
     }
 
-
+    /* istanbul ignore next */
     cleanPanelInfoTimes = ( isSingleSchedule = false, isFiltered = false,  filteredPanels = []) => {
         let { schedule: tempSchedule } = this.state;
 
@@ -124,6 +124,7 @@ class Main extends React.Component {
                         </div>
                         <div className="right-side">
                             {
+                            /* istanbul ignore next */
                             (loading) ? (
                                 <Loading />
                             ):(this.state.schedule.length === 0) ? (
