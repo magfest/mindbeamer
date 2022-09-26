@@ -9,6 +9,12 @@
     margin: auto 0;
 }
 
+#scroll-schedule {
+    overflow-y: scroll;
+    max-height: 600px;
+    height: 600px;
+}
+
 
 .tanned {
     background-color: #4b3a34;
