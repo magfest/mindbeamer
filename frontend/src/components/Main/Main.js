@@ -52,6 +52,7 @@ class Main extends React.Component {
         };
         this.setState({ isFull, filtered });
         this.getPanelInfo(isFull, filtered);
+        document.getElementById('scroll-schedule').scrollTo(0, 0);
         this.scrollPage();
     }
 
@@ -63,16 +64,12 @@ class Main extends React.Component {
         // Determines if the bottom is reached before going back to the top
         if ((scrollWindow.scrollTop) === (scrollWindow.scrollHeight - scrollWindow.offsetHeight)) {
             setTimeout(() => {
-                scrollWindow.scroll(0, 0);
-                scrollWindow.scrollTop = 0;
                 scrollWindow.scrollTo(0, 0);
                 this.scrollPage();
             }, 3000);
         } else  {
-            setTimeout(() => {
-                scrollWindow.scrollBy(0, 1);
-                setTimeout(this.scrollPage, 50);
-            }, 3000);
+            scrollWindow.scrollBy(0, 1);
+            setTimeout(this.scrollPage, 100);
         }
     }
 

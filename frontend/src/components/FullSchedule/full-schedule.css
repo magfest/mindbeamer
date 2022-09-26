@@ -11,8 +11,7 @@
 
 #scroll-schedule {
     overflow-y: scroll;
-    max-height: 600px;
-    height: 600px;
+    height: calc(100vh - 100px);
 }
 
 
