@@ -2,14 +2,19 @@
     width: 98%;
     margin: 0 auto 0 auto;
     padding: 0px 0px 20px 0px;
-    border: 2px solid #bbb5b3;
+    border: 2px solid #B2B5E1;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: 2px 2px 3px #B2B5E1;
 }
 
 .map-header {
     height: 30px;
-    background-color: #bbb5b3;
+    background-color: rgba(178, 181, 225, 0.5);
+    border-bottom: 2px solid #B2B5E1;
+    box-shadow: 2px 2px 3px #B2B5E1;
     margin-bottom: 20px;
-    color: #1F0A02;
+    color: #262214;
     font-size: 1.5em;
     font-weight: 700;
     display: flex;
@@ -24,7 +29,7 @@
 } 
 
 #show-map {
-    background-color: #bbb5b3;
+    background-color: #B2B5E1;
     margin: 10px auto;
     width: 100px;
     box-sizing: content-box;
@@ -39,13 +44,12 @@
 .map-header #header-text {
     align-self: center;
     text-align: center;
-    margin: 0 0 0 auto;
+    margin: 0 auto 0 auto;
 }
 
 .map-header #map-toggle {
     margin: 0 3px 0 auto;
-    background-color: #bbb5b3;
-    color: #1F0A02;
+    color: #071965;
     text-align: right;
     cursor: pointer;
 }
@@ -56,11 +60,11 @@
 
 
 .map-orangish #map-toggle, .map-orangish #show-map, .map-orangish .map-header {
-    background-color: #C67B62;
+    background-color: #071965;
 }
 
 .map-orangish #map-section {
-    border: 2px solid #C67B62;
+    border: 2px solid #071965;
 }
 
 

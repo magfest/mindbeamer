@@ -16,8 +16,10 @@
 
 
 .tanned {
-    background-color: #4b3a34;
     color: white;
+    border-top: 1px solid #B2B5E1;
+    border-bottom: 1px solid #B2B5E1;
+    box-shadow: 0px 0px 5px #B2B5E1;
 }
 
 
@@ -30,10 +32,11 @@
 }
 
 .column-headers {
-    color: #bbb5b3;
+    color: #fef110;
     font-size: 2.0em;
     font-weight: 700;
-    border-bottom: 4px solid #786c67;
+    background-color: black;
+    box-shadow: 2px 2px 10px #fef110;
     text-align: left;
     margin-bottom: 5px;
 }

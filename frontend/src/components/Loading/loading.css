@@ -9,7 +9,7 @@
 
 .loader-animation {
     border: 10px solid white;
-    border-top: 10px solid #EBAD43;
+    border-top: 10px solid #B2B5E1;
     margin: 15px auto;
     border-radius: 50%;
     width: 80px;
@@ -35,7 +35,7 @@
   @media only screen and (min-width: 3500px) {
     .loader-animation {
         border: 20px solid white;
-        border-top: 20px solid #EBAD43;
+        border-top: 20px solid #B2B5E1;
         margin: 20px auto;
         width: 150px;
         height: 150px;

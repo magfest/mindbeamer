@@ -133,7 +133,7 @@ class Main extends React.Component {
                     <div className="generic-info-box">
                         <GenericInfoSection isFull={isFull} />
                     </div>
-                    <img src={ mountainsTextCombined } className="mountainsCombined" />
+                    <div className="mountainsCombined" />
                 </div><div id="background-colors">
                     <div id="panels-info" 
                     className={(isFull) ? "is-full-class": "is-small-class"}
