@@ -22,8 +22,9 @@
 .qrCode {
     width: 20%;
     margin-right: 10px;
+    /* if black QR code on a yellow background
     background-color: #fef110;
-    box-shadow: 0px 0px 15px #fef110;
+    box-shadow: 0px 0px 15px #fef110; */
     border-radius: 5px;
 }
 
