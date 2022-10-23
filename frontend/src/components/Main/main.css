@@ -17,16 +17,11 @@
 }
 
 #main-container #panels-info {
-    padding-top: 40px;
+    padding-top: 10px;
 }
 
 
-#header .generic-info-box {
-    position: absolute;
-    top: 0px;
-    height: 50px;
-    right: 0px;
-}
+
 
 
 #main-container #background-colors {
@@ -79,6 +74,16 @@
 
 #main-container .individual-rows {
     font-family: 'Roboto';
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 5px #fef110;
+    color: #E8A200;
+
+    /* For purple theme
+    background-color: rgba(178, 181, 225, 0.2);
+    border: 2px solid #B2B5E1;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px #B2B5E1;
+    color: #B2B5E1; */
 }
 
 

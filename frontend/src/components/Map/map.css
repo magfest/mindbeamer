@@ -10,11 +10,11 @@
 
 .map-header {
     height: 30px;
-    background-color: rgba(178, 181, 225, 0.5);
+    background-color: rgba(178, 181, 225, 0.1);
     border-bottom: 2px solid #B2B5E1;
     box-shadow: 2px 2px 3px #B2B5E1;
     margin-bottom: 20px;
-    color: #262214;
+    color: #B2B5E1;
     font-size: 1.5em;
     font-weight: 700;
     display: flex;

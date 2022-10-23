@@ -1,6 +1,6 @@
 #generic-info-section {
     box-sizing: content-box;
-    color: #1F0A02;
+    color: #B2B5E1;
     font-family: 'Helvetica Neue';
 }
 
@@ -9,24 +9,26 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    margin: 0px 1% 1% 1%;
 }
 
 .flexed-content-generic {
-    background: rgba(178, 181, 225, 0.7);
+    background-color: rgba(178, 181, 225, 0.1);
+    border: 2px solid #B2B5E1;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px #B2B5E1;
 }
 
 .qrCode {
     width: 20%;
     margin-right: 10px;
+    background-color: #fef110;
+    box-shadow: 0px 0px 15px #fef110;
+    border-radius: 5px;
 }
 
 .flexed-content-generic {
     display: flex;
-}
-
-
-.qrCode {
-    display: block;
 }
 
 
@@ -38,7 +40,6 @@
     .flexed-content-generic {
         flex-direction: row;
         justify-content: center;
-        width: 35%;
         font-size: 20px;
     }
 }
@@ -53,37 +54,16 @@
 @media only screen and (min-width: 2050px) {
 
     .flexed-content-generic {
-        width: 24%;
         padding: 2px 0;
     }
 }
 
-@media only screen and (min-width: 3000px) {
 
-    .flexed-content-generic {
-        width: 20%;
-    }
-}
-
-@media only screen and (min-width: 3500px) {
-
-    .flexed-content-generic {
-        width: 20%;
-    }
-}
-
-@media only screen and (min-width: 4000px) {
-
-    .flexed-content-generic {
-        width: 20%;
-    }
-}
 
 @media only screen and (max-width: 1279px) {
     .flexed-content-generic {
         flex-direction: row;
         justify-content: flex-start;
-        width: 45%;
         font-size: 18px;
         text-align: left;
     }
@@ -98,8 +78,5 @@
     .qrCode {
         width: 20%;
         margin: 0 auto;
-    }
-    .flexed-content-generic {
-        width: 100%;
     }
 }

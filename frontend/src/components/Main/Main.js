@@ -130,16 +130,14 @@ class Main extends React.Component {
         const { main_event: smallSchedule } = example.default.rooms;
         return (
             <div id="main-container">
-                <div id="header">
-                    <div className="generic-info-box">
-                        <GenericInfoSection isFull={isFull} />
-                    </div>
-                    <div className="mountainsCombined" />
-                </div><div id="background-colors">
+                <div id="background-colors">
                     <div id="panels-info" 
                     className={(isFull) ? "is-full-class": "is-small-class"}
                     >
                         <div className="left-side">
+                            <div className="generic-info-box">
+                                <GenericInfoSection isFull={isFull} />
+                            </div>
                             <Map isFull={isFull} />
                         </div>
                         <div className="right-side">
