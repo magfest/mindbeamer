@@ -9,10 +9,12 @@
     margin: auto 0;
 }
 
+
+/* add back in for an auto scrolling display
 #scroll-schedule {
     overflow-y: scroll;
     height: calc(100vh - 100px);
-}
+} */
 
 
 .tanned {

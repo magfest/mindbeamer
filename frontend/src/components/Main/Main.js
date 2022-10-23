@@ -14,7 +14,6 @@ import './main.css';
 import * as example from 'testConfig/testconfig1.json';
 import * as fullSchedule from 'testConfig/super_2022.json';
 
-import mountainsTextCombined from '../../assets/pictures/mountainsTextCombined.svg';
 
 class Main extends React.Component {
     constructor(props){
@@ -52,26 +51,28 @@ class Main extends React.Component {
         };
         this.setState({ isFull, filtered });
         this.getPanelInfo(isFull, filtered);
-        document.getElementById('scroll-schedule').scrollTo(0, 0);
-        this.scrollPage();
+        // Add back in for an auto scroling display
+        // document.getElementById('scroll-schedule').scrollTo(0, 0);
+        // this.scrollPage();
     }
 
     /**
+     * Add back in for an auto scroling display
      * Scrolls through the list of panels before going back to the top
      */
-    scrollPage = () => {
-        let scrollWindow = document.getElementById('scroll-schedule');
-        // Determines if the bottom is reached before going back to the top
-        if ((scrollWindow.scrollTop) === (scrollWindow.scrollHeight - scrollWindow.offsetHeight)) {
-            setTimeout(() => {
-                scrollWindow.scrollTo(0, 0);
-                this.scrollPage();
-            }, 3000);
-        } else  {
-            scrollWindow.scrollBy(0, 1);
-            setTimeout(this.scrollPage, 100);
-        }
-    }
+    // scrollPage = () => {
+    //     let scrollWindow = document.getElementById('scroll-schedule');
+    //     // Determines if the bottom is reached before going back to the top
+    //     if ((scrollWindow.scrollTop) === (scrollWindow.scrollHeight - scrollWindow.offsetHeight)) {
+    //         setTimeout(() => {
+    //             scrollWindow.scrollTo(0, 0);
+    //             this.scrollPage();
+    //         }, 3000);
+    //     } else  {
+    //         scrollWindow.scrollBy(0, 1);
+    //         setTimeout(this.scrollPage, 100);
+    //     }
+    // }
 
     getPanelInfo = (isFullCopy, isFiltered) => {
 
