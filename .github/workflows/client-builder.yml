@@ -42,14 +42,14 @@ jobs:
       id: cache-raspbian
       uses: actions/cache@v2
       with:
-        path: repository/client-builder/src/image/2021-05-07-raspios-buster-armhf-lite.zip
+        path: repository/client-builder/src/image/2022-01-28-raspios-bullseye-armhf-lite.zip
         key: ${{ runner.os }}-raspbian
 
     - name: Download Raspbian Image
       if: steps.cache-raspbian.outputs.cache-hit != 'true'
       run: |
         cd repository/client-builder/src/image
-        wget -c --trust-server-names 'https://downloads.raspberrypi.org/raspios_lite_armhf/images/raspios_lite_armhf-2021-05-28/2021-05-07-raspios-buster-armhf-lite.zip'
+        wget -c --trust-server-names 'https://downloads.raspberrypi.org/raspios_lite_armhf/images/raspios_lite_armhf-2022-01-28/2022-01-28-raspios-bullseye-armhf-lite.zip'
 
     - name: Download and Unpack AWS IOT Greengrass Core
       run: |
