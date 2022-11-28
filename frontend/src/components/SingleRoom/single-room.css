@@ -1,10 +1,10 @@
-.column-headers-single {
-    color: #071965;
-    font-size: 2.0em;
-    font-weight: 700;
-    border-bottom: 2px solid #786c67;
+.single-panel-header {
     text-align: left;
     margin-bottom: 5px;
+}
+
+.single-panel-header span:last-child {
+    margin-left: auto;
 }
 
 .column-headers-single, .individual-rows.single-row {

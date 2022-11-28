@@ -5,7 +5,7 @@ import squareXmark from '../../assets/icons/square-xmark.svg';
 
 const Map = ({isFull}) => {
     return (
-        <div id="map-container" className={(isFull) ? "map-col-normal": "map-orangish"}>
+        <div id="map-container" className="map-col-normal">
             <div id="map-section">
                 <div className="map-header">
                     <span id="header-text">Convention Maps</span>

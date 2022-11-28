@@ -42,13 +42,24 @@
     flex-direction: row;
     justify-content: center;
     margin-bottom: 1%;
-    color: #B2B5E1;
+    padding: 10px;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #fef110;
+    background-color: black;
+    box-shadow: 2px -2px 10px #fef110;
+    border-radius: 5px;
+    text-align: left;
+    margin-bottom: 5px;
 }
 
 #main-container .single-room-panel-name span:first-child{
-    margin-right: 0.3em;
     padding-right: 0.3em;
-    border-right: 4px solid white;
+    border-right: 4px solid #fef110;
+}
+
+#main-container .single-room-panel-name span:last-child{
+    margin-left: 0.3em;
 }
 
 
@@ -70,6 +81,24 @@
 
 #main-container .empty-message.orange {
     background-color: #071965;
+}
+
+
+.column-headers {
+    font-size: 2.0em;
+    font-weight: 700;
+    color: #fef110;
+    background-color: black;
+    box-shadow: 2px 2px 10px #fef110;
+    border-radius: 5px;
+    text-align: left;
+    margin-bottom: 5px;
+
+    /* For purple theme
+    background-color: rgba(178, 181, 225, 0.2);
+    border: 2px solid #B2B5E1;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px #B2B5E1; */
 }
 
 #main-container .individual-rows {
@@ -102,10 +131,6 @@
         font-size: 20px;
     }
 
-    .single-room-panel-name {
-        font-size: 1.8em;
-    }
-
 
     #panels-info {
         display: flex;
@@ -124,10 +149,6 @@
 
     .individual-rows {
         font-size: 1.4em;
-    }
-
-    .single-room-panel-name {
-        font-size: 2.3em;
     }
 
     #background-colors {
@@ -170,9 +191,6 @@
         font-size: 1.8em;
     }
 
-    .single-room-panel-name {
-        font-size: 3em;
-    }
 
     .is-full-class .left-side {
         width: 40%;

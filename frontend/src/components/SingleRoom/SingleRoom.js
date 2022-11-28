@@ -6,7 +6,7 @@ import "./single-room.css";
 const SingleRoom = ({schedule}) => {
     return (
         <div>
-            <div className="column-headers-single">
+            <div className="column-headers single-panel-header">
                 <span>Time</span>
                 <span>Event</span>
             </div>
